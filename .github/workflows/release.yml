@@ -58,13 +58,13 @@ jobs:
           pyenv install 2.7
           pyenv global 2.7
           python --version
-          git clone https://github.com/cocos2d/cocos2d-x.git
+          yes | git clone https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
-          git checkout tags/cocos2d-x-3.6
+          yes | git checkout tags/cocos2d-x-3.6
           yes | python download-deps.py
-          git submodule update --init
+          yes | git submodule update --init
           cd cocos2d-x
-          ./setup.py
+          yes | ./setup.py
           source /path/to/system_variables.plist
        
       - name: Create new cocos2dx project
