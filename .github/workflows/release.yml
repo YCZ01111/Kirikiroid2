@@ -43,8 +43,21 @@ jobs:
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+      - name: Install pyenv
+        run: |
+          brew update
+          brew install pyenv
+
       - name: Install Python 2.7
-        run: brew install python@2
+        run: |
+          echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+          echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+          echo 'eval "$(pyenv init --path)"' >> ~/.bash_profile
+          echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+          source ~/.bash_profile
+          pyenv install 2.7
+          pyenv global 2.7
+          python --version
 
       - name: Install cocos2d-x
         run: |
