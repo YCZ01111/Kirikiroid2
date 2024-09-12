@@ -29,6 +29,12 @@ jobs:
       - name: Echo build progress
         run: echo "Kirikiroid2_${{ steps.extract_tag.outputs.tag }}.ipa build progress"
 
+      - name: Install distutils
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install setuptools
+
+
       - name: Install cocos2d-x
         run: |
           git clone https://github.com/cocos2d/cocos2d-x.git
