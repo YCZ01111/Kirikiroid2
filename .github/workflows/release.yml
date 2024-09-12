@@ -1,0 +1,68 @@
+name: release
+    
+on:
+  push:
+    tags:
+      - "1.*"
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+
+jobs:
+  cocos2dx-build-ios:
+    name: "Release for iOS"
+    runs-on: "macos-latest"
+    permissions:
+      contents: write
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Extract tag name
+        run: echo "tag=${{ env.GITHUB_REF#refs/tags/ }}" >> $GITHUB_ENV
+
+      - name: Echo build progress
+        run: echo "Cocos2d-x_${{ env.tag }}.ipa build progress"
+
+      - name: Install cocos2d-x
+        run: |
+          git clone https://github.com/cocos2d/cocos2d-x.git
+          cd cocos2d-x
+          git checkout tags/cocos2d-x-3.6
+          python download-deps.py
+          python setup.py
+          cd ..
+          
+      - name: Create new cocos2dx project
+        run: cocos new MyCocosProject -l cpp -d ./
+
+      - name: Generate Xcode project
+        run: cocos gen-libs -p ios -m release
+
+      - name: Install Xcode
+        uses: actions/setup-xcode@v2
+        with:
+          xcode-version: "12.x"
+
+      - name: Build IPA
+        run: |
+          cd MyCocosProject
+          xcodebuild -workspace MyCocosProject.xcworkspace -scheme MyCocosProject -configuration Release -destination generic/platform=iOS -archivePath build/MyCocosProject.xcarchive archive
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive -archivePath build/MyCocosProject.xcarchive -exportPath build -exportOptionsPlist ExportOptions.plist
+
+      - name: Create IPA
+        run: |
+          mv build/MyCocosProject.ipa build/Cocos2d-x_${{ env.tag }}_no_sign.ipa
+
+      - name: Upload iOS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios_outputs
+          path: build/Cocos2d-x_*.ipa
