@@ -63,6 +63,7 @@ jobs:
           git checkout tags/cocos2d-x-3.6
           yes | python download-deps.py
           yes | python setup.py
+          source /Users/runner/.bash_profile
           cd ..
 
 
