@@ -35,20 +35,20 @@ jobs:
           source $HOME/.bashrc
 
 
-      - name: Install distutils
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install setuptools
-
+      - name: Set up Python 2.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 2.7
 
       - name: Install cocos2d-x
         run: |
           git clone https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git checkout tags/cocos2d-x-3.6
-          python2.7 download-deps.py
-          python2.7 setup.py
+          python download-deps.py
+          python setup.py
           cd ..
+
           
       - name: Display cocos command path
         run: which cocos
