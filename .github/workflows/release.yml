@@ -62,12 +62,22 @@ jobs:
           cd cocos2d-x
           git checkout tags/cocos2d-x-3.6
           yes | python download-deps.py
-          yes | python setup.py
           source /Users/runner/.bash_profile
+          yes | python setup.py
           cd ..
-          which cocos
-          cocos new MyCocosProject -l cpp -d ./
-          cocos gen-libs -p ios -m release
+
+
+          
+      - name: Display cocos command path
+        run: which cocos
+
+          
+      - name: Create new cocos2dx project
+        run: cocos new MyCocosProject -l cpp -d ./
+
+
+      - name: Generate Xcode project
+        run: cocos gen-libs -p ios -m release
 
       - name: Build IPA
         run: |
