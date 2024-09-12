@@ -35,19 +35,25 @@ jobs:
           source $HOME/.bashrc
 
 
-      - name: Set up Python 2.7
-        uses: actions/setup-python@v2
-        with:
-          python-version: 2.7
+      - name: Install Python 2.7
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python2.7
+
+      - name: Set Python 2.7 as default
+        run: |
+          echo "alias python=python2.7" >> $HOME/.bashrc
+          source $HOME/.bashrc
 
       - name: Install cocos2d-x
         run: |
           git clone https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git checkout tags/cocos2d-x-3.6
-          python download-deps.py
-          python setup.py
+          python2.7 download-deps.py
+          python2.7 setup.py
           cd ..
+
 
           
       - name: Display cocos command path
