@@ -64,8 +64,8 @@ jobs:
           git clone https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git checkout tags/cocos2d-x-3.6
-          python2.7 download-deps.py
-          python2.7 setup.py
+          python download-deps.py
+          python setup.py
           cd ..
 
 
