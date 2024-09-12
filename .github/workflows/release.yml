@@ -34,13 +34,25 @@ jobs:
           echo "alias python=python2.7" >> $HOME/.bashrc
           source $HOME/.bashrc
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install Homebrew
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+      - name: Install Python 2.7
+        run: brew install python@2
+
       - name: Install cocos2d-x
         run: |
           git clone https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git checkout tags/cocos2d-x-3.6
-          python download-deps.py
-          python setup.py
+          python2.7 download-deps.py
+          python2.7 setup.py
           cd ..
 
 
