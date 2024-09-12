@@ -44,11 +44,6 @@ jobs:
       - name: Generate Xcode project
         run: cocos gen-libs -p ios -m release
 
-      - name: Install Xcode
-        uses: xcpretty/action@v2
-        with:
-          xcode-select: 'latest'
-
       - name: Build IPA
         run: |
           cd MyCocosProject
