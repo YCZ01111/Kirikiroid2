@@ -43,13 +43,16 @@ jobs:
           python download-deps.py
           python setup.py
           cd ..
+      - name: Display cocos command path
+        run: which cocos
+
           
       - name: Create new cocos2dx project
-        run: cocos2d-x/tools/cocos2d-console/bin/cocos new MyCocosProject -l cpp -d ./
+        run: cocos new MyCocosProject -l cpp -d ./
 
 
       - name: Generate Xcode project
-        run: cocos2d-x/tools/cocos2d-console/bin/cocos gen-libs -p ios -m release
+        run: cocos gen-libs -p ios -m release
 
       - name: Build IPA
         run: |
