@@ -45,9 +45,9 @@ jobs:
         run: cocos gen-libs -p ios -m release
 
       - name: Install Xcode
-        uses: actions/setup-xcode@v2
+        uses: xcpretty/action@v2
         with:
-          xcode-version: "12.x"
+          xcode-select: 'latest'
 
       - name: Build IPA
         run: |
