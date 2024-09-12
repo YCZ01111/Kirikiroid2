@@ -65,19 +65,9 @@ jobs:
           yes | python setup.py
           source /Users/runner/.bash_profile
           cd ..
-
-
-          
-      - name: Display cocos command path
-        run: which cocos
-
-          
-      - name: Create new cocos2dx project
-        run: cocos new MyCocosProject -l cpp -d ./
-
-
-      - name: Generate Xcode project
-        run: cocos gen-libs -p ios -m release
+          which cocos
+          cocos new MyCocosProject -l cpp -d ./
+          cocos gen-libs -p ios -m release
 
       - name: Build IPA
         run: |
