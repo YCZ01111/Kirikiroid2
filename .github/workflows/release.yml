@@ -23,10 +23,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Extract tag name
-        run: echo "tag=${{ env.GITHUB_REF#refs/tags/ }}" >> $GITHUB_ENV
+        id: extract_tag
+        run: echo "::set-output name=tag::${{ github.ref }}"
 
       - name: Echo build progress
-        run: echo "Cocos2d-x_${{ env.tag }}.ipa build progress"
+        run: echo "Kirikiroid2_${{ steps.extract_tag.outputs.tag }}.ipa build progress"
 
       - name: Install cocos2d-x
         run: |
@@ -59,10 +60,10 @@ jobs:
 
       - name: Create IPA
         run: |
-          mv build/MyCocosProject.ipa build/Cocos2d-x_${{ env.tag }}_no_sign.ipa
+          mv build/MyCocosProject.ipa build/Kirikiroid2_${{ steps.extract_tag.outputs.tag }}_no_sign.ipa
 
       - name: Upload iOS build
         uses: actions/upload-artifact@v4
         with:
           name: ios_outputs
-          path: build/Cocos2d-x_*.ipa
+          path: build/Kirikiroid2_*.ipa
