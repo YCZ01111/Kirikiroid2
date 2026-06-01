@@ -9,6 +9,8 @@
 #include <mutex>
 #include <condition_variable>
 
+extern std::thread::id TVPMainThreadID;
+
 namespace kr2ios {
 	std::condition_variable MessageBoxCond;
 	std::mutex MessageBoxLock;
