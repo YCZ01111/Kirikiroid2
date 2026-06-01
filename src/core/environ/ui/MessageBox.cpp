@@ -63,10 +63,11 @@ void TVPMessageBoxForm::init(const std::string &caption, const std::string &text
 		float fontSize = _btnBody->getTitleFontSize();
 		textSize.width += fontSize;
 		_btnBody->addClickEventListener([this, i](Ref* node) {
-			retain();
+#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+            RefPtr<iTVPBaseForm> self(this);
+#endif
 			TVPMainScene::GetInstance()->popUIForm(this, TVPMainScene::eLeaveAniNone);
 			if (_callback) _callback(i);
-			release();
 		});
 		Size size = _btnModel->getContentSize();
 		if (btnSize.width < textSize.width) {

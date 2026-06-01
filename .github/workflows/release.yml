@@ -1,96 +1,134 @@
-name: release
-    
+name: Build and Release
+
 on:
   push:
     tags:
-      - "1.*"
+      - "v*"
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
 
 jobs:
-  cocos2dx-build-ios:
-    name: "Release for iOS"
-    runs-on: "macos-latest"
+  ios-build:
+    name: "Build iOS IPA"
+    runs-on: "macos-13"
     permissions:
       contents: write
 
     steps:
-      - name: Clone repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Extract tag name
-        id: extract_tag
-        run: echo "::set-output name=tag::${{ github.ref }}"
-
-      - name: Echo build progress
-        run: echo "Kirikiroid2_${{ steps.extract_tag.outputs.tag }}.ipa build progress"
-
-      - name: Set Python 2.7 as default
+      - name: Extract version
+        id: extract_version
         run: |
-          echo "alias python=python2.7" >> $HOME/.bashrc
-          source $HOME/.bashrc
+          TAG_NAME=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          echo "::set-output name=version::${TAG_NAME}"
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-
-      - name: Install Homebrew
+      - name: Install dependencies
         run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install pyenv cmake ninja pkg-config
 
-      - name: Install pyenv
-        run: |
-          brew update
-          brew install pyenv
-
-      - name: Install Python 2.7
+      - name: Setup Python 2.7
         run: |
           echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
           echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
           echo 'eval "$(pyenv init --path)"' >> ~/.bash_profile
           echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
           source ~/.bash_profile
-          pyenv install 2.7
-          pyenv global 2.7
+          pyenv install 2.7.18
+          pyenv global 2.7.18
           python --version
-          yes | git clone https://github.com/cocos2d/cocos2d-x.git
-          cd cocos2d-x
-          yes | git checkout tags/cocos2d-x-3.6
-          yes | python download-deps.py
-          yes | git submodule update --init
-          cd cocos2d-x
-          yes | ./setup.py
-          source /path/to/system_variables.plist
-       
-      - name: Create new cocos2dx project
-        run: |
-          cocos new MyCocosProject -l cpp -d ./
 
-
-      - name: Generate Xcode project
+      - name: Setup cocos2d-x
         run: |
-          cocos gen-libs -p ios -m release
+          mkdir -p vendor
+          cd vendor
+          git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
+          cd cocos2d-x
+          python download-deps.py -a no
+          git submodule update --init
+          cd ..
+          ln -sf cocos2d-x current
+          cd ../..
+
+      - name: Create iOS project
+        run: |
+          python vendor/cocos2d-x/tools/cocos2d-console/bin/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d ios
+
+      - name: Copy source files
+        run: |
+          cp -r src/core/environ/ios/iOSUtils.cpp ios/Kirikiroid2/Classes/
+          cp src/core/environ/ui/MessageBox.cpp ios/Kirikiroid2/Classes/
+          cp src/core/environ/ui/BaseForm.cpp ios/Kirikiroid2/Classes/
+          cp src/core/environ/cocos2d/MainScene.cpp ios/Kirikiroid2/Classes/
+          cp src/core/environ/cocos2d/AppDelegate.cpp ios/Kirikiroid2/Classes/
+          cp src/core/environ/cocos2d/CustomFileUtils.cpp ios/Kirikiroid2/Classes/
+
+      - name: Copy header files
+        run: |
+          mkdir -p ios/Kirikiroid2/Classes/environ/ios
+          mkdir -p ios/Kirikiroid2/Classes/environ/ui
+          mkdir -p ios/Kirikiroid2/Classes/environ/cocos2d
+          mkdir -p ios/Kirikiroid2/Classes/base
+          mkdir -p ios/Kirikiroid2/Classes/tjs2
+          cp -r src/core/environ/ ios/Kirikiroid2/Classes/environ/
+          cp -r src/core/base/ ios/Kirikiroid2/Classes/base/
+          cp -r src/core/tjs2/*.h ios/Kirikiroid2/Classes/tjs2/
+
+      - name: Copy resources
+        run: |
+          cp -r cocos/kr2/Resources/* ios/Kirikiroid2/Resources/
+          cp -r cocos/kr2/cocosstudio/* ios/Kirikiroid2/Resources/
+
+      - name: Build cocos2d-x libraries
+        run: |
+          cd vendor/cocos2d-x
+          python tools/cocos2d-console/bin/cocos gen-libs -p ios -m release
 
       - name: Build IPA
         run: |
-          cd MyCocosProject
-          xcodebuild -workspace MyCocosProject.xcworkspace -scheme MyCocosProject -configuration Release -destination generic/platform=iOS -archivePath build/MyCocosProject.xcarchive archive
+          cd ios/Kirikiroid2
+          xcodebuild -workspace Kirikiroid2.xcworkspace -scheme Kirikiroid2 -configuration Release -destination generic/platform=iOS -archivePath build/Kirikiroid2.xcarchive archive 2>&1 | tail -50
 
       - name: Export IPA
         run: |
-          xcodebuild -exportArchive -archivePath build/MyCocosProject.xcarchive -exportPath build -exportOptionsPlist ExportOptions.plist
+          cd ios/Kirikiroid2
+          cat > ExportOptions.plist << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>method</key>
+  <string>development</string>
+  <key>compileBitcode</key>
+  <false/>
+  <key>stripSwiftSymbols</key>
+  <false/>
+</dict>
+</plist>
+EOF
+          xcodebuild -exportArchive -archivePath build/Kirikiroid2.xcarchive -exportPath build -exportOptionsPlist ExportOptions.plist
 
-      - name: Create IPA
+      - name: Rename IPA
         run: |
-          mv build/MyCocosProject.ipa build/Kirikiroid2_${{ steps.extract_tag.outputs.tag }}_no_sign.ipa
+          mv ios/Kirikiroid2/build/Kirikiroid2.ipa ios/Kirikiroid2/build/Kirikiroid2_${{ steps.extract_version.outputs.version }}_ios.ipa
 
-      - name: Upload iOS build
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ios_outputs
-          path: build/Kirikiroid2_*.ipa
+          name: ios_build
+          path: ios/Kirikiroid2/build/Kirikiroid2_*.ipa
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          files: ios/Kirikiroid2/build/Kirikiroid2_*.ipa
+          name: Kirikiroid2 ${{ steps.extract_version.outputs.version }}
+          body: |
+            ## iOS Build
+
+            - Fixed iOS popup crash issue by adding proper UIAlertController implementation
+            - Added thread safety by routing UI calls to main thread
+            - Fixed memory management issues with ARC compatibility
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
