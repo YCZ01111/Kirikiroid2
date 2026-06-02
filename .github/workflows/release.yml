@@ -39,7 +39,7 @@ jobs:
         run: |
           git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
-          python download-deps.py -a no
+          python download-deps.py
           git submodule update --init --recursive
 
       - name: Build cocos2d-x prebuilt libs
