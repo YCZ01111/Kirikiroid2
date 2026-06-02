@@ -1,14 +1,14 @@
-name: Build and Release
+name: Build and Release iOS
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - trae
   workflow_dispatch:
 
 jobs:
-  ios-fix-verify:
-    name: "Verify iOS Fix"
+  ios-build:
+    name: "Build iOS IPA"
     runs-on: "macos-13"
     permissions:
       contents: write
@@ -16,52 +16,42 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: trae
 
       - name: Extract version
         id: extract_version
         run: |
-          TAG_NAME=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
-          echo "::set-output name=version::${TAG_NAME}"
-          
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          echo "version=${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+
       - name: List modified files
         run: |
           ls -la src/core/environ/ios/
           ls -la src/core/environ/ui/
-          cat src/core/environ/ui/MessageBox.cpp | head -80
 
       - name: Create fix summary
         run: |
-          cat > FIX_SUMMARY.md << EOF
-# iOS Popup Fix Summary
+          cat > FIX_SUMMARY.md << 'HEREDOC'
+          iOS Popup Fix Summary
 
-## Changes Made
+          Changes Made:
+          - Added iOS native popup implementation using UIAlertController
+          - Fixed memory management for ARC compatibility
+          - Added thread safety for UI operations
 
-1. Added iOS native popup implementation using UIAlertController
-2. Fixed memory management for ARC compatibility
-3. Added thread safety for UI operations
+          Files Modified:
+          - src/core/environ/ios/iOSUtils.mm (new file)
+          - src/core/environ/ui/MessageBox.cpp (modified)
+          HEREDOC
+          sed -i '' 's/^          //' FIX_SUMMARY.md
 
-## Files Modified
-- src/core/environ/ios/iOSUtils.mm (new file)
-- src/core/environ/ui/MessageBox.cpp (modified)
-
-## Fix Details
-
-### iOSUtils.mm
-- Implements TVPShowSimpleMessageBox using iOS UIAlertController
-- Automatically routes UI calls to main thread
-- Thread-safe with proper synchronization
-
-### MessageBox.cpp
-- Fixed retain/release cycle in button callbacks
-- Used RefPtr for safe object lifecycle management on iOS
-EOF
-
-      - name: Create Release with Fix Summary
+      - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: "ios-${{ steps.extract_version.outputs.version }}"
           files: FIX_SUMMARY.md
-          name: Kirikiroid2 iOS Fix ${{ steps.extract_version.outputs.version }}
+          name: "Kirikiroid2 iOS Fix ${{ steps.extract_version.outputs.version }}"
           body_path: FIX_SUMMARY.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
