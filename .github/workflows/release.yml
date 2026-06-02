@@ -108,9 +108,26 @@ jobs:
           cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
 
           mkdir -p $DEST/vendor/onig/enc
-          cp vendor/onig/*.c $DEST/vendor/onig/
-          cp vendor/onig/*.h $DEST/vendor/onig/
-          cp vendor/onig/enc/*.c $DEST/vendor/onig/enc/
+          cp vendor/onig/regcomp.c vendor/onig/regexec.c vendor/onig/regparse.c vendor/onig/regenc.c \
+             vendor/onig/regerror.c vendor/onig/regext.c vendor/onig/reggnu.c vendor/onig/regsyntax.c \
+             vendor/onig/regtrav.c vendor/onig/regversion.c vendor/onig/st.c vendor/onig/regposix.c \
+             vendor/onig/regposerr.c $DEST/vendor/onig/
+          cp vendor/onig/oniguruma.h vendor/onig/oniggnu.h vendor/onig/onigposix.h \
+             vendor/onig/regint.h vendor/onig/regparse.h vendor/onig/regenc.h vendor/onig/st.h \
+             vendor/onig/config.h $DEST/vendor/onig/ 2>/dev/null || true
+          cp vendor/onig/enc/unicode.c vendor/onig/enc/ascii.c vendor/onig/enc/utf8.c \
+             vendor/onig/enc/utf16_be.c vendor/onig/enc/utf16_le.c \
+             vendor/onig/enc/utf32_be.c vendor/onig/enc/utf32_le.c \
+             vendor/onig/enc/euc_jp.c vendor/onig/enc/sjis.c vendor/onig/enc/iso8859_1.c \
+             vendor/onig/enc/iso8859_2.c vendor/onig/enc/iso8859_3.c vendor/onig/enc/iso8859_4.c \
+             vendor/onig/enc/iso8859_5.c vendor/onig/enc/iso8859_6.c vendor/onig/enc/iso8859_7.c \
+             vendor/onig/enc/iso8859_8.c vendor/onig/enc/iso8859_9.c \
+             vendor/onig/enc/iso8859_10.c vendor/onig/enc/iso8859_11.c \
+             vendor/onig/enc/iso8859_13.c vendor/onig/enc/iso8859_14.c \
+             vendor/onig/enc/iso8859_15.c vendor/onig/enc/iso8859_16.c \
+             vendor/onig/enc/euc_tw.c vendor/onig/enc/euc_kr.c vendor/onig/enc/big5.c \
+             vendor/onig/enc/gb18030.c vendor/onig/enc/koi8_r.c vendor/onig/enc/cp1251.c \
+             $DEST/vendor/onig/enc/
 
       - name: Copy resources
         run: |
