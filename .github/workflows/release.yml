@@ -107,12 +107,10 @@ jobs:
 
           cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
 
-          mkdir -p $DEST/vendor/onig
-          cp vendor/onig/src/*.c $DEST/vendor/onig/
-          cp vendor/onig/src/*.h $DEST/vendor/onig/
-          cp vendor/onig/src/regint.h $DEST/vendor/onig/
-          cp vendor/onig/src/regparse.h $DEST/vendor/onig/
-          cp vendor/onig/src/regenc.h $DEST/vendor/onig/
+          mkdir -p $DEST/vendor/onig/enc
+          cp vendor/onig/*.c $DEST/vendor/onig/
+          cp vendor/onig/*.h $DEST/vendor/onig/
+          cp vendor/onig/enc/*.c $DEST/vendor/onig/enc/
 
       - name: Copy resources
         run: |

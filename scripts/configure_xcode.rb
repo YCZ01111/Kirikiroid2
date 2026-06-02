@@ -29,7 +29,6 @@ header_search_paths = [
   '$(SRCROOT)/../Classes/plugins',
   '$(SRCROOT)/../Classes/movie',
   '$(SRCROOT)/../Classes/vendor/onig',
-  '$(SRCROOT)/../Classes/vendor/onig/include',
   '$(SRCROOT)/../cocos2d',
   '$(SRCROOT)/../cocos2d/cocos',
   '$(SRCROOT)/../cocos2d/cocos/base',
