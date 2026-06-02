@@ -23,23 +23,25 @@ end
 added = 0
 Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
+  xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
   group = project.main_group.find_subpath(group_path, true)
-  file_ref = group.new_file(rel_path)
+  file_ref = group.new_file(xcode_path)
   ios_target.source_build_phase.add_file_reference(file_ref)
   added += 1
-  puts "  Added: #{rel_path}"
+  puts "  Added: #{xcode_path}"
 end
 
 Dir.glob(File.join(source_dir, '**/*.h')).each do |file|
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
-  existing = project.files.find { |f| f.path == rel_path }
+  xcode_path = '../' + rel_path
+  existing = project.files.find { |f| f.path == xcode_path }
   if existing.nil?
     group_path = File.dirname(rel_path)
     group = project.main_group.find_subpath(group_path, true)
-    group.new_file(rel_path)
+    group.new_file(xcode_path)
     added += 1
-    puts "  Added header: #{rel_path}"
+    puts "  Added header: #{xcode_path}"
   end
 end
 
