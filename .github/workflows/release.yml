@@ -91,6 +91,7 @@ jobs:
           cd build/Kirikiroid2/proj.ios_mac
           SCHEME=$(xcodebuild -project Kirikiroid2.xcodeproj -list | grep -A1 'Schemes:' | tail -1 | xargs)
           echo "Using scheme: $SCHEME"
+          set +e
           xcodebuild \
             -project Kirikiroid2.xcodeproj \
             -scheme "$SCHEME" \
@@ -101,7 +102,12 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY='' \
             ENABLE_BITCODE=NO \
-            2>&1 | tee xcodebuild.log | tail -100
+            2>&1 | tee xcodebuild.log
+          BUILD_EXIT=${PIPESTATUS[0]}
+          set -e
+          echo "Build exit code: $BUILD_EXIT"
+          tail -30 xcodebuild.log
+          exit $BUILD_EXIT
 
       - name: Package IPA
         run: |
@@ -110,19 +116,28 @@ jobs:
             mkdir -p Payload
             cp -r "$APP_PATH" Payload/
             zip -r Kirikiroid2.ipa Payload/
-            echo "IPA created successfully"
+            echo "IPA created successfully from: $APP_PATH"
           else
-            echo "No .app found, checking archive..."
+            echo "No .app found directly, checking archive..."
             ARCHIVE_APP=$(find build/Kirikiroid2 -path "*/Products/Applications/*.app" -type d | head -1)
             if [ -n "$ARCHIVE_APP" ]; then
               mkdir -p Payload
               cp -r "$ARCHIVE_APP" Payload/
               zip -r Kirikiroid2.ipa Payload/
-              echo "IPA created from archive"
+              echo "IPA created from archive: $ARCHIVE_APP"
             else
-              echo "ERROR: No .app found"
-              cat build/Kirikiroid2/proj.ios_mac/xcodebuild.log | grep -i error | head -30
-              exit 1
+              echo "No .app found in archive either, checking DerivedData..."
+              DERIVED_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null | head -1)
+              if [ -n "$DERIVED_APP" ]; then
+                mkdir -p Payload
+                cp -r "$DERIVED_APP" Payload/
+                zip -r Kirikiroid2.ipa Payload/
+                echo "IPA created from DerivedData: $DERIVED_APP"
+              else
+                echo "ERROR: No .app found anywhere"
+                grep -i "error:" build/Kirikiroid2/proj.ios_mac/xcodebuild.log | head -30 || true
+                exit 1
+              fi
             fi
           fi
 
