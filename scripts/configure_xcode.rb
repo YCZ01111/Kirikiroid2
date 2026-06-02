@@ -28,8 +28,11 @@ header_search_paths = [
   '$(SRCROOT)/../Classes/visual/win32',
   '$(SRCROOT)/../Classes/plugins',
   '$(SRCROOT)/../Classes/movie',
+  '$(SRCROOT)/../Classes/vendor/onig',
+  '$(SRCROOT)/../Classes/vendor/onig/include',
   '$(SRCROOT)/../cocos2d',
   '$(SRCROOT)/../cocos2d/cocos',
+  '$(SRCROOT)/../cocos2d/cocos/base',
   '$(SRCROOT)/../cocos2d/cocos/platform/ios',
   '$(SRCROOT)/../cocos2d/cocos/platform',
   '$(SRCROOT)/../cocos2d/external',
@@ -39,15 +42,26 @@ header_search_paths = [
   '$(SRCROOT)/../cocos2d/external/jpeg/include/ios',
   '$(SRCROOT)/../cocos2d/external/png/include/ios',
   '$(SRCROOT)/../cocos2d/external/tiff/include/ios',
-  '$(SRCROOT)/../cocos2d/external/zip/include'
+  '$(SRCROOT)/../cocos2d/external/zip/include',
+  '$(SRCROOT)/../cocos2d/external/curl/include/ios',
+  '$(SRCROOT)/../cocos2d/external/freetype2/include/ios',
+  '$(SRCROOT)/../cocos2d/external/websockets/include/ios'
+]
+
+preprocessor_defs = [
+  '$(inherited)',
+  'TJS_TEXT_OUT_CRLF',
+  '__STDC_CONSTANT_MACROS',
+  '__STDC_FORMAT_MACROS',
+  'USE_UNICODE_FSTRING',
+  'CC_TARGET_PLATFORM=CC_PLATFORM_IOS',
+  'NDEBUG',
+  'COCOS2DX_VERSION=0x00030600'
 ]
 
 ios_target.build_configurations.each do |config|
   config.build_settings['HEADER_SEARCH_PATHS'] = header_search_paths
-  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
-  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'TJS_TEXT_OUT_CRLF'
-  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << '__STDC_CONSTANT_MACROS'
-  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'USE_UNICODE_FSTRING'
+  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = preprocessor_defs
   config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++11'
   config.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
   config.build_settings['GCC_ENABLE_CPP_EXCEPTIONS'] = 'YES'
@@ -55,6 +69,13 @@ ios_target.build_configurations.each do |config|
   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
   config.build_settings['ENABLE_BITCODE'] = 'NO'
   config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+  config.build_settings['LIBRARY_SEARCH_PATHS'] ||= ['$(inherited)']
+  config.build_settings['OTHER_LDFLAGS'] ||= ['$(inherited)']
+  config.build_settings['GCC_WARN_ABOUT_MISSING_PROTOTYPES'] = 'NO'
+  config.build_settings['GCC_WARN_ABOUT_RETURN_TYPE'] = 'NO'
+  config.build_settings['GCC_WARN_UNUSED_VARIABLE'] = 'NO'
+  config.build_settings['CLANG_WARN_SUSPICIOUS_MOVE'] = 'NO'
+  config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
   puts "  Configured build settings for: #{config.name}"
 end
 

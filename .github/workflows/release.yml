@@ -65,6 +65,10 @@ jobs:
           fi
           echo "Patch verified - no GameController import found"
 
+      - name: Download Oniguruma
+        run: |
+          git clone --depth=1 https://github.com/kkos/oniguruma.git vendor/onig
+
       - name: Copy source files
         run: |
           DEST=build/Kirikiroid2/Classes
@@ -102,6 +106,13 @@ jobs:
           cp -r src/plugins $DEST/plugins
 
           cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
+
+          mkdir -p $DEST/vendor/onig
+          cp vendor/onig/src/*.c $DEST/vendor/onig/
+          cp vendor/onig/src/*.h $DEST/vendor/onig/
+          cp vendor/onig/src/regint.h $DEST/vendor/onig/
+          cp vendor/onig/src/regparse.h $DEST/vendor/onig/
+          cp vendor/onig/src/regenc.h $DEST/vendor/onig/
 
       - name: Copy resources
         run: |
