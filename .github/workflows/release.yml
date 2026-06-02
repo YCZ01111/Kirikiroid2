@@ -54,79 +54,16 @@ jobs:
           bash $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
 
       - name: Patch cocos2d-x for Xcode 15 compatibility
+        run: bash scripts/patch_cocos2d.sh build/Kirikiroid2
+
+      - name: Verify patch applied
         run: |
           FILE="build/Kirikiroid2/cocos2d/cocos/base/CCController-iOS.mm"
-          cat > "$FILE" << 'STUBEOF'
-#include "CCController.h"
-
-NS_CC_BEGIN
-
-class ControllerImpl
-{
-public:
-    ControllerImpl(Controller* controller)
-    : _controller(controller)
-    {}
-
-    Controller* _controller;
-};
-
-std::vector<Controller*> Controller::s_allController;
-
-Controller::Controller()
-: _deviceId(0)
-, _controllerTag(TAG_UNSET)
-, _impl(new ControllerImpl(this))
-, _eventDispatcher(nullptr)
-, _connectEvent(nullptr)
-, _keyEvent(nullptr)
-, _axisEvent(nullptr)
-{}
-
-Controller::~Controller()
-{
-    delete _impl;
-}
-
-void Controller::registerListeners() {}
-
-void Controller::onConnected() {}
-void Controller::onDisconnected() {}
-void Controller::onButtonEvent(int keyCode, bool isPressed, float value, bool isAnalog) {}
-void Controller::onAxisEvent(int axisCode, float value, bool isAnalog) {}
-
-const Controller::KeyStatus& Controller::getKeyStatus(int keyCode)
-{
-    return _allKeyStatus[keyCode];
-}
-
-bool Controller::isConnected() const
-{
-    return false;
-}
-
-void Controller::receiveExternalKeyEvent(int externalKeyCode, bool receive)
-{
-}
-
-Controller* Controller::getControllerByTag(int tag)
-{
-    for (auto& controller : s_allController)
-    {
-        if (controller->_controllerTag == tag)
-            return controller;
-    }
-    return nullptr;
-}
-
-void Controller::startDiscoveryController() {}
-void Controller::stopDiscoveryController() {}
-
-void Controller::init() {}
-
-NS_CC_END
-STUBEOF
-          echo "Patched CCController-iOS.mm with stub implementation"
+          if grep -q "GameController" "$FILE"; then
+            echo "ERROR: Patch was not applied - GameController still present"
+            exit 1
+          fi
+          echo "Patch verified - no GameController import found"
 
       - name: Copy source files
         run: |
@@ -181,39 +118,37 @@ STUBEOF
           BUILD_EXIT=${PIPESTATUS[0]}
           set -e
           echo "Build exit code: $BUILD_EXIT"
-          tail -30 xcodebuild.log
+          if [ $BUILD_EXIT -ne 0 ]; then
+            echo "=== BUILD ERRORS ==="
+            grep -E "error:|fatal:" xcodebuild.log | head -50 || true
+            echo "=== LAST 50 LINES ==="
+            tail -50 xcodebuild.log
+          fi
           exit $BUILD_EXIT
 
       - name: Package IPA
         run: |
-          APP_PATH=$(find build/Kirikiroid2 -name "*.app" -type d | head -1)
-          if [ -n "$APP_PATH" ]; then
+          ARCHIVE_APP=$(find build/Kirikiroid2/proj.ios_mac/build/Kirikiroid2.xcarchive -name "*.app" -type d 2>/dev/null | head -1)
+          if [ -z "$ARCHIVE_APP" ]; then
+            ARCHIVE_APP=$(find build/Kirikiroid2 -path "*/Products/Applications/*.app" -type d 2>/dev/null | head -1)
+          fi
+          if [ -z "$ARCHIVE_APP" ]; then
+            ARCHIVE_APP=$(find build/Kirikiroid2 -name "*.app" -type d 2>/dev/null | head -1)
+          fi
+          if [ -z "$ARCHIVE_APP" ]; then
+            ARCHIVE_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null | head -1)
+          fi
+          if [ -n "$ARCHIVE_APP" ]; then
             mkdir -p Payload
-            cp -r "$APP_PATH" Payload/
+            cp -r "$ARCHIVE_APP" Payload/
             zip -r Kirikiroid2.ipa Payload/
-            echo "IPA created successfully from: $APP_PATH"
+            echo "IPA created from: $ARCHIVE_APP"
+            ls -la Kirikiroid2.ipa
           else
-            echo "No .app found directly, checking archive..."
-            ARCHIVE_APP=$(find build/Kirikiroid2 -path "*/Products/Applications/*.app" -type d | head -1)
-            if [ -n "$ARCHIVE_APP" ]; then
-              mkdir -p Payload
-              cp -r "$ARCHIVE_APP" Payload/
-              zip -r Kirikiroid2.ipa Payload/
-              echo "IPA created from archive: $ARCHIVE_APP"
-            else
-              echo "No .app found in archive either, checking DerivedData..."
-              DERIVED_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null | head -1)
-              if [ -n "$DERIVED_APP" ]; then
-                mkdir -p Payload
-                cp -r "$DERIVED_APP" Payload/
-                zip -r Kirikiroid2.ipa Payload/
-                echo "IPA created from DerivedData: $DERIVED_APP"
-              else
-                echo "ERROR: No .app found anywhere"
-                grep -i "error:" build/Kirikiroid2/proj.ios_mac/xcodebuild.log | head -30 || true
-                exit 1
-              fi
-            fi
+            echo "ERROR: No .app found anywhere"
+            find build/Kirikiroid2 -name "*.app" -type d 2>/dev/null || true
+            find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null || true
+            exit 1
           fi
 
       - name: Upload Release
