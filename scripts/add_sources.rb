@@ -1,10 +1,9 @@
 #!/usr/bin/env ruby
 require 'xcodeproj'
 
-pbx_path = ARGV[0] || 'build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj/project.pbxproj'
+pbx_path = ARGV[0] || 'build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj'
 source_dir = ARGV[1] || 'build/Kirikiroid2/Classes/'
 
-project_path = File.dirname(pbx_path)
 project = Xcodeproj::Project.open(pbx_path)
 target = project.targets.first
 

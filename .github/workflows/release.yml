@@ -83,7 +83,7 @@ jobs:
       - name: Add source files to Xcode project
         run: |
           ruby scripts/add_sources.rb \
-            build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj/project.pbxproj \
+            build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj \
             build/Kirikiroid2/Classes/
 
       - name: Build IPA (unsigned)
