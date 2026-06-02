@@ -137,15 +137,15 @@ jobs:
         run: |
           cd build/Kirikiroid2/proj.ios_mac
           echo "Available schemes:"
-          xcodebuild -project Kirikiroid2.xcodeproj -list
+          xcodebuild -project Kirikiroid2.xcodeproj -list || true
           SCHEME="Kirikiroid2 iOS"
           echo "Using scheme: $SCHEME"
           set +e
           xcodebuild \
             -project Kirikiroid2.xcodeproj \
             -scheme "$SCHEME" \
+            -sdk iphoneos \
             -configuration Release \
-            -destination 'generic/platform=iOS' \
             -archivePath build/Kirikiroid2.xcarchive \
             archive \
             CODE_SIGNING_ALLOWED=NO \
