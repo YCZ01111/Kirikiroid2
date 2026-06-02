@@ -72,14 +72,28 @@ jobs:
           mkdir -p $DEST
 
           cp -r src/core/base $DEST/base
+          rm -rf $DEST/base/win32
+
           cp -r src/core/environ $DEST/environ
+          rm -rf $DEST/environ/win32 $DEST/environ/android $DEST/environ/sdl
+
           cp -r src/core/extension $DEST/extension
           cp -r src/core/movie $DEST/movie
+
           cp -r src/core/msg $DEST/msg
+          rm -rf $DEST/msg/win32
+
           cp -r src/core/sound $DEST/sound
+          rm -rf $DEST/sound/win32 $DEST/sound/ARM
+
           cp -r src/core/tjs2 $DEST/tjs2
+
           cp -r src/core/utils $DEST/utils
+          rm -rf $DEST/utils/win32
+
           cp -r src/core/visual $DEST/visual
+          rm -rf $DEST/visual/win32 $DEST/visual/ARM
+
           cp -r src/plugins $DEST/plugins
 
           cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
