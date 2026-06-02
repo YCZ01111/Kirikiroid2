@@ -51,7 +51,7 @@ jobs:
 
       - name: Create iOS project from template
         run: |
-          python $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
+          bash $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
 
       - name: Copy source files
         run: |
