@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: cocos2d-x
-          key: cocos2d-x-3.6-v2
+          key: cocos2d-x-3.6-full-v1
 
       - name: Clone and setup cocos2d-x 3.6
         if: steps.cache-cocos.outputs.cache-hit != 'true'
@@ -43,19 +43,14 @@ jobs:
           yes no | python download-deps.py
           git submodule update --init --recursive
 
-      - name: Build cocos2d-x prebuilt libs
-        if: steps.cache-cocos.outputs.cache-hit != 'true'
+      - name: Setup cocos environment
         run: |
-          cd cocos2d-x
-          mkdir -p build
-          cd build
-          cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_DEPLOYMENT_TARGET=9.0 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-          cmake --build . --config Release -- -sdk iphoneos -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO
+          echo "COCOS_CONSOLE_ROOT=$GITHUB_WORKSPACE/cocos2d-x/tools/cocos2d-console/bin" >> $GITHUB_ENV
+          echo "COCOS_TEMPLATES_ROOT=$GITHUB_WORKSPACE/cocos2d-x/templates" >> $GITHUB_ENV
+          echo "COCOS_X_ROOT=$GITHUB_WORKSPACE/cocos2d-x" >> $GITHUB_ENV
 
-      - name: Create iOS project
+      - name: Create iOS project from template
         run: |
-          export COCOS_CONSOLE_ROOT="$GITHUB_WORKSPACE/cocos2d-x/tools/cocos2d-console/bin"
-          export COCOS_TEMPLATES_ROOT="$GITHUB_WORKSPACE/cocos2d-x/templates"
           python $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
 
       - name: Copy source files
