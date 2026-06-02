@@ -78,7 +78,7 @@ jobs:
           cp -r cocos/kr2/cocosstudio/* build/Kirikiroid2/Resources/
 
       - name: Install mod-pbxproj
-        run: pip3 install mod-pbxproj
+        run: pip3 install --break-system-packages mod-pbxproj
 
       - name: Add source files to Xcode project
         run: |
