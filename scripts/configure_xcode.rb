@@ -50,6 +50,7 @@ header_search_paths = [
 
 preprocessor_defs = [
   '$(inherited)',
+  'CC_TARGET_OS_IPHONE',
   'TJS_TEXT_OUT_CRLF',
   '__STDC_CONSTANT_MACROS',
   '__STDC_FORMAT_MACROS',
