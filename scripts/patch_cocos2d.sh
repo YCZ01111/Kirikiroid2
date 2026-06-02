@@ -177,4 +177,6 @@ EOF
     echo "Patched CCController-apple.mm with stub implementation"
 fi
 
+python3 scripts/patch_cocos2d.py "$BUILD_DIR"
+
 echo "All patches applied successfully."
