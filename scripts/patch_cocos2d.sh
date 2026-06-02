@@ -18,6 +18,7 @@ if [ -f "$CCCTRL_FILE" ]; then
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 
 #include "ccMacros.h"
+#include "CCEventController.h"
 
 NS_CC_BEGIN
 
@@ -31,8 +32,6 @@ public:
     Controller* _controller;
 };
 
-std::vector<Controller*> Controller::s_allController;
-
 Controller::Controller()
 : _controllerTag(TAG_UNSET)
 , _impl(new ControllerImpl(this))
@@ -41,6 +40,7 @@ Controller::Controller()
 , _axisEvent(nullptr)
 , _deviceId(0)
 {
+    init();
 }
 
 Controller::~Controller()
@@ -52,15 +52,6 @@ Controller::~Controller()
 }
 
 void Controller::registerListeners() {}
-void Controller::onConnected() {}
-void Controller::onDisconnected() {}
-void Controller::onButtonEvent(int keyCode, bool isPressed, float value, bool isAnalog) {}
-void Controller::onAxisEvent(int axisCode, float value, bool isAnalog) {}
-
-const Controller::KeyStatus& Controller::getKeyStatus(int keyCode)
-{
-    return _allKeyStatus[keyCode];
-}
 
 bool Controller::isConnected() const
 {
@@ -71,19 +62,9 @@ void Controller::receiveExternalKeyEvent(int externalKeyCode, bool receive)
 {
 }
 
-Controller* Controller::getControllerByTag(int tag)
-{
-    for (auto& controller : s_allController)
-    {
-        if (controller->_controllerTag == tag)
-            return controller;
-    }
-    return nullptr;
-}
-
 void Controller::startDiscoveryController() {}
+
 void Controller::stopDiscoveryController() {}
-void Controller::init() {}
 
 NS_CC_END
 
@@ -103,6 +84,7 @@ if [ -f "$CCCTRL_APPLE" ]; then
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 
 #include "ccMacros.h"
+#include "CCEventController.h"
 
 NS_CC_BEGIN
 
@@ -116,8 +98,6 @@ public:
     Controller* _controller;
 };
 
-std::vector<Controller*> Controller::s_allController;
-
 Controller::Controller()
 : _controllerTag(TAG_UNSET)
 , _impl(new ControllerImpl(this))
@@ -126,6 +106,7 @@ Controller::Controller()
 , _axisEvent(nullptr)
 , _deviceId(0)
 {
+    init();
 }
 
 Controller::~Controller()
@@ -137,15 +118,6 @@ Controller::~Controller()
 }
 
 void Controller::registerListeners() {}
-void Controller::onConnected() {}
-void Controller::onDisconnected() {}
-void Controller::onButtonEvent(int keyCode, bool isPressed, float value, bool isAnalog) {}
-void Controller::onAxisEvent(int axisCode, float value, bool isAnalog) {}
-
-const Controller::KeyStatus& Controller::getKeyStatus(int keyCode)
-{
-    return _allKeyStatus[keyCode];
-}
 
 bool Controller::isConnected() const
 {
@@ -156,19 +128,9 @@ void Controller::receiveExternalKeyEvent(int externalKeyCode, bool receive)
 {
 }
 
-Controller* Controller::getControllerByTag(int tag)
-{
-    for (auto& controller : s_allController)
-    {
-        if (controller->_controllerTag == tag)
-            return controller;
-    }
-    return nullptr;
-}
-
 void Controller::startDiscoveryController() {}
+
 void Controller::stopDiscoveryController() {}
-void Controller::init() {}
 
 NS_CC_END
 
