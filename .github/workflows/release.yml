@@ -136,7 +136,9 @@ jobs:
       - name: Build IPA (unsigned)
         run: |
           cd build/Kirikiroid2/proj.ios_mac
-          SCHEME=$(xcodebuild -project Kirikiroid2.xcodeproj -list | grep -A1 'Schemes:' | tail -1 | xargs)
+          echo "Available schemes:"
+          xcodebuild -project Kirikiroid2.xcodeproj -list
+          SCHEME="Kirikiroid2 iOS"
           echo "Using scheme: $SCHEME"
           set +e
           xcodebuild \
