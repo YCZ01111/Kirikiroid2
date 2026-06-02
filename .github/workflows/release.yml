@@ -53,6 +53,19 @@ jobs:
         run: |
           bash $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
 
+      - name: Patch cocos2d-x for Xcode 15 compatibility
+        run: |
+          cat > build/Kirikiroid2/cocos2d/cocos/base/CCController-iOS.mm << 'PATCH'
+          #include "CCController.h"
+          NS_CC_BEGIN
+          void Controller::setupImpl(void* /*handler*/) {}
+          void Controller::registerListeners() {}
+          Controller::Controller() : _controllerName(""), _deviceId(0) {}
+          Controller::~Controller() {}
+          void Controller::receiveExternalKeyEvent(int /*externalKeyCode*/, bool /*isPressed*/) {}
+          NS_CC_END
+          PATCH
+
       - name: Copy source files
         run: |
           DEST=build/Kirikiroid2/Classes
