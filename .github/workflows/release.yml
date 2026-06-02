@@ -12,7 +12,7 @@ permissions:
 jobs:
   ios-build:
     name: "Build iOS IPA"
-    runs-on: macos-13
+    runs-on: macos-14
 
     steps:
       - name: Checkout repository
