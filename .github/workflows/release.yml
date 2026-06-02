@@ -67,7 +67,7 @@ jobs:
 
       - name: Download Oniguruma
         run: |
-          git clone --depth=1 https://github.com/kkos/oniguruma.git vendor/onig
+          git clone --depth=1 --branch=v5.9.6 https://github.com/kkos/oniguruma.git vendor/onig
 
       - name: Copy source files
         run: |
