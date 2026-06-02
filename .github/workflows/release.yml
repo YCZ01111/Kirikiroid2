@@ -72,27 +72,32 @@ jobs:
           mkdir -p $DEST
 
           cp -r src/core/base $DEST/base
-          rm -rf $DEST/base/win32
+          rm -f $DEST/base/win32/FuncStubs.cpp $DEST/base/win32/SusieArchive.cpp
 
           cp -r src/core/environ $DEST/environ
-          rm -rf $DEST/environ/win32 $DEST/environ/android $DEST/environ/sdl
+          rm -rf $DEST/environ/android $DEST/environ/sdl
+          rm -f $DEST/environ/MainFormUnit.cpp
 
           cp -r src/core/extension $DEST/extension
           cp -r src/core/movie $DEST/movie
 
           cp -r src/core/msg $DEST/msg
-          rm -rf $DEST/msg/win32
 
           cp -r src/core/sound $DEST/sound
-          rm -rf $DEST/sound/win32 $DEST/sound/ARM
+          rm -rf $DEST/sound/ARM
+          rm -f $DEST/sound/xmmlib.cpp $DEST/sound/WaveFormatConverter_SSE.cpp
 
           cp -r src/core/tjs2 $DEST/tjs2
 
           cp -r src/core/utils $DEST/utils
-          rm -rf $DEST/utils/win32
 
           cp -r src/core/visual $DEST/visual
-          rm -rf $DEST/visual/win32 $DEST/visual/ARM
+          rm -rf $DEST/visual/ARM
+          rm -f $DEST/visual/Resampler.cpp
+          rm -f $DEST/visual/win32/GDIFontRasterizer.cpp
+          rm -f $DEST/visual/win32/NativeFreeTypeFace.cpp
+          rm -f $DEST/visual/win32/TVPSysFont.cpp
+          rm -f $DEST/visual/win32/VSyncTimingThread.cpp
 
           cp -r src/plugins $DEST/plugins
 
@@ -111,6 +116,11 @@ jobs:
           ruby scripts/add_sources.rb \
             build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj \
             build/Kirikiroid2/Classes/
+
+      - name: Configure Xcode build settings
+        run: |
+          ruby scripts/configure_xcode.rb \
+            build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj
 
       - name: Build IPA (unsigned)
         run: |
