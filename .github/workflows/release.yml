@@ -6,12 +6,13 @@ on:
       - trae
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   ios-build:
-    name: "Build iOS IPA"
-    runs-on: "macos-13"
-    permissions:
-      contents: write
+    name: "Build and Release iOS"
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -44,7 +45,7 @@ jobs:
           - src/core/environ/ios/iOSUtils.mm (new file)
           - src/core/environ/ui/MessageBox.cpp (modified)
           HEREDOC
-          sed -i '' 's/^          //' FIX_SUMMARY.md
+          sed -i 's/^          //' FIX_SUMMARY.md
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
