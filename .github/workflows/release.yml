@@ -11,8 +11,8 @@ permissions:
 
 jobs:
   ios-build:
-    name: "Build and Release iOS"
-    runs-on: ubuntu-latest
+    name: "Build iOS IPA"
+    runs-on: macos-13
 
     steps:
       - name: Checkout repository
@@ -20,39 +20,126 @@ jobs:
         with:
           ref: trae
 
-      - name: Extract version
-        id: extract_version
+      - name: Setup Python 2.7
         run: |
-          SHORT_SHA=$(git rev-parse --short HEAD)
-          echo "version=${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+          brew install pyenv
+          pyenv install 2.7.18
+          pyenv global 2.7.18
+          echo "$HOME/.pyenv/shims" >> $GITHUB_PATH
 
-      - name: List modified files
+      - name: Cache cocos2d-x
+        id: cache-cocos
+        uses: actions/cache@v4
+        with:
+          path: cocos2d-x
+          key: cocos2d-x-3.6-v2
+
+      - name: Clone and setup cocos2d-x 3.6
+        if: steps.cache-cocos.outputs.cache-hit != 'true'
         run: |
-          ls -la src/core/environ/ios/
-          ls -la src/core/environ/ui/
+          git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
+          cd cocos2d-x
+          python download-deps.py -a no
+          git submodule update --init --recursive
 
-      - name: Create fix summary
+      - name: Build cocos2d-x prebuilt libs
+        if: steps.cache-cocos.outputs.cache-hit != 'true'
         run: |
-          cat > FIX_SUMMARY.md << 'HEREDOC'
-          iOS Popup Fix Summary
+          cd cocos2d-x
+          mkdir -p build
+          cd build
+          cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_DEPLOYMENT_TARGET=9.0
+          cmake --build . --config Release -- -sdk iphoneos -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO
 
-          Changes Made:
-          - Added iOS native popup implementation using UIAlertController
-          - Fixed memory management for ARC compatibility
-          - Added thread safety for UI operations
+      - name: Create iOS project
+        run: |
+          export COCOS_CONSOLE_ROOT="$GITHUB_WORKSPACE/cocos2d-x/tools/cocos2d-console/bin"
+          export COCOS_TEMPLATES_ROOT="$GITHUB_WORKSPACE/cocos2d-x/templates"
+          python $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
 
-          Files Modified:
-          - src/core/environ/ios/iOSUtils.mm (new file)
-          - src/core/environ/ui/MessageBox.cpp (modified)
-          HEREDOC
-          sed -i 's/^          //' FIX_SUMMARY.md
+      - name: Copy source files
+        run: |
+          DEST=build/Kirikiroid2/Classes
+          rm -rf $DEST/*
+          mkdir -p $DEST
 
-      - name: Create Release
+          cp -r src/core/base $DEST/base
+          cp -r src/core/environ $DEST/environ
+          cp -r src/core/extension $DEST/extension
+          cp -r src/core/movie $DEST/movie
+          cp -r src/core/msg $DEST/msg
+          cp -r src/core/sound $DEST/sound
+          cp -r src/core/tjs2 $DEST/tjs2
+          cp -r src/core/utils $DEST/utils
+          cp -r src/core/visual $DEST/visual
+          cp -r src/plugins $DEST/plugins
+
+          cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
+
+      - name: Copy resources
+        run: |
+          cp -r cocos/kr2/Resources/* build/Kirikiroid2/Resources/
+          cp -r cocos/kr2/cocosstudio/* build/Kirikiroid2/Resources/
+
+      - name: Install mod-pbxproj
+        run: pip3 install mod-pbxproj
+
+      - name: Add source files to Xcode project
+        run: |
+          python3 scripts/add_sources.py \
+            build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj/project.pbxproj \
+            build/Kirikiroid2/Classes/
+
+      - name: Build IPA (unsigned)
+        run: |
+          cd build/Kirikiroid2/proj.ios_mac
+          xcodebuild \
+            -project Kirikiroid2.xcodeproj \
+            -scheme Kirikiroid2 \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/Kirikiroid2.xcarchive \
+            archive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY='' \
+            ENABLE_BITCODE=NO \
+            2>&1 | tee xcodebuild.log | tail -100
+
+      - name: Package IPA
+        run: |
+          APP_PATH=$(find build/Kirikiroid2 -name "*.app" -type d | head -1)
+          if [ -n "$APP_PATH" ]; then
+            mkdir -p Payload
+            cp -r "$APP_PATH" Payload/
+            zip -r Kirikiroid2.ipa Payload/
+            echo "IPA created successfully"
+          else
+            echo "No .app found, checking archive..."
+            ARCHIVE_APP=$(find build/Kirikiroid2 -path "*/Products/Applications/*.app" -type d | head -1)
+            if [ -n "$ARCHIVE_APP" ]; then
+              mkdir -p Payload
+              cp -r "$ARCHIVE_APP" Payload/
+              zip -r Kirikiroid2.ipa Payload/
+              echo "IPA created from archive"
+            else
+              echo "ERROR: No .app found"
+              cat build/Kirikiroid2/proj.ios_mac/xcodebuild.log | grep -i error | head -30
+              exit 1
+            fi
+          fi
+
+      - name: Upload Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "ios-${{ steps.extract_version.outputs.version }}"
-          files: FIX_SUMMARY.md
-          name: "Kirikiroid2 iOS Fix ${{ steps.extract_version.outputs.version }}"
-          body_path: FIX_SUMMARY.md
+          tag_name: "ios-build-${{ github.sha }}"
+          files: Kirikiroid2.ipa
+          name: "Kirikiroid2 iOS Build"
+          body: |
+            iOS build with popup crash fix
+
+            Changes:
+            - Added iOS native popup implementation (UIAlertController)
+            - Fixed memory management for ARC compatibility
+            - Added thread safety for UI operations
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
