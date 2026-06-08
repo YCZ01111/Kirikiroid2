@@ -188,6 +188,14 @@ jobs:
           fi
           exit $BUILD_EXIT
 
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: build/Kirikiroid2/proj.ios_mac/xcodebuild.log
+          retention-days: 5
+
       - name: Package IPA
         run: |
           BUILD_APP=$(find build/Kirikiroid2 -name "*.app" -type d 2>/dev/null | head -1)
