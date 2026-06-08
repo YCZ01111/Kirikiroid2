@@ -161,8 +161,7 @@ jobs:
             -scheme "$SCHEME" \
             -sdk iphoneos \
             -configuration Release \
-            -archivePath build/Kirikiroid2.xcarchive \
-            archive \
+            build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY='' \
             ENABLE_BITCODE=NO \
@@ -172,29 +171,23 @@ jobs:
           echo "Build exit code: $BUILD_EXIT"
           if [ $BUILD_EXIT -ne 0 ]; then
             echo "=== BUILD ERRORS ==="
-            grep -E "error:|fatal:" xcodebuild.log | head -50 || true
-            echo "=== LAST 50 LINES ==="
-            tail -50 xcodebuild.log
+            grep -E "error:|fatal:" xcodebuild.log | head -80 || true
+            echo "=== LAST 80 LINES ==="
+            tail -80 xcodebuild.log
           fi
           exit $BUILD_EXIT
 
       - name: Package IPA
         run: |
-          ARCHIVE_APP=$(find build/Kirikiroid2/proj.ios_mac/build/Kirikiroid2.xcarchive -name "*.app" -type d 2>/dev/null | head -1)
-          if [ -z "$ARCHIVE_APP" ]; then
-            ARCHIVE_APP=$(find build/Kirikiroid2 -path "*/Products/Applications/*.app" -type d 2>/dev/null | head -1)
+          BUILD_APP=$(find build/Kirikiroid2 -name "*.app" -type d 2>/dev/null | head -1)
+          if [ -z "$BUILD_APP" ]; then
+            BUILD_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null | head -1)
           fi
-          if [ -z "$ARCHIVE_APP" ]; then
-            ARCHIVE_APP=$(find build/Kirikiroid2 -name "*.app" -type d 2>/dev/null | head -1)
-          fi
-          if [ -z "$ARCHIVE_APP" ]; then
-            ARCHIVE_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d 2>/dev/null | head -1)
-          fi
-          if [ -n "$ARCHIVE_APP" ]; then
+          if [ -n "$BUILD_APP" ]; then
             mkdir -p Payload
-            cp -r "$ARCHIVE_APP" Payload/
+            cp -r "$BUILD_APP" Payload/
             zip -r Kirikiroid2.ipa Payload/
-            echo "IPA created from: $ARCHIVE_APP"
+            echo "IPA created from: $BUILD_APP"
             ls -la Kirikiroid2.ipa
           else
             echo "ERROR: No .app found anywhere"
