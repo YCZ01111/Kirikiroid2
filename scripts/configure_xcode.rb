@@ -56,7 +56,15 @@ preprocessor_defs = [
   'USE_UNICODE_FSTRING',
   'CC_TARGET_PLATFORM=CC_PLATFORM_IOS',
   'NDEBUG',
-  'COCOS2DX_VERSION=0x00030600'
+  'COCOS2DX_VERSION=0x00030600',
+  'HAVE_CONFIG_H=1',
+  'SIZEOF_INT=4',
+  'SIZEOF_SHORT=2',
+  'SIZEOF_LONG=8',
+  'SIZEOF_VOIDP=8',
+  'SIZEOF_LONG_LONG=8',
+  'SIZEOF_SIZE_T=8',
+  'SIZEOF_OFF_T=8'
 ]
 
 ios_target.build_configurations.each do |config|
