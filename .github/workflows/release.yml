@@ -171,10 +171,16 @@ jobs:
           set -e
           echo "Build exit code: $BUILD_EXIT"
           if [ $BUILD_EXIT -ne 0 ]; then
-            echo "=== BUILD ERRORS ==="
-            grep -E "error:|fatal:" xcodebuild.log | head -80 || true
-            echo "=== LAST 80 LINES ==="
-            tail -80 xcodebuild.log
+            {
+              echo "## Build Errors"
+              echo '```'
+              grep -E "error:|fatal:" xcodebuild.log | head -80 || echo "No error lines found"
+              echo '```'
+              echo "## Last 80 lines"
+              echo '```'
+              tail -80 xcodebuild.log
+              echo '```'
+            } >> $GITHUB_STEP_SUMMARY
           fi
           exit $BUILD_EXIT
 
