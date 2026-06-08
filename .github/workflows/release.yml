@@ -158,9 +158,7 @@ jobs:
           for f in regparse.c reggnu.c; do
             if [ -f "$f" ] && ! grep -q '#include <stdlib.h>' "$f"; then
               echo "Adding #include <stdlib.h> to $f"
-              sed -i '' '1i\
-#include <stdlib.h>
-' "$f"
+              echo '#include <stdlib.h>' | cat - "$f" > "$f.tmp" && mv "$f.tmp" "$f"
             fi
           done
 
