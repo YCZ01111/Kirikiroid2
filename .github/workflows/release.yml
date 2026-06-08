@@ -188,6 +188,21 @@ jobs:
           fi
           exit $BUILD_EXIT
 
+      - name: Save build error info
+        if: failure()
+        run: |
+          cd build/Kirikiroid2/proj.ios_mac
+          {
+            echo "=== BUILD ERROR INFO ==="
+            echo "Date: $(date)"
+            echo ""
+            grep -E "error:|fatal:|scheme|not found|does not exist" xcodebuild.log | head -80 || echo "No error lines found"
+            echo ""
+            echo "=== LAST 150 LINES ==="
+            tail -150 xcodebuild.log
+          } > /tmp/build_errors.txt
+          cat /tmp/build_errors.txt
+
       - name: Upload build log
         if: failure()
         uses: actions/upload-artifact@v4
