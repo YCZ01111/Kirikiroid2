@@ -192,16 +192,24 @@ jobs:
         if: failure()
         run: |
           cd build/Kirikiroid2/proj.ios_mac
+          ERROR_FILE="$GITHUB_WORKSPACE/build_errors.txt"
           {
             echo "=== BUILD ERROR INFO ==="
             echo "Date: $(date)"
+            echo "Run: $GITHUB_RUN_NUMBER"
             echo ""
             grep -E "error:|fatal:|scheme|not found|does not exist" xcodebuild.log | head -80 || echo "No error lines found"
             echo ""
             echo "=== LAST 150 LINES ==="
             tail -150 xcodebuild.log
-          } > /tmp/build_errors.txt
-          cat /tmp/build_errors.txt
+          } > "$ERROR_FILE"
+          cat "$ERROR_FILE"
+          cd "$GITHUB_WORKSPACE"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add build_errors.txt
+          git commit -m "auto: update build_errors.txt from run #$GITHUB_RUN_NUMBER" || true
+          git push origin trae || true
 
       - name: Upload build log
         if: failure()
