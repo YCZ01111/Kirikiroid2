@@ -1,37 +1,21 @@
 === BUILD ERROR INFO ===
-Date: Mon Jun  8 08:00:09 UTC 2026
-Run: 77
+Date: Mon Jun  8 08:19:55 UTC 2026
+Run: 79
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:104:31: error: call to undeclared library function 'free' with type 'void (void *)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:115:23: error: call to undeclared library function 'malloc' with type 'void *(unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:283:18: error: call to undeclared library function 'realloc' with type 'void *(void *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:128:21: error: call to undeclared library function 'malloc' with type 'void *(unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1601:12: error: use of undeclared identifier 'SIZEOF_INT'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1629:12: error: use of undeclared identifier 'SIZEOF_INT'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1657:12: error: use of undeclared identifier 'SIZEOF_INT'
 
 === LAST 150 LINES ===
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/saveStruct.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncbind.hpp:5:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:186:52: note: expanded from macro 'MCIMPL_CLASS_REF'
-#define MCIMPL_CLASS_REF /*                */ClassT::
-                                                   ^~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/saveStruct.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncbind.hpp:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:225:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_foreach.h:220:1: note: '*' token is here
-FOREACH
-^~~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/saveStruct.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncbind.hpp:5:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:222:2: note: expanded from macro 'FOREACH'
-        METHODRESOLVER_SPECIALIZATION(    MCIMPL_CLASS,  MCIMPL_CONST);    \
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:157:73: note: expanded from macro 'METHODRESOLVER_SPECIALIZATION'
-                        typedef             ResultT                   (cls ## _REF           *MethodType)( FOREACH_COMMA_EXT(MCIMPL_METH_ARGS_EXT)) cnst ## _REF;        \
-                                                                                             ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/saveStruct.cpp:29:33: warning: implicit conversion loses integer precision: 'unsigned long' to 'tjs_uint' (aka 'unsigned int') [-Wshorten-64-to-32]
-        stream->Write(s, TJS_strlen(s) * sizeof(*s));
-                ~~~~~    ~~~~~~~~~~~~~~^~~~~~~~~~~~
-212 warnings generated.
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/sjis.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/enc/sjis.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/9794063539297520673/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/sjis.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/sjis.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/enc/sjis.c -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/sjis.o
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/enc/sjis.c:126:12: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return p - buf;
+  ~~~~~~ ~~^~~~~
+1 warning generated.
 
 CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regversion.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regversion.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
@@ -69,87 +53,102 @@ CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegy
 CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regparse.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/9794063539297520673/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regparse.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regparse.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regparse.o
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:104:31: error: call to undeclared library function 'free' with type 'void (void *)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-    if (IS_NOT_NULL(bbuf->p)) xfree(bbuf->p);
-                              ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:107:21: note: expanded from macro 'xfree'
-#define xfree       free
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:104:31: note: include the header <stdlib.h> or explicitly provide a declaration for 'free'
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:107:21: note: expanded from macro 'xfree'
-#define xfree       free
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:115:23: error: call to undeclared library function 'malloc' with type 'void *(unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-  *rto = to = (BBuf* )xmalloc(sizeof(BBuf));
-                      ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:104:21: note: expanded from macro 'xmalloc'
-#define xmalloc     malloc
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:115:23: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:104:21: note: expanded from macro 'xmalloc'
-#define xmalloc     malloc
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:221:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:222:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
   int len = end - src;
       ~~~   ~~~~^~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:235:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:236:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
   slen = end - s;
        ~ ~~~~^~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:283:18: error: call to undeclared library function 'realloc' with type 'void *(void *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-    r = (UChar* )xrealloc(dest, capa + 1);
-                 ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:105:21: note: expanded from macro 'xrealloc'
-#define xrealloc    realloc
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:283:18: note: include the header <stdlib.h> or explicitly provide a declaration for 'realloc'
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:30:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:105:21: note: expanded from macro 'xrealloc'
-#define xrealloc    realloc
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:745:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:746:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
     e->name_len   = name_end - name;
                   ~ ~~~~~~~~~^~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1422:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1423:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
   int addlen = end - s;
       ~~~~~~   ~~~~^~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1425:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1426:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
     int len  = NSTR(node)->end - NSTR(node)->s;
         ~~~    ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1601:12: error: use of undeclared identifier 'SIZEOF_INT'
+      if ((INT_MAX_LIMIT - val) / 10UL < num)
+           ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:280:43: note: expanded from macro 'INT_MAX_LIMIT'
+#define INT_MAX_LIMIT           ((1UL << (SIZEOF_INT * 8 - 1)) - 1)
+                                          ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1629:12: error: use of undeclared identifier 'SIZEOF_INT'
+      if ((INT_MAX_LIMIT - val) / 16UL < num)
+           ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:280:43: note: expanded from macro 'INT_MAX_LIMIT'
+#define INT_MAX_LIMIT           ((1UL << (SIZEOF_INT * 8 - 1)) - 1)
+                                          ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1632:24: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+      num = (num << 4) + XDIGITVAL(enc,c);
+          ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1657:12: error: use of undeclared identifier 'SIZEOF_INT'
+      if ((INT_MAX_LIMIT - val) / 8UL < num)
+           ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:280:43: note: expanded from macro 'INT_MAX_LIMIT'
+#define INT_MAX_LIMIT           ((1UL << (SIZEOF_INT * 8 - 1)) - 1)
+                                          ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1656:13: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+      val = ODIGITVAL(c);
+          ~ ^~~~~~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:283:27: note: expanded from macro 'ODIGITVAL'
+#define ODIGITVAL(code)   DIGITVAL(code)
+                          ^~~~~~~~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:282:35: note: expanded from macro 'DIGITVAL'
+#define DIGITVAL(code)    ((code) - '0')
+                           ~~~~~~~^~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1722:25: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  for (low = 0, bound = n; low < bound; ) {
+                      ~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1730:28: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  for (high = low, bound = n; high < bound; ) {
+                         ~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1752:31: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    int size = (n - high) * 2 * SIZE_CODE_POINT;
+        ~~~~   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1798:3: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  GET_CODE_POINT(n, data);
+  ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.h:32:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:578:41: note: expanded from macro 'GET_CODE_POINT'
+#define GET_CODE_POINT(code,p)   code = *((OnigCodePoint* )(p))
+                                      ~ ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:1973:52: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+      r = and_code_range1(pbuf, from1, to1, data2, n2);
+          ~~~~~~~~~~~~~~~                          ^~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:2472:32: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+      c = conv_backslash_value(c, env);
+          ~~~~~~~~~~~~~~~~~~~~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:2478:10: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  return c;
+  ~~~~~~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:2927:15: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+  tok->u.c  = c;
+            ~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:2944:16: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    tok->u.c = c;
+             ~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:3154:16: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    tok->u.c = c;
+             ~ ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c:3590:16: warning: implicit conversion loses integer precision: 'OnigCodePoint' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    tok->u.c = c;
+             ~ ^
+18 warnings and 3 errors generated.
 
 CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/reggnu.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/9794063539297520673/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/reggnu.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/reggnu.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/reggnu.o
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:57:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
-    return p - (UChar* )string;
-    ~~~~~~ ~~^~~~~~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:128:21: error: call to undeclared library function 'malloc' with type 'void *(unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-  *reg = (regex_t* )xmalloc(sizeof(regex_t));
-                    ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:30:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:104:21: note: expanded from macro 'xmalloc'
-#define xmalloc     malloc
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:128:21: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c:30:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regint.h:104:21: note: expanded from macro 'xmalloc'
-#define xmalloc     malloc
-                    ^
-1 warning and 1 error generated.
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regext.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regext.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/9794063539297520673/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regext.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regext.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regext.c -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regext.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -157,5 +156,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/reggnu.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/reggnu.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/regparse.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/vendor/onig/regparse.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
