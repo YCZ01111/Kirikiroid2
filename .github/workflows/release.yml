@@ -152,8 +152,12 @@ jobs:
       - name: Build IPA (unsigned)
         run: |
           cd build/Kirikiroid2/proj.ios_mac
-          echo "Available schemes:"
-          xcodebuild -project Kirikiroid2.xcodeproj -list || true
+          echo "=== Available schemes ==="
+          xcodebuild -project Kirikiroid2.xcodeproj -list 2>&1 || true
+          echo "=== Available targets ==="
+          xcodebuild -project Kirikiroid2.xcodeproj -targets 2>&1 || true
+          echo "=== Checking SDK ==="
+          xcodebuild -showBuildSettings -sdk iphoneos 2>&1 | head -20 || true
           SCHEME="Kirikiroid2 iOS"
           echo "Using scheme: $SCHEME"
           set +e
@@ -174,11 +178,11 @@ jobs:
             {
               echo "## Build Errors"
               echo '```'
-              grep -E "error:|fatal:" xcodebuild.log | head -80 || echo "No error lines found"
+              grep -E "error:|fatal:|scheme|not found|does not exist" xcodebuild.log | head -80 || echo "No error lines found"
               echo '```'
-              echo "## Last 80 lines"
+              echo "## Last 100 lines"
               echo '```'
-              tail -80 xcodebuild.log
+              tail -100 xcodebuild.log
               echo '```'
             } >> $GITHUB_STEP_SUMMARY
           fi
