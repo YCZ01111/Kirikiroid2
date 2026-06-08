@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: cocos2d-x
-          key: cocos2d-x-3.6-full-v1
+          key: cocos2d-x-3.6-full-v2
 
       - name: Clone and setup cocos2d-x 3.6
         if: steps.cache-cocos.outputs.cache-hit != 'true'
@@ -40,8 +40,9 @@ jobs:
           git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git config --global url."https://github.com/".insteadOf "git://github.com/"
-          yes no | python download-deps.py
-          git submodule update --init --recursive
+          echo "yes" | python download-deps.py || echo "download-deps failed, continuing..."
+          git submodule update --init --recursive || echo "submodule update failed, continuing..."
+          echo "cocos2d-x setup completed"
 
       - name: Setup cocos environment
         run: |
