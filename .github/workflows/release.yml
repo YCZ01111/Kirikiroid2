@@ -150,6 +150,20 @@ jobs:
           cp -r cocos/kr2/Resources/* build/Kirikiroid2/Resources/
           cp -r cocos/kr2/cocosstudio/* build/Kirikiroid2/Resources/
 
+      - name: Patch Oniguruma for C99 compatibility
+        run: |
+          cd build/Kirikiroid2/Classes/vendor/onig
+          # Oniguruma v5.9.6 C files need explicit #include <stdlib.h> for C99+
+          # which disallows implicit function declarations (malloc/free/realloc)
+          for f in regparse.c reggnu.c; do
+            if [ -f "$f" ] && ! grep -q '#include <stdlib.h>' "$f"; then
+              echo "Adding #include <stdlib.h> to $f"
+              sed -i '' '1i\
+#include <stdlib.h>
+' "$f"
+            fi
+          done
+
       - name: Install xcodeproj gem
         run: gem install xcodeproj
 
