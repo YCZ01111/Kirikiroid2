@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: cocos2d-x
-          key: cocos2d-x-3.6-full-v3
+          key: cocos2d-x-3.6-full-v4
 
       - name: Clone and setup cocos2d-x 3.6
         if: steps.cache-cocos.outputs.cache-hit != 'true'
@@ -40,21 +40,14 @@ jobs:
           git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
           cd cocos2d-x
           git config --global url."https://github.com/".insteadOf "git://github.com/"
-          # Download 3rd-party dependencies directly (bypass download-deps.py which requires Python 2)
-          echo "Downloading 3rd-party dependencies (v3-deps-47)..."
-          curl -L --retry 3 -o v3-deps-47.zip "https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin/archive/v3-deps-47.zip"
-          unzip -q v3-deps-47.zip
-          # Copy external dependencies (the zip extracts to cocos2d-x-3rd-party-libs-bin-v3-deps-47/)
-          EXTRACTED_DIR=$(find . -maxdepth 1 -type d -name "cocos2d-x-3rd-party-libs-bin*" | head -1)
-          if [ -n "$EXTRACTED_DIR" ]; then
-            echo "Merging external dependencies from $EXTRACTED_DIR..."
-            rsync -a "$EXTRACTED_DIR"/ external/
-            rm -rf "$EXTRACTED_DIR"
-          else
-            echo "ERROR: Failed to extract 3rd-party dependencies"
-            exit 1
-          fi
-          rm -f v3-deps-47.zip
+          # Download 3rd-party dependencies by cloning the 3rd-party-libs-bin repo
+          echo "Cloning 3rd-party dependencies (v3-deps-47)..."
+          git clone --depth=1 --branch=v3-deps-47 https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin.git /tmp/3rd-party-deps
+          # Merge external dependencies into cocos2d-x/external/
+          echo "Merging external dependencies..."
+          mkdir -p external
+          rsync -a /tmp/3rd-party-deps/ external/
+          rm -rf /tmp/3rd-party-deps
           # Move fbx-conv to tools directory (as specified in config.json)
           if [ -d "external/fbx-conv" ]; then
             mkdir -p tools
