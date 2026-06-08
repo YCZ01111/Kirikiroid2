@@ -183,6 +183,7 @@ jobs:
             echo '#define HAVE_SYS_STAT_H 1' >> config.h
             echo '#define HAVE_ALLOCA_H 1' >> config.h
             echo '#define HAVE_ALLOCA 1' >> config.h
+            echo '#define HAVE_STRINGIZE 1' >> config.h
             echo '#endif' >> config.h
             echo "Created config.h for Oniguruma"
           fi
