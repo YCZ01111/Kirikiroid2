@@ -9,6 +9,7 @@ ios_target = project.targets.find { |t| t.name.include?('iOS') } || project.targ
 puts "Configuring target: #{ios_target.name}"
 
 header_search_paths = [
+  '$(SRCROOT)/../Classes',
   '$(SRCROOT)/../Classes/base',
   '$(SRCROOT)/../Classes/base/win32',
   '$(SRCROOT)/../Classes/environ',
