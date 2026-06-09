@@ -22,6 +22,8 @@ end
 
 added = 0
 Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
+  # Skip platform-specific directories not needed for iOS
+  next if file.include?('/win32/') || file.include?('/ARM/') || file.include?('/android/') || file.include?('/sdl/')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
