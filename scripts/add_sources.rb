@@ -34,6 +34,10 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('XP3ArchiveRepack')
   # Skip VorbisWaveDecoder (depends on libvorbis not available on iOS)
   next if file.include?('VorbisWaveDecoder')
+  # Skip UtilStreams (depends on libarchive and 7zip SDK)
+  next if file.include?('UtilStreams')
+  # Skip UIExtension (depends on cocostudio not in cocos2d-x 3.6)
+  next if file.include?('UIExtension')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
