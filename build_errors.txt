@@ -1,6 +1,6 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 03:01:52 UTC 2026
-Run: 83
+Date: Tue Jun  9 03:10:40 UTC 2026
+Run: 84
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:15:10: fatal error: 'movie/ffmpeg/KRMovieLayer.h' file not found
