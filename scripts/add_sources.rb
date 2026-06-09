@@ -24,6 +24,27 @@ added = 0
 Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   # Skip platform-specific directories not needed for iOS
   next if file.include?('/win32/') || file.include?('/ARM/') || file.include?('/android/') || file.include?('/sdl/') || file.include?('/linux/')
+  # Exception: include specific win32 files needed for iOS build
+  ios_needed_win32 = [
+    'LayerBitmapImpl.cpp',
+    'NativeEventQueue.cpp',
+    'SystemImpl.cpp',
+    'ScriptMgnImpl.cpp',
+    'PluginImpl.cpp',
+    'StorageImpl.cpp',
+    'EventImpl.cpp',
+    'TVPTimer.cpp',
+    'BasicDrawDevice.cpp',
+    'NativeEventQueue.h',
+    'LayerBitmapImpl.h',
+    'BitmapInfomation.h',
+    'TVPTimer.h',
+    'BasicDrawDevice.h',
+  ]
+  if file.include?('/win32/')
+    is_needed = ios_needed_win32.any? { |f| file.end_with?('/' + f) || file.end_with?('/' + File.basename(f)) }
+    next unless is_needed
+  end
   # Skip FFmpeg-dependent movie code (no FFmpeg on iOS)
   next if file.include?('/ffmpeg/')
   next if file.include?('/movie/krmovie')
@@ -55,6 +76,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('FFWaveDecoder')
   # Skip 7zArchive (depends on 7zip SDK not available on iOS)
   next if file.include?('7zArchive')
+  # Skip XP3RepackForm (depends on XP3ArchiveRepack which needs 7zip SDK)
+  next if file.include?('XP3RepackForm')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
