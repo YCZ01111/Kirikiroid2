@@ -1,81 +1,18 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 05:10:44 UTC 2026
-Run: 97
+Date: Tue Jun  9 05:17:25 UTC 2026
+Run: 98
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2637:5: error: member initializer 'img_convert_ctx' does not name a non-static data member or base class
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/FileSelectorForm.h:3:10: fatal error: 'GUI/CCScrollView/CCTableView.h' file not found
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:78:3: error: use of undeclared identifier 'dispatchSelectChangedEvent'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:504:15: error: no member named 'setScrollBarEnabled' in 'cocos2d::ui::ScrollView'
 
 === LAST 150 LINES ===
-        virtual iTVPTexture2D* CreateTexture2D(tTJSBinaryStream* s) {
-                               ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:207:25: note: overridden virtual function is here
-        virtual iTVPTexture2D* CreateTexture2D(TJS::tTJSBinaryStream* s) = 0; // for compressed or special image format
-                               ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2705:22: warning: 'GetName' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual const char *GetName() { return "Software"; }
-                            ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:219:22: note: overridden virtual function is here
-        virtual const char *GetName() = 0;
-                            ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2707:15: warning: 'IsSoftware' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool IsSoftware() { return true; }
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:218:15: note: overridden virtual function is here
-        virtual bool IsSoftware() { return false; }
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2709:15: warning: 'GetRenderStat' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool GetRenderStat(unsigned int &drawCount, uint64_t &vmemsize) {
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:221:15: note: overridden virtual function is here
-        virtual bool GetRenderStat(unsigned int &drawCount, uint64_t &vmemsize) = 0;
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2716:15: warning: 'GetTextureStat' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool GetTextureStat(iTVPTexture2D *texture, uint64_t &vmemsize) {
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:222:15: note: overridden virtual function is here
-        virtual bool GetTextureStat(iTVPTexture2D *texture, uint64_t &vmemsize) { return false; }
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2725:14: warning: 'EnumParameterID' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual int EnumParameterID(const char *name) {
-                    ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:230:14: note: overridden virtual function is here
-        virtual int EnumParameterID(const char *name) { return -1; }
-                    ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2732:15: warning: 'SetParameterInt' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void SetParameterInt(int id, int Value) {
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:232:15: note: overridden virtual function is here
-        virtual void SetParameterInt(int id, int Value) {};
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2820:15: warning: 'OperateRect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void OperateRect(iTVPRenderMethod* method,
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:239:15: note: overridden virtual function is here
-        virtual void OperateRect(iTVPRenderMethod* method, iTVPTexture2D *tar, iTVPTexture2D *reftar,
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:4274:15: warning: 'OperatePerspective' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void OperatePerspective(iTVPRenderMethod* method, int nQuads,
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:1:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.h:248:15: note: overridden virtual function is here
         virtual void OperatePerspective(iTVPRenderMethod* method, int nQuads, iTVPTexture2D *target,
                      ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:2637:5: error: member initializer 'img_convert_ctx' does not name a non-static data member or base class
-                , img_convert_ctx(nullptr)
-                  ^~~~~~~~~~~~~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:3279:82: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:3281:82: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
                         iTVPTexture2D *tmp = new tTVPSoftwareTexture2D_static(dst_img.ptr(0), dst_img.step1(0), dst_size.width, dst_size.height, TVPTextureFormat::RGBA);
                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                 ~~~~~~~~^~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:4358:83: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/RenderManager.cpp:4360:83: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
                                 iTVPTexture2D *tmp = new tTVPSoftwareTexture2D_static(dst_img.ptr(0), dst_img.step1(0), dst_size.width, dst_size.height, TVPTextureFormat::RGBA);
                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                 ~~~~~~~~^~~~~~~~
 
@@ -144,10 +81,73 @@ In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroi
     virtual void insertText(const char * text, size_t len) {CC_UNUSED_PARAM(text);CC_UNUSED_PARAM(len);}
                  ^
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:14:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/FileSelectorForm.h:3:10: fatal error: 'GUI/CCScrollView/CCTableView.h' file not found
-#include "GUI/CCScrollView/CCTableView.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2 warnings and 1 error generated.
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/FileSelectorForm.h:173:27: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+                        _owner->_onCellClicked(getIdx());
+                                ~~~~~~~~~~~~~~ ^~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/FileSelectorForm.h:177:28: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+                        _owner->onCellLongPress(getIdx());
+                                ~~~~~~~~~~~~~~~ ^~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Platform.h:2:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:78:3: error: use of undeclared identifier 'dispatchSelectChangedEvent'
+                dispatchSelectChangedEvent(newstat);
+                ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:504:15: error: no member named 'setScrollBarEnabled' in 'cocos2d::ui::ScrollView'
+        _scrollview->setScrollBarEnabled(false);
+        ~~~~~~~~~~~  ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:543:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+        sprintf(buf, "%d <=> %d", k, v);
+        ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:42:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCRefPtr.h:31:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/ccMacros.h:35:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCConsole.h:42:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/thread:92:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__thread/formatter.h:15:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__format/concepts.h:17:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__format/format_parse_context.h:16:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/string_view:221:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__string/char_traits.h:25:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/cstdio:101:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/stdio.h:108:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/stdio.h:180:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/PreferenceForm.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:41:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCRef.h:29:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCPlatformMacros.h:34:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCPlatformDefine.h:35:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/ios/CCPlatformDefine-ios.h:31:
+In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/assert.h:42:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+6 warnings and 2 errors generated.
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PluginIntf.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/PluginIntf.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PluginIntf.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PluginIntf.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/PluginIntf.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PluginIntf.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/PluginIntf.cpp:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Platform.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/linux/Platform.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Platform.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Platform.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/linux/Platform.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Platform.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
