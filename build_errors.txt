@@ -1,49 +1,92 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 07:57:11 UTC 2026
-Run: 114
+Date: Tue Jun  9 08:03:34 UTC 2026
+Run: 115
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:60:43: error: no member named 'path' in 'cocos2d::FileUtils'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:89:23: error: out-of-line definition of 'isFileExistInternal' does not match any declaration in 'cocos2d::CustomFileUtils'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:243:43: error: no member named 'path' in 'cocos2d::FileUtils'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp:34:10: fatal error: 'libavutil/avstring.h' file not found
 
 === LAST 150 LINES ===
-        sprintf(tmp, "%.2fMB", (float)((double)totalSize / (1024.f * 1024.f)));
-        ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/DebugViewLayerForm.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:42:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCRefPtr.h:31:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/ccMacros.h:35:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCConsole.h:42:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/thread:92:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__thread/formatter.h:15:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__format/concepts.h:17:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__format/format_parse_context.h:16:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/string_view:221:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/__string/char_traits.h:25:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/cstdio:101:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/c++/v1/stdio.h:108:
-/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/stdio.h:180:1: note: 'sprintf' has been explicitly marked deprecated here
-__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
-^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/DebugViewLayerForm.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:41:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCRef.h:29:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCPlatformMacros.h:34:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCPlatformDefine.h:35:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/ios/CCPlatformDefine-ios.h:31:
-In file included from /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/assert.h:42:
-/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'
-        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
-                                                      ^
-85 warnings generated.
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.h:96:28: warning: 'GetWidth' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tjs_error TJS_INTF_METHOD GetWidth(/*in*/tjs_int *width);
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.h:16:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/transhandler.h:94:36: note: overridden virtual function is here
+        virtual tjs_error TJS_INTF_METHOD GetWidth(/*out*/tjs_int *width) = 0;
+                                          ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:20:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.h:97:28: warning: 'GetHeight' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tjs_error TJS_INTF_METHOD GetHeight(/*in*/tjs_int *height);
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.h:16:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/transhandler.h:96:36: note: overridden virtual function is here
+        virtual tjs_error TJS_INTF_METHOD GetHeight(/*out*/tjs_int *height) = 0;
+                                          ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:1017:17: warning: 'GetTargetLayerType' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                tTVPLayerType GetTargetLayerType();
+                              ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:5:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:18:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/drawable.h:110:24: note: overridden virtual function is here
+        virtual tTVPLayerType GetTargetLayerType() = 0;
+                              ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:195:28: warning: 'Construct' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tjs_error TJS_INTF_METHOD Construct(tjs_int numparams, tTJSVariant **param,
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:3:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.h:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsNative.h:46:36: note: overridden virtual function is here
+        virtual tjs_error TJS_INTF_METHOD Construct(tjs_int numparams,
+                                          ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:197:23: warning: 'Invalidate' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD Invalidate();
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:3:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.h:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsNative.h:48:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD Invalidate() {;}
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:208:23: warning: 'OnCompact' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD OnCompact(tjs_int level); // method from tTVPCompactEventCallbackIntf
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h
+:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/EventIntf.h:276:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD OnCompact(tjs_int level) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:936:20: warning: 'GetDrawTargetBitmap' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tTVPBaseTexture * GetDrawTargetBitmap(const tTVPRect &rect,
+                          ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:5:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:18:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/drawable.h:104:28: note: overridden virtual function is here
+        virtual tTVPBaseTexture * GetDrawTargetBitmap(const tTVPRect &rect,
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:8:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:938:16: warning: 'GetTargetLayerType' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tTVPLayerType GetTargetLayerType();
+                      ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/BitmapIntf.cpp:5:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:18:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/drawable.h:110:24: note: overridden virtual function is here
+        virtual tTVPLayerType GetTargetLayerType() = 0;
+                              ^
+13 warnings generated.
 
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/DebugIntf.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/DebugIntf.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BinaryStream.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/BinaryStream.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/DebugIntf.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/DebugIntf.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/DebugIntf.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/DebugIntf.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/DebugIntf.cpp:11:
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BinaryStream.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BinaryStream.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/BinaryStream.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BinaryStream.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/BinaryStream.cpp:11:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
@@ -52,103 +95,58 @@ In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroi
                 ~~~~~~ ^~~~~~~~
 1 warning generated.
 
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/CustomFileUtils.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm normal arm64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/af3fcb34312c57c0f52879cdce924b91-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/16491424669029279840/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/CustomFileUtils.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/CustomFileUtils.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/CustomFileUtils.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:6:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/apple/CCFileUtils-apple.h:53:22: warning: 'getValueMapFromData' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-    virtual ValueMap getValueMapFromData(const char* filedata, int filesize);
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:177:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCFileUtils.h:326:22: note: overridden virtual function is here
-    virtual ValueMap getValueMapFromData(const char* filedata, int filesize);
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:39:15: warning: 'isFileExist' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool isFileExist(const std::string& strFilePath) const;
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:177:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCFileUtils.h:344:18: note: overridden virtual function is here
-    virtual bool isFileExist(const std::string& filename) const;
-                 ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:60:43: error: no member named 'path' in 'cocos2d::FileUtils'
-        file = unzOpen(FileUtils::getInstance()->path.c_str());
-                       ~~~~~~~~~~~~~~~~~~~~~~~~  ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:86:27: warning: 'getFileData' is deprecated [-Wdeprecated-declarations]
-        return FileUtilsInherit::getFileData(filename, mode, size);
-                                 ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:177:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCFileUtils.h:111:5: note: 'getFileData' has been explicitly marked deprecated here
-    CC_DEPRECATED_ATTRIBUTE virtual unsigned char* getFileData(const std::string& filename, const char* mode, ssize_t *size);
-    ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:41:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCRef.h:29:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/platform/CCPlatformMacros.h:287:52: note: expanded from macro 'CC_DEPRECATED_ATTRIBUTE'
-    #define CC_DEPRECATED_ATTRIBUTE __attribute__((deprecated))
-                                                   ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:89:23: error: out-of-line definition of 'isFileExistInternal' does not match any declaration in 'cocos2d::CustomFileUtils'
-bool CustomFileUtils::isFileExistInternal(const std::string& strFilePath) const
-                      ^~~~~~~~~~~~~~~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:163:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/win32/StorageImpl.h:14:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/StorageIntf.h:14:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsNative.h:14:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsObjectExtendable.h:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsObject.h:16:
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:4:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.h:5:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
                 return RefCount;
                 ~~~~~~ ^~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:203:19: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-        while ((readed = fread(&buffer.front(), 1, bufSize, ffrom))) {
-                       ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm:243:43: error: no member named 'path' in 'cocos2d::FileUtils'
-        file = unzOpen(FileUtils::getInstance()->path.c_str());
-                       ~~~~~~~~~~~~~~~~~~~~~~~~  ^
-5 warnings and 3 errors generated.
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ConsoleWindow.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ConsoleWindow.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ConsoleWindow.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ConsoleWindow.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.h:7:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
-                return RefCount;
-                ~~~~~~ ^~~~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp:2:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:6:
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/MainScene.h:81:15: warning: 'deleteBackward' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
         virtual void deleteBackward();
                      ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:1:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:61:
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCIMEDelegate.h:125:18: note: overridden virtual function is here
     virtual void deleteBackward() {}
                  ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp:2:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:6:
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/MainScene.h:82:15: warning: 'insertText' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
         virtual void insertText(const char * text, size_t len);
                      ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/ConsoleWindow.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:1:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:61:
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCIMEDelegate.h:118:18: note: overridden virtual function is here
     virtual void insertText(const char * text, size_t len) {CC_UNUSED_PARAM(text);CC_UNUSED_PARAM(len);}
                  ^
 
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ComplexRect.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/ComplexRect.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ComplexRect.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ComplexRect.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/ComplexRect.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/ComplexRect.o
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp:34:10: fatal error: 'libavutil/avstring.h' file not found
+#include <libavutil/avstring.h>
+         ^~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/AppDelegate.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/AppDelegate.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.o
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppController.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/AppController.mm normal arm64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/af3fcb34312c57c0f52879cdce924b91-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/16491424669029279840/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppController.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppController.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/AppController.mm -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppController.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -156,5 +154,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/CustomFileUtils.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/CustomFileUtils.mm normal arm64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
