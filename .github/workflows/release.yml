@@ -238,18 +238,12 @@ jobs:
         run: |
           cd build/Kirikiroid2/proj.ios_mac/ios
           # The project uses TVPAppDelegate, not AppDelegate
-          # Use Python for precise replacement (avoid replacing #include directives)
-          python3 -c "
-          import re
-          with open('AppController.mm', 'r') as f:
-              content = f.read()
-          # Add import for TVPAppDelegate header
-          content = content.replace('#import \"AppDelegate.h\"', '#import \"AppDelegate.h\"\n#import \"../../Classes/environ/cocos2d/AppDelegate.h\"')
-          # Replace AppDelegate class references but not in #import/#include or filenames
-          content = re.sub(r'(?<![#\w./\" ])\bAppDelegate\b(?!\.h)', 'TVPAppDelegate', content)
-          with open('AppController.mm', 'w') as f:
-              f.write(content)
-          "
+          # Simple approach: replace all AppDelegate, then fix the #import back
+          sed -i '' 's/AppDelegate/TVPAppDelegate/g' AppController.mm
+          # Fix the #import that was incorrectly changed
+          sed -i '' 's/#import "TVPAppDelegate.h"/#import "AppDelegate.h"/g' AppController.mm
+          # Add import for our AppDelegate header (which defines TVPAppDelegate)
+          sed -i '' 's/#import "AppDelegate.h"/#import "AppDelegate.h"\n#import "..\/..\/Classes\/environ\/cocos2d\/AppDelegate.h"/g' AppController.mm
 
       - name: Install xcodeproj gem
         run: gem install xcodeproj
