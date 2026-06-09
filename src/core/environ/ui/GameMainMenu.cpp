@@ -112,7 +112,7 @@ bool TVPGameMainMenu::init() {
 	});
 
 	reader.findWidget("btn_exit")->addClickEventListener([this](Ref*){
-		Application->PostUserMessage([](){
+		::Application->PostUserMessage([](){
 			TVPGetActiveWindow()->Close();
 		});
 		shrink();
