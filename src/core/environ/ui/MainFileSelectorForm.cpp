@@ -205,7 +205,7 @@ void TVPMainFileSelectorForm::onCellClicked(int idx) {
 		TVPMainScene::GetInstance()->addChild(player, 10);// pushUIForm(player);
 		player->PlayFile(info.FullPath.c_str());
 #endif
-	} else if (archiveType && FileUtils::getInstance()->getExtension(info.NameForCompare) == ".skin") {
+	} else if (archiveType && info.NameForCompare.size() >= 5 && info.NameForCompare.substr(info.NameForCompare.size() - 5) == ".skin") {
 		// maybe skin
 		if (TVPSkinManager::Check(info.FullPath)) {
 			std::vector<ttstr> btns;
