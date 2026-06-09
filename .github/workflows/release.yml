@@ -234,6 +234,12 @@ jobs:
           sed -i '' 's/bool CustomFileUtils::isFileExistInternal/bool CustomFileUtils::isFileExist/g' CustomFileUtils.mm
           sed -i '' 's/FileUtilsInherit::isFileExistInternal(strFilePath)/FileUtilsInherit::isFileExist(strFilePath)/g' CustomFileUtils.mm
 
+      - name: Patch AppController for AppDelegate class name
+        run: |
+          cd build/Kirikiroid2/proj.ios_mac/ios
+          # The project uses TVPAppDelegate, not AppDelegate
+          sed -i '' 's/AppDelegate/TVPAppDelegate/g' AppController.mm
+
       - name: Install xcodeproj gem
         run: gem install xcodeproj
 

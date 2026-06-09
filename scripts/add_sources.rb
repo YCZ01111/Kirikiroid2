@@ -53,6 +53,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.end_with?('/FreeType.cpp')
   # Skip FFWaveDecoder (depends on FFmpeg/libavutil not available on iOS)
   next if file.include?('FFWaveDecoder')
+  # Skip 7zArchive (depends on 7zip SDK not available on iOS)
+  next if file.include?('7zArchive')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
