@@ -31,6 +31,7 @@ header_search_paths = [
   '$(SRCROOT)/../Classes/movie',
   '$(SRCROOT)/../Classes/vendor/onig',
   '$(SRCROOT)/../Classes/vendor/lz4',
+  '$(SRCROOT)/../Classes/vendor',
   '$(SRCROOT)/../cocos2d',
   '$(SRCROOT)/../cocos2d/cocos',
   '$(SRCROOT)/../cocos2d/cocos/base',
