@@ -1,11 +1,17 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 03:10:40 UTC 2026
-Run: 84
+Date: Tue Jun  9 03:20:39 UTC 2026
+Run: 85
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:15:10: fatal error: 'movie/ffmpeg/KRMovieLayer.h' file not found
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/Demux.h:4:10: fatal error: 'libavcodec/avcodec.h' file not found
 
 === LAST 150 LINES ===
+^~~~~~~~~~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:10:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncbind.hpp:5:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:186:52: note: expanded from macro 'MCIMPL_CLASS_REF'
+#define MCIMPL_CLASS_REF /*                */ClassT::
+                                                   ^~
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:10:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncbind.hpp:5:
 In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:225:
@@ -128,25 +134,19 @@ In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroi
 /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/ncbind/ncb_invoke.hpp:157:73: note: expanded from macro 'METHODRESOLVER_SPECIALIZATION'
                         typedef             ResultT                   (cls ## _REF           *MethodType)( FOREACH_COMMA_EXT(MCIMPL_METH_ARGS_EXT)) cnst ## _REF;        \
                                                                                              ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:15:10: fatal error: 'movie/ffmpeg/KRMovieLayer.h' file not found
-#include "movie/ffmpeg/KRMovieLayer.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/layerExMovie.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/KRMovieLayer.h:2:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/KRMoviePlayer.h:3:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/VideoPlayer.h:4:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/StreamInfo.h:3:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/Demux.h:4:10: fatal error: 'libavcodec/avcodec.h' file not found
+#include "libavcodec/avcodec.h"
+         ^~~~~~~~~~~~~~~~~~~~~~
 223 warnings and 1 error generated.
 
 CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krmovie.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/krmovie.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krmovie.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krmovie.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/krmovie.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krmovie.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/krmovie.cpp:19:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
-                return RefCount;
-                ~~~~~~ ^~~~~~~~
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krffmpeg.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/krffmpeg.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krffmpeg.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krffmpeg.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/movie/ffmpeg/krffmpeg.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/krffmpeg.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
