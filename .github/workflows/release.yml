@@ -140,6 +140,12 @@ jobs:
 
           cp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/
 
+          # Copy iOS-specific stub implementations
+          mkdir -p $DEST/ios
+          cp src/core/ios/LayerBitmapImpl.cpp $DEST/ios/
+          cp src/core/ios/BasicDrawDeviceStub.cpp $DEST/ios/
+          cp src/core/ios/MenuItemImplStub.cpp $DEST/ios/
+
           mkdir -p $DEST/vendor/onig/enc
           cp vendor/onig/regcomp.c vendor/onig/regexec.c vendor/onig/regparse.c vendor/onig/regenc.c \
              vendor/onig/regerror.c vendor/onig/regext.c vendor/onig/reggnu.c vendor/onig/regsyntax.c \
@@ -258,53 +264,6 @@ jobs:
         run: |
           ruby scripts/configure_xcode.rb \
             build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj
-
-      - name: Create iOS platform stubs
-        run: |
-          STUBS_DIR="build/Kirikiroid2/Classes/ios_stubs"
-          mkdir -p "$STUBS_DIR"
-
-          # Copy needed win32 headers that don't depend on Windows API
-          cp src/core/visual/win32/BitmapInfomation.h "$STUBS_DIR/"
-          cp src/core/visual/win32/BitmapBitsAlloc.h "$STUBS_DIR/"
-          cp src/core/visual/win32/LayerBitmapImpl.h "$STUBS_DIR/"
-          cp src/core/visual/win32/MenuItemImpl.h "$STUBS_DIR/"
-          cp src/core/utils/win32/TVPTimer.h "$STUBS_DIR/"
-          cp src/core/visual/win32/BasicDrawDevice.h "$STUBS_DIR/"
-
-          # Copy BitmapBitsAlloc.cpp (no Windows deps)
-          cp src/core/visual/win32/BitmapBitsAlloc.cpp "$STUBS_DIR/"
-
-          # Copy MenuItemImpl.cpp and patch it
-          cp src/core/visual/win32/MenuItemImpl.cpp "$STUBS_DIR/"
-          sed -i '' 's/#include "MenuItemImpl.h"/#include "MenuItemImpl.h"\n#include "tjsCommHead.h"/g' "$STUBS_DIR/MenuItemImpl.cpp"
-
-          # Copy TVPTimer.cpp and patch it
-          cp src/core/utils/win32/TVPTimer.cpp "$STUBS_DIR/"
-          sed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/TVPTimer.cpp"
-          sed -i '' 's/#include <mmsystem.h>/\/\/ #include <mmsystem.h>/g' "$STUBS_DIR/TVPTimer.cpp"
-
-          # Copy BasicDrawDevice.cpp and patch it
-          cp src/core/visual/win32/BasicDrawDevice.cpp "$STUBS_DIR/"
-          sed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/BasicDrawDevice.cpp"
-
-          # Copy LayerBitmapImpl.cpp and patch Windows-specific includes
-          cp src/core/visual/win32/LayerBitmapImpl.cpp "$STUBS_DIR/"
-          sed -i '' 's/#include "visual\/FreeType.h"/\/\/ #include "visual\/FreeType.h"/g' "$STUBS_DIR/LayerBitmapImpl.cpp"
-          sed -i '' 's/#include "FreeTypeFontRasterizer.h"/\/\/ #include "FreeTypeFontRasterizer.h"/g' "$STUBS_DIR/LayerBitmapImpl.cpp"
-
-          # Copy NativeEventQueue.cpp
-          cp src/core/environ/win32/NativeEventQueue.cpp "$STUBS_DIR/"
-
-          # Copy ThreadImpl.cpp and patch
-          cp src/core/utils/win32/ThreadImpl.cpp "$STUBS_DIR/"
-          sed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/ThreadImpl.cpp"
-          sed -i '' 's/#include <process.h>/\/\/ #include <process.h>/g' "$STUBS_DIR/ThreadImpl.cpp"
-
-          # Add stub files to Xcode project
-          ruby scripts/add_sources.rb \
-            build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj \
-            build/Kirikiroid2/Classes/
 
       - name: Build IPA (unsigned)
         run: |

@@ -1,0 +1,1178 @@
+﻿2026-06-09T09:03:35.8742630Z Current runner version: '2.334.0'
+2026-06-09T09:03:35.8756400Z ##[group]Runner Image Provisioner
+2026-06-09T09:03:35.8756870Z Hosted Compute Agent
+2026-06-09T09:03:35.8757220Z Version: 20260520.533
+2026-06-09T09:03:35.8757610Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-06-09T09:03:35.8758040Z Build Date: 2026-05-20T17:44:04Z
+2026-06-09T09:03:35.8758460Z Worker ID: {2ab9784b-861b-4498-a277-8846d35a9146}
+2026-06-09T09:03:35.8758890Z Azure Region: westus
+2026-06-09T09:03:35.8759240Z ##[endgroup]
+2026-06-09T09:03:35.8760010Z ##[group]Operating System
+2026-06-09T09:03:35.8760380Z macOS
+2026-06-09T09:03:35.8760700Z 14.8.7
+2026-06-09T09:03:35.8761000Z 23J520
+2026-06-09T09:03:35.8761320Z ##[endgroup]
+2026-06-09T09:03:35.8761660Z ##[group]Runner Image
+2026-06-09T09:03:35.8762020Z Image: macos-14-arm64
+2026-06-09T09:03:35.8762370Z Version: 20260525.0091.1
+2026-06-09T09:03:35.8763100Z Included Software: https://github.com/actions/runner-images/blob/macos-14-arm64/20260525.0091/images/macos/macos-14-arm64-Readme.md
+2026-06-09T09:03:35.8764050Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-14-arm64%2F20260525.0091
+2026-06-09T09:03:35.8764650Z ##[endgroup]
+2026-06-09T09:03:35.8765290Z ##[group]GITHUB_TOKEN Permissions
+2026-06-09T09:03:35.8766150Z Contents: write
+2026-06-09T09:03:35.8766500Z Metadata: read
+2026-06-09T09:03:35.8766820Z ##[endgroup]
+2026-06-09T09:03:35.8768060Z Secret source: Actions
+2026-06-09T09:03:35.8768490Z Prepare workflow directory
+2026-06-09T09:03:35.8963680Z Prepare all required actions
+2026-06-09T09:03:35.8987450Z Getting action download info
+2026-06-09T09:03:36.2905700Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-09T09:03:36.5333100Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-06-09T09:03:36.6382720Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-06-09T09:03:36.7288840Z Download action repository 'softprops/action-gh-release@v1' (SHA:de2c0eb89ae2a093876385947365aca7b0e5f844)
+2026-06-09T09:03:37.6175500Z Complete job name: Build iOS IPA
+2026-06-09T09:03:37.6638270Z ##[group]Run actions/checkout@v4
+2026-06-09T09:03:37.6638780Z with:
+2026-06-09T09:03:37.6639070Z   ref: trae
+2026-06-09T09:03:37.6639400Z   repository: YCZ01111/Kirikiroid2
+2026-06-09T09:03:37.6642330Z   token: ***
+2026-06-09T09:03:37.6642630Z   ssh-strict: true
+2026-06-09T09:03:37.6642920Z   ssh-user: git
+2026-06-09T09:03:37.6643230Z   persist-credentials: true
+2026-06-09T09:03:37.6643560Z   clean: true
+2026-06-09T09:03:37.6643870Z   sparse-checkout-cone-mode: true
+2026-06-09T09:03:37.6644220Z   fetch-depth: 1
+2026-06-09T09:03:37.6644520Z   fetch-tags: false
+2026-06-09T09:03:37.6644830Z   show-progress: true
+2026-06-09T09:03:37.6645130Z   lfs: false
+2026-06-09T09:03:37.6645420Z   submodules: false
+2026-06-09T09:03:37.6645730Z   set-safe-directory: true
+2026-06-09T09:03:37.6646160Z ##[endgroup]
+2026-06-09T09:03:37.9274060Z Syncing repository: YCZ01111/Kirikiroid2
+2026-06-09T09:03:37.9275920Z ##[group]Getting Git version info
+2026-06-09T09:03:37.9276820Z Working directory is '/Users/runner/work/Kirikiroid2/Kirikiroid2'
+2026-06-09T09:03:37.9278080Z [command]/opt/homebrew/bin/git version
+2026-06-09T09:03:37.9516050Z git version 2.54.0
+2026-06-09T09:03:37.9546810Z ##[endgroup]
+2026-06-09T09:03:37.9558050Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/413ee0a1-ed19-4096-a758-ba1a4b6894f9/.gitconfig'
+2026-06-09T09:03:37.9565490Z Temporarily overriding HOME='/Users/runner/work/_temp/413ee0a1-ed19-4096-a758-ba1a4b6894f9' before making global git config changes
+2026-06-09T09:03:37.9568140Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-09T09:03:37.9570560Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/Kirikiroid2/Kirikiroid2
+2026-06-09T09:03:37.9679040Z Deleting the contents of '/Users/runner/work/Kirikiroid2/Kirikiroid2'
+2026-06-09T09:03:37.9683050Z ##[group]Initializing the repository
+2026-06-09T09:03:37.9696820Z [command]/opt/homebrew/bin/git init /Users/runner/work/Kirikiroid2/Kirikiroid2
+2026-06-09T09:03:37.9989540Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-09T09:03:37.9992220Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-09T09:03:38.0143420Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-09T09:03:38.0145110Z hint: call:
+2026-06-09T09:03:38.0146200Z hint:
+2026-06-09T09:03:38.0147650Z hint: 	git config --global init.defaultBranch <name>
+2026-06-09T09:03:38.0149540Z hint:
+2026-06-09T09:03:38.0150690Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-09T09:03:38.0152660Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-09T09:03:38.0154200Z hint:
+2026-06-09T09:03:38.0155390Z hint: 	git branch -m <name>
+2026-06-09T09:03:38.0156370Z hint:
+2026-06-09T09:03:38.0157880Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-09T09:03:38.0194660Z Initialized empty Git repository in /Users/runner/work/Kirikiroid2/Kirikiroid2/.git/
+2026-06-09T09:03:38.0198500Z [command]/opt/homebrew/bin/git remote add origin https://github.com/YCZ01111/Kirikiroid2
+2026-06-09T09:03:38.0201760Z ##[endgroup]
+2026-06-09T09:03:38.0203140Z ##[group]Disabling automatic garbage collection
+2026-06-09T09:03:38.0204390Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-06-09T09:03:38.0207000Z ##[endgroup]
+2026-06-09T09:03:38.0208290Z ##[group]Setting up auth
+2026-06-09T09:03:38.0209770Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-09T09:03:38.0215250Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-09T09:03:38.1246920Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-09T09:03:38.1290560Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-09T09:03:38.1821270Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-09T09:03:38.1860570Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-09T09:03:38.2428180Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-09T09:03:38.2474030Z ##[endgroup]
+2026-06-09T09:03:38.2475230Z ##[group]Fetching the repository
+2026-06-09T09:03:38.2480520Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/trae*:refs/remotes/origin/trae* +refs/tags/trae*:refs/tags/trae*
+2026-06-09T09:03:39.7332260Z From https://github.com/YCZ01111/Kirikiroid2
+2026-06-09T09:03:39.7332800Z  * [new branch]      trae       -> origin/trae
+2026-06-09T09:03:39.7412340Z ##[endgroup]
+2026-06-09T09:03:39.7421310Z ##[group]Determining the checkout info
+2026-06-09T09:03:39.7431010Z [command]/opt/homebrew/bin/git branch --list --remote origin/trae
+2026-06-09T09:03:39.7452540Z   origin/trae
+2026-06-09T09:03:39.7465440Z ##[endgroup]
+2026-06-09T09:03:39.7465910Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-06-09T09:03:39.7535790Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-09T09:03:39.7581430Z ##[group]Checking out the ref
+2026-06-09T09:03:39.7582090Z [command]/opt/homebrew/bin/git checkout --progress --force -B trae refs/remotes/origin/trae
+2026-06-09T09:03:39.8459860Z Switched to a new branch 'trae'
+2026-06-09T09:03:39.8560340Z branch 'trae' set up to track 'origin/trae'.
+2026-06-09T09:03:39.8765800Z ##[endgroup]
+2026-06-09T09:03:39.8812480Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-06-09T09:03:39.8813140Z 0de477ff2de48136e869ee27ac03403b7d425075
+2026-06-09T09:03:39.8894470Z ##[group]Run brew install pyenv
+2026-06-09T09:03:39.8894790Z [36;1mbrew install pyenv[0m
+2026-06-09T09:03:39.8894980Z [36;1mpyenv install 2.7.18[0m
+2026-06-09T09:03:39.8895180Z [36;1mpyenv global 2.7.18[0m
+2026-06-09T09:03:39.8895400Z [36;1mecho "$HOME/.pyenv/shims" >> $GITHUB_PATH[0m
+2026-06-09T09:03:39.8961950Z shell: /bin/bash -e {0}
+2026-06-09T09:03:39.8962200Z ##[endgroup]
+2026-06-09T09:03:41.6368540Z ✔︎ JSON API formula_tap_migrations.jws.json
+2026-06-09T09:03:41.6369100Z ✔︎ JSON API cask_tap_migrations.jws.json
+2026-06-09T09:03:42.9436690Z Inspect the formula dependency plan before installing with `brew install --ask`.
+2026-06-09T09:03:42.9437250Z Enable ask mode by setting `HOMEBREW_ASK=1`.
+2026-06-09T09:03:42.9437570Z Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+2026-06-09T09:03:42.9438270Z [32m==>[0m [1mFetching downloads for: [32mpyenv[39m[0m
+2026-06-09T09:03:43.5577900Z ✔︎ Bottle Manifest pyenv (2.6.31)
+2026-06-09T09:03:44.2570800Z ✔︎ Bottle Manifest m4 (1.4.21)
+2026-06-09T09:03:44.3152450Z ✔︎ Bottle Manifest autoconf (2.73)
+2026-06-09T09:03:44.3776150Z ✔︎ Bottle m4 (1.4.21)
+2026-06-09T09:03:44.3781390Z ✔︎ Bottle autoconf (2.73)
+2026-06-09T09:03:44.6409300Z ✔︎ Bottle pyenv (2.6.31)
+2026-06-09T09:03:44.8201200Z [32m==>[0m [1mInstalling dependencies for pyenv: [32mm4[39m and [32mautoconf[39m[0m
+2026-06-09T09:03:44.8206010Z [32m==>[0m [1mInstalling pyenv dependency: [32mm4[39m[0m
+2026-06-09T09:03:44.8229260Z [34m==>[0m [1mPouring m4--1.4.21.arm64_sonoma.bottle.tar.gz[0m
+2026-06-09T09:03:46.1201520Z 🍺  /opt/homebrew/Cellar/m4/1.4.21: 14 files, 815.9KB
+2026-06-09T09:03:46.1207380Z [32m==>[0m [1mInstalling pyenv dependency: [32mautoconf[39m[0m
+2026-06-09T09:03:46.1284830Z [34m==>[0m [1mPouring autoconf--2.73.arm64_sonoma.bottle.tar.gz[0m
+2026-06-09T09:03:47.1433230Z 🍺  /opt/homebrew/Cellar/autoconf/2.73: 73 files, 3.8MB
+2026-06-09T09:03:47.1436180Z [32m==>[0m [1mInstalling [32mpyenv[39m[0m
+2026-06-09T09:03:47.1439310Z [34m==>[0m [1mPouring pyenv--2.6.31.arm64_sonoma.bottle.tar.gz[0m
+2026-06-09T09:03:48.4827430Z 🍺  /opt/homebrew/Cellar/pyenv/2.6.31: 1,485 files, 4.7MB
+2026-06-09T09:03:48.7663960Z python-build: use openssl@1.1 from homebrew
+2026-06-09T09:03:48.7846130Z python-build: use readline from homebrew
+2026-06-09T09:03:48.7902210Z Downloading Python-2.7.18.tar.xz...
+2026-06-09T09:03:48.7902860Z -> https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
+2026-06-09T09:03:50.1860190Z Installing Python-2.7.18...
+2026-06-09T09:03:50.2166300Z patching file configure
+2026-06-09T09:03:50.2251470Z patching file configure.ac
+2026-06-09T09:03:50.2281920Z patching file setup.py
+2026-06-09T09:03:50.2304100Z patching file 'Mac/Tools/pythonw.c'
+2026-06-09T09:03:50.2309960Z patching file setup.py
+2026-06-09T09:03:50.2332810Z patching file 'Doc/library/ctypes.rst'
+2026-06-09T09:03:50.2351260Z patching file 'Lib/test/test_str.py'
+2026-06-09T09:03:50.2358890Z patching file 'Lib/test/test_unicode.py'
+2026-06-09T09:03:50.2378010Z patching file 'Modules/_ctypes/_ctypes.c'
+2026-06-09T09:03:50.2414720Z patching file 'Modules/_ctypes/callproc.c'
+2026-06-09T09:03:50.2428050Z patching file 'Modules/_ctypes/ctypes.h'
+2026-06-09T09:03:50.2434480Z patching file 'Modules/_ctypes/callproc.c'
+2026-06-09T09:03:50.2447730Z patching file setup.py
+2026-06-09T09:03:50.2468870Z patching file 'Mac/Modules/qt/setup.py'
+2026-06-09T09:03:50.2472040Z patching file setup.py
+2026-06-09T09:03:50.2735960Z python-build: use tcl-tk@8 from homebrew
+2026-06-09T09:03:50.3044040Z python-build: use readline from homebrew
+2026-06-09T09:03:51.0906870Z python-build: use zlib from xcode sdk
+2026-06-09T09:04:53.7062190Z Installed Python-2.7.18 to /Users/runner/.pyenv/versions/2.7.18
+2026-06-09T09:04:54.0443310Z ##[group]Run actions/cache@v4
+2026-06-09T09:04:54.0443590Z with:
+2026-06-09T09:04:54.0447310Z   path: cocos2d-x
+2026-06-09T09:04:54.0447570Z   key: cocos2d-x-3.6-full-v4
+2026-06-09T09:04:54.0447810Z   enableCrossOsArchive: false
+2026-06-09T09:04:54.0448020Z   fail-on-cache-miss: false
+2026-06-09T09:04:54.0448270Z   lookup-only: false
+2026-06-09T09:04:54.0448450Z   save-always: false
+2026-06-09T09:04:54.0448650Z ##[endgroup]
+2026-06-09T09:04:54.3752150Z Cache not found for input keys: cocos2d-x-3.6-full-v4
+2026-06-09T09:04:54.3823040Z ##[group]Run git clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git
+2026-06-09T09:04:54.3823730Z [36;1mgit clone --depth=1 --branch=cocos2d-x-3.6 https://github.com/cocos2d/cocos2d-x.git[0m
+2026-06-09T09:04:54.3824190Z [36;1mcd cocos2d-x[0m
+2026-06-09T09:04:54.3824540Z [36;1mgit config --global url."https://github.com/".insteadOf "git://github.com/"[0m
+2026-06-09T09:04:54.3825120Z [36;1m# Download 3rd-party dependencies by cloning the 3rd-party-libs-bin repo[0m
+2026-06-09T09:04:54.3825520Z [36;1mecho "Cloning 3rd-party dependencies (v3-deps-47)..."[0m
+2026-06-09T09:04:54.3826140Z [36;1mgit clone --depth=1 --branch=v3-deps-47 https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin.git /tmp/3rd-party-deps[0m
+2026-06-09T09:04:54.3826780Z [36;1m# Merge external dependencies into cocos2d-x/external/[0m
+2026-06-09T09:04:54.3827130Z [36;1mecho "Merging external dependencies..."[0m
+2026-06-09T09:04:54.3827420Z [36;1mmkdir -p external[0m
+2026-06-09T09:04:54.3827740Z [36;1mrsync -a /tmp/3rd-party-deps/ external/[0m
+2026-06-09T09:04:54.3828050Z [36;1mrm -rf /tmp/3rd-party-deps[0m
+2026-06-09T09:04:54.3828370Z [36;1m# Move fbx-conv to tools directory (as specified in config.json)[0m
+2026-06-09T09:04:54.3828780Z [36;1mif [ -d "external/fbx-conv" ]; then[0m
+2026-06-09T09:04:54.3829060Z [36;1m  mkdir -p tools[0m
+2026-06-09T09:04:54.3829270Z [36;1m  mv external/fbx-conv tools/[0m
+2026-06-09T09:04:54.3829510Z [36;1mfi[0m
+2026-06-09T09:04:54.3849230Z [36;1mgit submodule update --init --recursive || echo "submodule update failed, continuing..."[0m
+2026-06-09T09:04:54.3849750Z [36;1mecho "cocos2d-x setup completed"[0m
+2026-06-09T09:04:54.3850010Z [36;1m# Verify critical files exist[0m
+2026-06-09T09:04:54.3850480Z [36;1mecho "Checking external files..."[0m
+2026-06-09T09:04:54.3850950Z [36;1mls -la external/unzip/unzip.cpp external/xxhash/xxhash.c || { echo "ERROR: Critical external files are missing!"; exit 1; }[0m
+2026-06-09T09:04:54.3922960Z shell: /bin/bash -e {0}
+2026-06-09T09:04:54.3923290Z ##[endgroup]
+2026-06-09T09:04:54.4702320Z Cloning into 'cocos2d-x'...
+2026-06-09T09:04:57.9743000Z Cloning 3rd-party dependencies (v3-deps-47)...
+2026-06-09T09:04:57.9792820Z Cloning into '/tmp/3rd-party-deps'...
+2026-06-09T09:05:07.1276460Z Merging external dependencies...
+2026-06-09T09:05:08.4424690Z Submodule 'plugin' (https://github.com/cocos2d-x/plugin-x.git) registered for path 'plugin'
+2026-06-09T09:05:08.4428550Z Submodule 'tests/cpp-tests/Resources/ccs-res' (git://github.com/dumganhar/ccs-res.git) registered for path 'tests/cpp-tests/Resources/ccs-res'
+2026-06-09T09:05:08.4434220Z Submodule 'tools/bindings-generator' (git://github.com/cocos2d/bindings-generator.git) registered for path 'tools/bindings-generator'
+2026-06-09T09:05:08.4438730Z Submodule 'tools/cocos2d-console' (git://github.com/cocos2d/cocos2d-console.git) registered for path 'tools/cocos2d-console'
+2026-06-09T09:05:08.4504470Z Cloning into '/Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/plugin'...
+2026-06-09T09:05:11.6156470Z Cloning into '/Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tests/cpp-tests/Resources/ccs-res'...
+2026-06-09T09:05:13.5872060Z Cloning into '/Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/bindings-generator'...
+2026-06-09T09:05:17.1357660Z Cloning into '/Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console'...
+2026-06-09T09:05:18.9491660Z Submodule path 'plugin': checked out '3a71e881f1b39b5b23ffcf32322e4139bf9350f7'
+2026-06-09T09:05:19.2015370Z Submodule path 'tests/cpp-tests/Resources/ccs-res': checked out 'afa5ba56b3745b0fb94e730ea54a79e598c31ba8'
+2026-06-09T09:05:19.3472560Z Submodule path 'tools/bindings-generator': checked out 'af67671bfd8394e8a5e13d702e57f3fd7eaa5c78'
+2026-06-09T09:05:19.3882960Z Submodule path 'tools/cocos2d-console': checked out 'f56ddf5c118a2652d0d7eb796872420a69f532af'
+2026-06-09T09:05:19.3952710Z cocos2d-x setup completed
+2026-06-09T09:05:19.3953080Z Checking external files...
+2026-06-09T09:05:19.3995390Z -rw-r--r--  1 runner  staff  71138 Jun  9 09:05 external/unzip/unzip.cpp
+2026-06-09T09:05:19.3996070Z -rw-r--r--  1 runner  staff  15357 Jun  9 09:05 external/xxhash/xxhash.c
+2026-06-09T09:05:19.4038150Z ##[group]Run echo "COCOS_CONSOLE_ROOT=$GITHUB_WORKSPACE/cocos2d-x/tools/cocos2d-console/bin" >> $GITHUB_ENV
+2026-06-09T09:05:19.4038840Z [36;1mecho "COCOS_CONSOLE_ROOT=$GITHUB_WORKSPACE/cocos2d-x/tools/cocos2d-console/bin" >> $GITHUB_ENV[0m
+2026-06-09T09:05:19.4039350Z [36;1mecho "COCOS_TEMPLATES_ROOT=$GITHUB_WORKSPACE/cocos2d-x/templates" >> $GITHUB_ENV[0m
+2026-06-09T09:05:19.4039840Z [36;1mecho "COCOS_X_ROOT=$GITHUB_WORKSPACE/cocos2d-x" >> $GITHUB_ENV[0m
+2026-06-09T09:05:19.4093610Z shell: /bin/bash -e {0}
+2026-06-09T09:05:19.4093870Z ##[endgroup]
+2026-06-09T09:05:19.4525550Z ##[group]Run bash $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build
+2026-06-09T09:05:19.4526330Z [36;1mbash $COCOS_CONSOLE_ROOT/cocos new Kirikiroid2 -p org.tvp.kirikiri2 -l cpp -d build[0m
+2026-06-09T09:05:19.4575850Z shell: /bin/bash -e {0}
+2026-06-09T09:05:19.4576050Z env:
+2026-06-09T09:05:19.4576410Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:19.4576950Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:19.4577360Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:19.4577690Z ##[endgroup]
+2026-06-09T09:05:19.6808610Z Running command: new
+2026-06-09T09:05:21.5967230Z > Copy template into /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2
+2026-06-09T09:05:21.5967730Z > Copying cocos2d-x files...
+2026-06-09T09:05:21.5968230Z > Rename project name from 'HelloCpp' to 'Kirikiroid2'
+2026-06-09T09:05:21.5968640Z > Replace the project name from 'HelloCpp' to 'Kirikiroid2'
+2026-06-09T09:05:21.5969050Z > Replace the project package name from 'org.cocos2dx.hellocpp' to 'org.tvp.kirikiri2'
+2026-06-09T09:05:21.5969560Z > Replace the mac bundle id from 'org.cocos2dx.hellocpp' to 'org.tvp.kirikiri2'
+2026-06-09T09:05:21.5970050Z > Replace the ios bundle id from 'org.cocos2dx.hellocpp' to 'org.tvp.kirikiri2'
+2026-06-09T09:05:21.7676610Z ##[group]Run bash scripts/patch_cocos2d.sh build/Kirikiroid2
+2026-06-09T09:05:21.7677020Z [36;1mbash scripts/patch_cocos2d.sh build/Kirikiroid2[0m
+2026-06-09T09:05:21.7729360Z shell: /bin/bash -e {0}
+2026-06-09T09:05:21.7729530Z env:
+2026-06-09T09:05:21.7729850Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:21.7730370Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:21.7730810Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:21.7731180Z ##[endgroup]
+2026-06-09T09:05:21.8209220Z Patching cocos2d-x files for Xcode 15/iOS 17 SDK compatibility...
+2026-06-09T09:05:21.8258840Z Patched CCController-iOS.mm with stub implementation (no GameController.h)
+2026-06-09T09:05:21.9385580Z Patched AssetsManager.cpp: added iOS branch using FileUtils::removeDirectory()
+2026-06-09T09:05:21.9386350Z All Python patches applied successfully.
+2026-06-09T09:05:21.9406390Z All patches applied successfully.
+2026-06-09T09:05:21.9443760Z ##[group]Run FILE="build/Kirikiroid2/cocos2d/cocos/base/CCController-iOS.mm"
+2026-06-09T09:05:21.9444390Z [36;1mFILE="build/Kirikiroid2/cocos2d/cocos/base/CCController-iOS.mm"[0m
+2026-06-09T09:05:21.9444820Z [36;1mif grep -q "GameController" "$FILE"; then[0m
+2026-06-09T09:05:21.9445340Z [36;1m  echo "ERROR: Patch was not applied - GameController still present"[0m
+2026-06-09T09:05:21.9446240Z [36;1m  exit 1[0m
+2026-06-09T09:05:21.9446520Z [36;1mfi[0m
+2026-06-09T09:05:21.9446840Z [36;1mecho "Patch verified - no GameController import found"[0m
+2026-06-09T09:05:21.9494970Z shell: /bin/bash -e {0}
+2026-06-09T09:05:21.9495320Z env:
+2026-06-09T09:05:21.9495720Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:21.9496310Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:21.9496720Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:21.9497310Z ##[endgroup]
+2026-06-09T09:05:21.9857450Z Patch verified - no GameController import found
+2026-06-09T09:05:21.9886790Z ##[group]Run git clone --depth=1 --branch=v5.9.6 https://github.com/kkos/oniguruma.git vendor/onig
+2026-06-09T09:05:21.9887330Z [36;1mgit clone --depth=1 --branch=v5.9.6 https://github.com/kkos/oniguruma.git vendor/onig[0m
+2026-06-09T09:05:21.9932280Z shell: /bin/bash -e {0}
+2026-06-09T09:05:21.9932500Z env:
+2026-06-09T09:05:21.9932910Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:21.9933410Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:21.9933810Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:21.9934170Z ##[endgroup]
+2026-06-09T09:05:22.0288470Z Cloning into 'vendor/onig'...
+2026-06-09T09:05:23.0314290Z warning: refs/tags/v5.9.6 6cb07d87cb5822e06c41ecba5afcfa6ce7d5efc0 is not a commit!
+2026-06-09T09:05:23.0436410Z ##[group]Run git clone --depth=1 --branch=v1.9.4 https://github.com/lz4/lz4.git vendor/lz4
+2026-06-09T09:05:23.0437010Z [36;1mgit clone --depth=1 --branch=v1.9.4 https://github.com/lz4/lz4.git vendor/lz4[0m
+2026-06-09T09:05:23.0437340Z [36;1mls vendor/lz4/lib/[0m
+2026-06-09T09:05:23.0487050Z shell: /bin/bash -e {0}
+2026-06-09T09:05:23.0487330Z env:
+2026-06-09T09:05:23.0487680Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:23.0488180Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:23.0488600Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:23.0488870Z ##[endgroup]
+2026-06-09T09:05:23.0791890Z Cloning into 'vendor/lz4'...
+2026-06-09T09:05:24.1520390Z LICENSE
+2026-06-09T09:05:24.1521230Z Makefile
+2026-06-09T09:05:24.1523580Z README.md
+2026-06-09T09:05:24.1523920Z dll
+2026-06-09T09:05:24.1524280Z liblz4-dll.rc.in
+2026-06-09T09:05:24.1524680Z liblz4.pc.in
+2026-06-09T09:05:24.1524950Z lz4.c
+2026-06-09T09:05:24.1525190Z lz4.h
+2026-06-09T09:05:24.1525450Z lz4file.c
+2026-06-09T09:05:24.1525690Z lz4file.h
+2026-06-09T09:05:24.1525950Z lz4frame.c
+2026-06-09T09:05:24.1526190Z lz4frame.h
+2026-06-09T09:05:24.1526460Z lz4frame_static.h
+2026-06-09T09:05:24.1526760Z lz4hc.c
+2026-06-09T09:05:24.1527010Z lz4hc.h
+2026-06-09T09:05:24.1527250Z xxhash.c
+2026-06-09T09:05:24.1527570Z xxhash.h
+2026-06-09T09:05:24.1550810Z ##[group]Run curl -L -o opencv-ios.zip https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-ios-framework.zip
+2026-06-09T09:05:24.1551590Z [36;1mcurl -L -o opencv-ios.zip https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-ios-framework.zip[0m
+2026-06-09T09:05:24.1552150Z [36;1munzip -q opencv-ios.zip -d vendor/opencv[0m
+2026-06-09T09:05:24.1552410Z [36;1mls -la vendor/opencv/[0m
+2026-06-09T09:05:24.1552620Z [36;1m# Verify the framework exists[0m
+2026-06-09T09:05:24.1552890Z [36;1mif [ ! -d "vendor/opencv/opencv2.framework" ]; then[0m
+2026-06-09T09:05:24.1553240Z [36;1m  echo "ERROR: opencv2.framework not found after extraction"[0m
+2026-06-09T09:05:24.1553560Z [36;1m  find vendor/opencv -type d | head -20[0m
+2026-06-09T09:05:24.1553790Z [36;1m  exit 1[0m
+2026-06-09T09:05:24.1553940Z [36;1mfi[0m
+2026-06-09T09:05:24.1602040Z shell: /bin/bash -e {0}
+2026-06-09T09:05:24.1602220Z env:
+2026-06-09T09:05:24.1602600Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:24.1603130Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:24.1603540Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:24.1603890Z ##[endgroup]
+2026-06-09T09:05:24.1991620Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-06-09T09:05:24.2014510Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-06-09T09:05:24.2046990Z 
+2026-06-09T09:05:24.5948980Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-06-09T09:05:24.5963290Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-06-09T09:05:24.7190690Z 
+2026-06-09T09:05:25.7147690Z   8  209M    8 16.9M    0     0  32.8M      0  0:00:06 --:--:--  0:00:06 32.8M
+2026-06-09T09:05:25.9292770Z  80  209M   80  169M    0     0   111M      0  0:00:01  0:00:01 --:--:--  152M
+2026-06-09T09:05:25.9293200Z 100  209M  100  209M    0     0   120M      0  0:00:01  0:00:01 --:--:--  158M
+2026-06-09T09:05:29.9467320Z total 0
+2026-06-09T09:05:29.9467700Z drwxr-xr-x  3 runner  staff   96 Jun  9 09:05 .
+2026-06-09T09:05:29.9468050Z drwxr-xr-x  5 runner  staff  160 Jun  9 09:05 ..
+2026-06-09T09:05:29.9468380Z drwxr-xr-x  7 runner  staff  224 Jan  9  2025 opencv2.framework
+2026-06-09T09:05:29.9510270Z ##[group]Run DEST=build/Kirikiroid2/Classes
+2026-06-09T09:05:29.9510590Z [36;1mDEST=build/Kirikiroid2/Classes[0m
+2026-06-09T09:05:29.9510800Z [36;1mrm -rf $DEST/*[0m
+2026-06-09T09:05:29.9510970Z [36;1mmkdir -p $DEST[0m
+2026-06-09T09:05:29.9511130Z [36;1m[0m
+2026-06-09T09:05:29.9511280Z [36;1mcp -r src/core/base $DEST/base[0m
+2026-06-09T09:05:29.9511600Z [36;1mrm -f $DEST/base/win32/FuncStubs.cpp $DEST/base/win32/SusieArchive.cpp[0m
+2026-06-09T09:05:29.9511990Z [36;1m[0m
+2026-06-09T09:05:29.9512200Z [36;1mcp -r src/core/environ $DEST/environ[0m
+2026-06-09T09:05:29.9512470Z [36;1mrm -rf $DEST/environ/android $DEST/environ/sdl[0m
+2026-06-09T09:05:29.9512740Z [36;1mrm -f $DEST/environ/MainFormUnit.cpp[0m
+2026-06-09T09:05:29.9512950Z [36;1m[0m
+2026-06-09T09:05:29.9513110Z [36;1mcp -r src/core/extension $DEST/extension[0m
+2026-06-09T09:05:29.9513350Z [36;1mcp -r src/core/movie $DEST/movie[0m
+2026-06-09T09:05:29.9513540Z [36;1m[0m
+2026-06-09T09:05:29.9513720Z [36;1mcp -r src/core/msg $DEST/msg[0m
+2026-06-09T09:05:29.9513890Z [36;1m[0m
+2026-06-09T09:05:29.9514050Z [36;1mcp -r src/core/sound $DEST/sound[0m
+2026-06-09T09:05:29.9514260Z [36;1mrm -rf $DEST/sound/ARM[0m
+2026-06-09T09:05:29.9514530Z [36;1mrm -f $DEST/sound/xmmlib.cpp $DEST/sound/WaveFormatConverter_SSE.cpp[0m
+2026-06-09T09:05:29.9514820Z [36;1m[0m
+2026-06-09T09:05:29.9514960Z [36;1mcp -r src/core/tjs2 $DEST/tjs2[0m
+2026-06-09T09:05:29.9515150Z [36;1m[0m
+2026-06-09T09:05:29.9515290Z [36;1mcp -r src/core/utils $DEST/utils[0m
+2026-06-09T09:05:29.9515490Z [36;1m[0m
+2026-06-09T09:05:29.9515630Z [36;1mcp -r src/core/visual $DEST/visual[0m
+2026-06-09T09:05:29.9515850Z [36;1mrm -rf $DEST/visual/ARM[0m
+2026-06-09T09:05:29.9516040Z [36;1mrm -f $DEST/visual/Resampler.cpp[0m
+2026-06-09T09:05:29.9516440Z [36;1mrm -f $DEST/visual/win32/GDIFontRasterizer.cpp[0m
+2026-06-09T09:05:29.9516790Z [36;1mrm -f $DEST/visual/win32/NativeFreeTypeFace.cpp[0m
+2026-06-09T09:05:29.9517060Z [36;1mrm -f $DEST/visual/win32/TVPSysFont.cpp[0m
+2026-06-09T09:05:29.9517320Z [36;1mrm -f $DEST/visual/win32/VSyncTimingThread.cpp[0m
+2026-06-09T09:05:29.9517530Z [36;1m[0m
+2026-06-09T09:05:29.9517690Z [36;1mcp -r src/plugins $DEST/plugins[0m
+2026-06-09T09:05:29.9517870Z [36;1m[0m
+2026-06-09T09:05:29.9518050Z [36;1mcp src/core/environ/ios/iOSUtils.mm $DEST/environ/ios/[0m
+2026-06-09T09:05:29.9518290Z [36;1m[0m
+2026-06-09T09:05:29.9518440Z [36;1mmkdir -p $DEST/vendor/onig/enc[0m
+2026-06-09T09:05:29.9520280Z [36;1mcp vendor/onig/regcomp.c vendor/onig/regexec.c vendor/onig/regparse.c vendor/onig/regenc.c \[0m
+2026-06-09T09:05:29.9520850Z [36;1m   vendor/onig/regerror.c vendor/onig/regext.c vendor/onig/reggnu.c vendor/onig/regsyntax.c \[0m
+2026-06-09T09:05:29.9521410Z [36;1m   vendor/onig/regtrav.c vendor/onig/regversion.c vendor/onig/st.c vendor/onig/regposix.c \[0m
+2026-06-09T09:05:29.9521820Z [36;1m   vendor/onig/regposerr.c $DEST/vendor/onig/[0m
+2026-06-09T09:05:29.9522270Z [36;1mcp vendor/onig/oniguruma.h vendor/onig/oniggnu.h vendor/onig/onigposix.h \[0m
+2026-06-09T09:05:29.9522730Z [36;1m   vendor/onig/regint.h vendor/onig/regparse.h vendor/onig/regenc.h vendor/onig/st.h \[0m
+2026-06-09T09:05:29.9523150Z [36;1m   vendor/onig/config.h $DEST/vendor/onig/ 2>/dev/null || true[0m
+2026-06-09T09:05:29.9523530Z [36;1mcp vendor/onig/enc/unicode.c vendor/onig/enc/ascii.c vendor/onig/enc/utf8.c \[0m
+2026-06-09T09:05:29.9523910Z [36;1m   vendor/onig/enc/utf16_be.c vendor/onig/enc/utf16_le.c \[0m
+2026-06-09T09:05:29.9524220Z [36;1m   vendor/onig/enc/utf32_be.c vendor/onig/enc/utf32_le.c \[0m
+2026-06-09T09:05:29.9524580Z [36;1m   vendor/onig/enc/euc_jp.c vendor/onig/enc/sjis.c vendor/onig/enc/iso8859_1.c \[0m
+2026-06-09T09:05:29.9525030Z [36;1m   vendor/onig/enc/iso8859_2.c vendor/onig/enc/iso8859_3.c vendor/onig/enc/iso8859_4.c \[0m
+2026-06-09T09:05:29.9525480Z [36;1m   vendor/onig/enc/iso8859_5.c vendor/onig/enc/iso8859_6.c vendor/onig/enc/iso8859_7.c \[0m
+2026-06-09T09:05:29.9526110Z [36;1m   vendor/onig/enc/iso8859_8.c vendor/onig/enc/iso8859_9.c \[0m
+2026-06-09T09:05:29.9526440Z [36;1m   vendor/onig/enc/iso8859_10.c vendor/onig/enc/iso8859_11.c \[0m
+2026-06-09T09:05:29.9526770Z [36;1m   vendor/onig/enc/iso8859_13.c vendor/onig/enc/iso8859_14.c \[0m
+2026-06-09T09:05:29.9527090Z [36;1m   vendor/onig/enc/iso8859_15.c vendor/onig/enc/iso8859_16.c \[0m
+2026-06-09T09:05:29.9527460Z [36;1m   vendor/onig/enc/euc_tw.c vendor/onig/enc/euc_kr.c vendor/onig/enc/big5.c \[0m
+2026-06-09T09:05:29.9527890Z [36;1m   vendor/onig/enc/gb18030.c vendor/onig/enc/koi8_r.c vendor/onig/enc/cp1251.c \[0m
+2026-06-09T09:05:29.9528220Z [36;1m   $DEST/vendor/onig/enc/[0m
+2026-06-09T09:05:29.9528390Z [36;1m[0m
+2026-06-09T09:05:29.9528530Z [36;1m# Copy lz4 library[0m
+2026-06-09T09:05:29.9528710Z [36;1mmkdir -p $DEST/vendor/lz4[0m
+2026-06-09T09:05:29.9529180Z [36;1mcp vendor/lz4/lib/lz4.c vendor/lz4/lib/lz4hc.c vendor/lz4/lib/lz4frame.c $DEST/vendor/lz4/[0m
+2026-06-09T09:05:29.9529670Z [36;1mcp vendor/lz4/lib/lz4.h vendor/lz4/lib/lz4hc.h vendor/lz4/lib/lz4frame.h $DEST/vendor/lz4/[0m
+2026-06-09T09:05:29.9530130Z [36;1m# lz4frame.c includes "xxhash.h" directly - copy from cocos2d-x external or download[0m
+2026-06-09T09:05:29.9530540Z [36;1mif [ -f "cocos2d-x/external/xxhash/include/xxhash.h" ]; then[0m
+2026-06-09T09:05:29.9530890Z [36;1m  cp cocos2d-x/external/xxhash/include/xxhash.h $DEST/vendor/lz4/[0m
+2026-06-09T09:05:29.9531160Z [36;1melse[0m
+2026-06-09T09:05:29.9531520Z [36;1m  curl -sL https://raw.githubusercontent.com/Cyan4973/xxHash/v0.8.2/xxhash.h -o $DEST/vendor/lz4/xxhash.h[0m
+2026-06-09T09:05:29.9531900Z [36;1mfi[0m
+2026-06-09T09:05:29.9583700Z shell: /bin/bash -e {0}
+2026-06-09T09:05:29.9583860Z env:
+2026-06-09T09:05:29.9584170Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:29.9584650Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:29.9585040Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:29.9585310Z ##[endgroup]
+2026-06-09T09:05:30.3736050Z ##[group]Run cp -r cocos/kr2/Resources/* build/Kirikiroid2/Resources/
+2026-06-09T09:05:30.3736500Z [36;1mcp -r cocos/kr2/Resources/* build/Kirikiroid2/Resources/[0m
+2026-06-09T09:05:30.3736850Z [36;1mcp -r cocos/kr2/cocosstudio/* build/Kirikiroid2/Resources/[0m
+2026-06-09T09:05:30.3788440Z shell: /bin/bash -e {0}
+2026-06-09T09:05:30.3788630Z env:
+2026-06-09T09:05:30.3789280Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:30.3789770Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:30.3790170Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:30.3790430Z ##[endgroup]
+2026-06-09T09:05:30.4413610Z ##[group]Run cp -r vendor/opencv/opencv2.framework build/Kirikiroid2/opencv2.framework
+2026-06-09T09:05:30.4414150Z [36;1mcp -r vendor/opencv/opencv2.framework build/Kirikiroid2/opencv2.framework[0m
+2026-06-09T09:05:30.4414510Z [36;1mecho "OpenCV framework copied"[0m
+2026-06-09T09:05:30.4414770Z [36;1mls -la build/Kirikiroid2/opencv2.framework/[0m
+2026-06-09T09:05:30.4539440Z shell: /bin/bash -e {0}
+2026-06-09T09:05:30.4539740Z env:
+2026-06-09T09:05:30.4540140Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:30.4540660Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:30.4541230Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:30.4541530Z ##[endgroup]
+2026-06-09T09:05:32.8627680Z OpenCV framework copied
+2026-06-09T09:05:32.9569300Z total 1129200
+2026-06-09T09:05:32.9570360Z drwxr-xr-x    7 runner  staff        224 Jun  9 09:05 .
+2026-06-09T09:05:32.9570880Z drwxr-xr-x   13 runner  staff        416 Jun  9 09:05 ..
+2026-06-09T09:05:32.9571440Z drwxr-xr-x  220 runner  staff       7040 Jun  9 09:05 Headers
+2026-06-09T09:05:32.9572040Z drwxr-xr-x    4 runner  staff        128 Jun  9 09:05 Modules
+2026-06-09T09:05:32.9573740Z drwxr-xr-x    4 runner  staff        128 Jun  9 09:05 Resources
+2026-06-09T09:05:32.9574760Z drwxr-xr-x    4 runner  staff        128 Jun  9 09:05 Versions
+2026-06-09T09:05:32.9575280Z -rw-r--r--    1 runner  staff  578147216 Jun  9 09:05 opencv2
+2026-06-09T09:05:32.9607170Z ##[group]Run cd build/Kirikiroid2/Classes/vendor/onig
+2026-06-09T09:05:32.9607620Z [36;1mcd build/Kirikiroid2/Classes/vendor/onig[0m
+2026-06-09T09:05:32.9607960Z [36;1m# Oniguruma v5.9.6 C files need explicit #include <stdlib.h> for C99+[0m
+2026-06-09T09:05:32.9608440Z [36;1m# which disallows implicit function declarations (malloc/free/realloc)[0m
+2026-06-09T09:05:32.9608770Z [36;1mfor f in regparse.c reggnu.c; do[0m
+2026-06-09T09:05:32.9609050Z [36;1m  if [ -f "$f" ] && ! grep -q '#include <stdlib.h>' "$f"; then[0m
+2026-06-09T09:05:32.9609350Z [36;1m    echo "Adding #include <stdlib.h> to $f"[0m
+2026-06-09T09:05:32.9609700Z [36;1m    echo '#include <stdlib.h>' | cat - "$f" > "$f.tmp" && mv "$f.tmp" "$f"[0m
+2026-06-09T09:05:32.9609990Z [36;1m  fi[0m
+2026-06-09T09:05:32.9610150Z [36;1mdone[0m
+2026-06-09T09:05:32.9610470Z [36;1m# Create config.h for Oniguruma (normally generated by configure)[0m
+2026-06-09T09:05:32.9610800Z [36;1mif [ ! -f config.h ]; then[0m
+2026-06-09T09:05:32.9611150Z [36;1m  echo '#ifndef ONIG_CONFIG_H' > config.h[0m
+2026-06-09T09:05:32.9611470Z [36;1m  echo '#define ONIG_CONFIG_H' >> config.h[0m
+2026-06-09T09:05:32.9611740Z [36;1m  echo '#define SIZEOF_INT 4' >> config.h[0m
+2026-06-09T09:05:32.9612020Z [36;1m  echo '#define SIZEOF_SHORT 2' >> config.h[0m
+2026-06-09T09:05:32.9612280Z [36;1m  echo '#define SIZEOF_LONG 8' >> config.h[0m
+2026-06-09T09:05:32.9612540Z [36;1m  echo '#define SIZEOF_VOIDP 8' >> config.h[0m
+2026-06-09T09:05:32.9612800Z [36;1m  echo '#define SIZEOF_LONG_LONG 8' >> config.h[0m
+2026-06-09T09:05:32.9613170Z [36;1m  echo '#define SIZEOF_SIZE_T 8' >> config.h[0m
+2026-06-09T09:05:32.9613500Z [36;1m  echo '#define SIZEOF_OFF_T 8' >> config.h[0m
+2026-06-09T09:05:32.9613850Z [36;1m  echo '#define HAVE_STDARG_H 1' >> config.h[0m
+2026-06-09T09:05:32.9614150Z [36;1m  echo '#define HAVE_STDLIB_H 1' >> config.h[0m
+2026-06-09T09:05:32.9614400Z [36;1m  echo '#define HAVE_STRING_H 1' >> config.h[0m
+2026-06-09T09:05:32.9614690Z [36;1m  echo '#define HAVE_MEMORY_H 1' >> config.h[0m
+2026-06-09T09:05:32.9615320Z [36;1m  echo '#define HAVE_SYS_TYPES_H 1' >> config.h[0m
+2026-06-09T09:05:32.9615610Z [36;1m  echo '#define HAVE_STDINT_H 1' >> config.h[0m
+2026-06-09T09:05:32.9615930Z [36;1m  echo '#define HAVE_INTTYPES_H 1' >> config.h[0m
+2026-06-09T09:05:32.9616210Z [36;1m  echo '#define HAVE_UNISTD_H 1' >> config.h[0m
+2026-06-09T09:05:32.9616550Z [36;1m  echo '#define HAVE_SYS_STAT_H 1' >> config.h[0m
+2026-06-09T09:05:32.9616860Z [36;1m  echo '#define HAVE_ALLOCA_H 1' >> config.h[0m
+2026-06-09T09:05:32.9617110Z [36;1m  echo '#define HAVE_ALLOCA 1' >> config.h[0m
+2026-06-09T09:05:32.9617410Z [36;1m  echo '#define HAVE_STRINGIZE 1' >> config.h[0m
+2026-06-09T09:05:32.9617670Z [36;1m  echo '#endif' >> config.h[0m
+2026-06-09T09:05:32.9617890Z [36;1m  echo "Created config.h for Oniguruma"[0m
+2026-06-09T09:05:32.9618120Z [36;1mfi[0m
+2026-06-09T09:05:32.9670700Z shell: /bin/bash -e {0}
+2026-06-09T09:05:32.9670890Z env:
+2026-06-09T09:05:32.9671200Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:32.9671760Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:32.9672150Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:32.9672420Z ##[endgroup]
+2026-06-09T09:05:32.9981050Z Adding #include <stdlib.h> to regparse.c
+2026-06-09T09:05:33.0032990Z Adding #include <stdlib.h> to reggnu.c
+2026-06-09T09:05:33.0069230Z Created config.h for Oniguruma
+2026-06-09T09:05:33.0101070Z ##[group]Run cd build/Kirikiroid2/Classes/environ/cocos2d
+2026-06-09T09:05:33.0101450Z [36;1mcd build/Kirikiroid2/Classes/environ/cocos2d[0m
+2026-06-09T09:05:33.0101770Z [36;1m# Rename to .mm for Objective-C support[0m
+2026-06-09T09:05:33.0102070Z [36;1mmv CustomFileUtils.cpp CustomFileUtils.mm[0m
+2026-06-09T09:05:33.0102440Z [36;1m# Replace getSuitableFOpen() (not in 3.6) - just use the path string directly[0m
+2026-06-09T09:05:33.0102930Z [36;1msed -i '' 's/FileUtils::getInstance()->getSuitableFOpen(path)/path/g' CustomFileUtils.mm[0m
+2026-06-09T09:05:33.0103460Z [36;1m# Fix isFileExistInternal (private in FileUtilsApple) - use public isFileExist[0m
+2026-06-09T09:05:33.0104240Z [36;1msed -i '' 's/virtual bool isFileExistInternal(const std::string& strFilePath) const override;/virtual bool isFileExist(const std::string\& strFilePath) const;/g' CustomFileUtils.mm[0m
+2026-06-09T09:05:33.0105100Z [36;1msed -i '' 's/bool CustomFileUtils::isFileExistInternal/bool CustomFileUtils::isFileExist/g' CustomFileUtils.mm[0m
+2026-06-09T09:05:33.0105880Z [36;1msed -i '' 's/FileUtilsInherit::isFileExistInternal(strFilePath)/FileUtilsInherit::isFileExist(strFilePath)/g' CustomFileUtils.mm[0m
+2026-06-09T09:05:33.0154940Z shell: /bin/bash -e {0}
+2026-06-09T09:05:33.0155140Z env:
+2026-06-09T09:05:33.0155550Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:33.0156080Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:33.0156500Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:33.0156770Z ##[endgroup]
+2026-06-09T09:05:33.0532060Z ##[group]Run cd build/Kirikiroid2/proj.ios_mac/ios
+2026-06-09T09:05:33.0532390Z [36;1mcd build/Kirikiroid2/proj.ios_mac/ios[0m
+2026-06-09T09:05:33.0532660Z [36;1m# The project uses TVPAppDelegate, not AppDelegate[0m
+2026-06-09T09:05:33.0533060Z [36;1m# Simple approach: replace all AppDelegate, then fix the #import back[0m
+2026-06-09T09:05:33.0533480Z [36;1msed -i '' 's/AppDelegate/TVPAppDelegate/g' AppController.mm[0m
+2026-06-09T09:05:33.0533840Z [36;1m# Fix the #import that was incorrectly changed[0m
+2026-06-09T09:05:33.0534270Z [36;1msed -i '' 's/#import "TVPAppDelegate.h"/#import "AppDelegate.h"/g' AppController.mm[0m
+2026-06-09T09:05:33.0534720Z [36;1m# Add import for our AppDelegate header (which defines TVPAppDelegate)[0m
+2026-06-09T09:05:33.0535350Z [36;1msed -i '' 's/#import "AppDelegate.h"/#import "AppDelegate.h"\n#import "..\/..\/Classes\/environ\/cocos2d\/AppDelegate.h"/g' AppController.mm[0m
+2026-06-09T09:05:33.0582780Z shell: /bin/bash -e {0}
+2026-06-09T09:05:33.0583070Z env:
+2026-06-09T09:05:33.0583430Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:33.0584000Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:33.0584420Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:33.0584730Z ##[endgroup]
+2026-06-09T09:05:33.0899050Z ##[group]Run gem install xcodeproj
+2026-06-09T09:05:33.0899340Z [36;1mgem install xcodeproj[0m
+2026-06-09T09:05:33.0946010Z shell: /bin/bash -e {0}
+2026-06-09T09:05:33.0946190Z env:
+2026-06-09T09:05:33.0946530Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:33.0948040Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:33.0948560Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:33.0948840Z ##[endgroup]
+2026-06-09T09:05:34.2656160Z Successfully installed xcodeproj-1.27.0
+2026-06-09T09:05:34.2656530Z Parsing documentation for xcodeproj-1.27.0
+2026-06-09T09:05:34.2656830Z Done installing documentation for xcodeproj after 0 seconds
+2026-06-09T09:05:34.2657120Z 1 gem installed
+2026-06-09T09:05:34.2697790Z ##[group]Run ruby scripts/add_sources.rb \
+2026-06-09T09:05:34.2698080Z [36;1mruby scripts/add_sources.rb \[0m
+2026-06-09T09:05:34.2698360Z [36;1m  build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj \[0m
+2026-06-09T09:05:34.2698660Z [36;1m  build/Kirikiroid2/Classes/[0m
+2026-06-09T09:05:34.2745690Z shell: /bin/bash -e {0}
+2026-06-09T09:05:34.2745870Z env:
+2026-06-09T09:05:34.2746180Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:34.2746700Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:34.2747150Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:34.2747420Z ##[endgroup]
+2026-06-09T09:05:34.3889840Z Using target: Kirikiroid2 iOS
+2026-06-09T09:05:34.3890350Z Removing old Classes group files from project...
+2026-06-09T09:05:34.3890640Z   Added: ../Classes/base/BinaryStream.cpp
+2026-06-09T09:05:34.3890960Z   Added: ../Classes/base/CharacterSet.cpp
+2026-06-09T09:05:34.3891200Z   Added: ../Classes/base/EventIntf.cpp
+2026-06-09T09:05:34.3891430Z   Added: ../Classes/base/PluginIntf.cpp
+2026-06-09T09:05:34.3891670Z   Added: ../Classes/base/ScriptMgnIntf.cpp
+2026-06-09T09:05:34.3891930Z   Added: ../Classes/base/StorageIntf.cpp
+2026-06-09T09:05:34.3892160Z   Added: ../Classes/base/SysInitIntf.cpp
+2026-06-09T09:05:34.3892400Z   Added: ../Classes/base/SystemIntf.cpp
+2026-06-09T09:05:34.3902030Z   Added: ../Classes/base/TARArchive.cpp
+2026-06-09T09:05:34.3902280Z   Added: ../Classes/base/TextStream.cpp
+2026-06-09T09:05:34.3902540Z   Added: ../Classes/base/XP3Archive.cpp
+2026-06-09T09:05:34.3902760Z   Added: ../Classes/base/ZIPArchive.cpp
+2026-06-09T09:05:34.3903000Z   Added: ../Classes/environ/Application.cpp
+2026-06-09T09:05:34.3903310Z   Added: ../Classes/environ/ConfigManager/GlobalConfigManager.cpp
+2026-06-09T09:05:34.3903680Z   Added: ../Classes/environ/ConfigManager/IndividualConfigManager.cpp
+2026-06-09T09:05:34.3904060Z   Added: ../Classes/environ/ConfigManager/LocaleConfigManager.cpp
+2026-06-09T09:05:34.3904360Z   Added: ../Classes/environ/DetectCPU.cpp
+2026-06-09T09:05:34.3904580Z   Added: ../Classes/environ/DumpSend.cpp
+2026-06-09T09:05:34.3904830Z   Added: ../Classes/environ/cocos2d/AppDelegate.cpp
+2026-06-09T09:05:34.3905100Z   Added: ../Classes/environ/cocos2d/CCKeyCodeConv.cpp
+2026-06-09T09:05:34.3905410Z   Added: ../Classes/environ/cocos2d/CustomFileUtils.mm
+2026-06-09T09:05:34.3905680Z   Added: ../Classes/environ/cocos2d/MainScene.cpp
+2026-06-09T09:05:34.3905930Z   Added: ../Classes/environ/ios/iOSUtils.mm
+2026-06-09T09:05:34.3906690Z   Added: ../Classes/environ/ui/BaseForm.cpp
+2026-06-09T09:05:34.3906930Z   Added: ../Classes/environ/ui/ConsoleWindow.cpp
+2026-06-09T09:05:34.3907210Z   Added: ../Classes/environ/ui/DebugViewLayerForm.cpp
+2026-06-09T09:05:34.3907480Z   Added: ../Classes/environ/ui/FileSelectorForm.cpp
+2026-06-09T09:05:34.3907740Z   Added: ../Classes/environ/ui/GameMainMenu.cpp
+2026-06-09T09:05:34.3908020Z   Added: ../Classes/environ/ui/GlobalPreferenceForm.cpp
+2026-06-09T09:05:34.3908300Z   Added: ../Classes/environ/ui/InGameMenuForm.cpp
+2026-06-09T09:05:34.3908590Z   Added: ../Classes/environ/ui/IndividualPreferenceForm.cpp
+2026-06-09T09:05:34.3908920Z   Added: ../Classes/environ/ui/MainFileSelectorForm.cpp
+2026-06-09T09:05:34.3909180Z   Added: ../Classes/environ/ui/MessageBox.cpp
+2026-06-09T09:05:34.3909450Z   Added: ../Classes/environ/ui/PreferenceForm.cpp
+2026-06-09T09:05:34.3909710Z   Added: ../Classes/environ/ui/SeletListForm.cpp
+2026-06-09T09:05:34.3909970Z   Added: ../Classes/environ/ui/TipsHelpForm.cpp
+2026-06-09T09:05:34.3910260Z   Added: ../Classes/environ/ui/extension/ActionExtension.cpp
+2026-06-09T09:05:34.3910550Z   Added: ../Classes/extension/Extension.cpp
+2026-06-09T09:05:34.3910780Z   Added: ../Classes/msg/MsgIntf.cpp
+2026-06-09T09:05:34.3911010Z   Added: ../Classes/plugins/InternalPlugins.cpp
+2026-06-09T09:05:34.3911270Z   Added: ../Classes/plugins/LayerExBase.cpp
+2026-06-09T09:05:34.3911790Z   Added: ../Classes/plugins/addFont.cpp
+2026-06-09T09:05:34.3912040Z   Added: ../Classes/plugins/csvParser.cpp
+2026-06-09T09:05:34.3912260Z   Added: ../Classes/plugins/dirlist.cpp
+2026-06-09T09:05:34.3912490Z   Added: ../Classes/plugins/fftgraph.cpp
+2026-06-09T09:05:34.3912710Z   Added: ../Classes/plugins/getSample.cpp
+2026-06-09T09:05:34.3912950Z   Added: ../Classes/plugins/getabout.cpp
+2026-06-09T09:05:34.3913180Z   Added: ../Classes/plugins/layerExPerspective.cpp
+2026-06-09T09:05:34.3913450Z   Added: ../Classes/plugins/ncbind/ncbind.cpp
+2026-06-09T09:05:34.3913700Z   Added: ../Classes/plugins/saveStruct.cpp
+2026-06-09T09:05:34.3913920Z   Added: ../Classes/plugins/varfile.cpp
+2026-06-09T09:05:34.3914150Z   Added: ../Classes/plugins/win32dialog.cpp
+2026-06-09T09:05:34.3914370Z   Added: ../Classes/plugins/wutcwf.cpp
+2026-06-09T09:05:34.3914600Z   Added: ../Classes/plugins/xp3filter.cpp
+2026-06-09T09:05:34.3914810Z   Added: ../Classes/sound/CDDAIntf.cpp
+2026-06-09T09:05:34.3915030Z   Added: ../Classes/sound/MIDIIntf.cpp
+2026-06-09T09:05:34.3915260Z   Added: ../Classes/sound/MathAlgorithms.cpp
+2026-06-09T09:05:34.3915490Z   Added: ../Classes/sound/PhaseVocoderDSP.cpp
+2026-06-09T09:05:34.3915730Z   Added: ../Classes/sound/PhaseVocoderFilter.cpp
+2026-06-09T09:05:34.3915970Z   Added: ../Classes/sound/SoundBufferBaseIntf.cpp
+2026-06-09T09:05:34.3916210Z   Added: ../Classes/sound/WaveFormatConverter.cpp
+2026-06-09T09:05:34.3916430Z   Added: ../Classes/sound/WaveIntf.cpp
+2026-06-09T09:05:34.3916650Z   Added: ../Classes/sound/WaveLoopManager.cpp
+2026-06-09T09:05:34.3916880Z   Added: ../Classes/sound/WaveSegmentQueue.cpp
+2026-06-09T09:05:34.3917100Z   Added: ../Classes/tjs2/tjs.cpp
+2026-06-09T09:05:34.3917300Z   Added: ../Classes/tjs2/tjs.tab.cpp
+2026-06-09T09:05:34.3917500Z   Added: ../Classes/tjs2/tjsArray.cpp
+2026-06-09T09:05:34.3917720Z   Added: ../Classes/tjs2/tjsBinarySerializer.cpp
+2026-06-09T09:05:34.3917960Z   Added: ../Classes/tjs2/tjsByteCodeLoader.cpp
+2026-06-09T09:05:34.3918220Z   Added: ../Classes/tjs2/tjsCompileControl.cpp
+2026-06-09T09:05:34.3918430Z   Added: ../Classes/tjs2/tjsConfig.cpp
+2026-06-09T09:05:34.3918660Z   Added: ../Classes/tjs2/tjsConstArrayData.cpp
+2026-06-09T09:05:34.3918890Z   Added: ../Classes/tjs2/tjsDate.cpp
+2026-06-09T09:05:34.3919110Z   Added: ../Classes/tjs2/tjsDateParser.cpp
+2026-06-09T09:05:34.3919320Z   Added: ../Classes/tjs2/tjsDebug.cpp
+2026-06-09T09:05:34.3919540Z   Added: ../Classes/tjs2/tjsDictionary.cpp
+2026-06-09T09:05:34.3919760Z   Added: ../Classes/tjs2/tjsDisassemble.cpp
+2026-06-09T09:05:34.3919980Z   Added: ../Classes/tjs2/tjsError.cpp
+2026-06-09T09:05:34.3920310Z   Added: ../Classes/tjs2/tjsException.cpp
+2026-06-09T09:05:34.3920540Z   Added: ../Classes/tjs2/tjsGlobalStringMap.cpp
+2026-06-09T09:05:34.3920790Z   Added: ../Classes/tjs2/tjsInterCodeExec.cpp
+2026-06-09T09:05:34.3921010Z   Added: ../Classes/tjs2/tjsInterCodeGen.cpp
+2026-06-09T09:05:34.3921250Z   Added: ../Classes/tjs2/tjsInterface.cpp
+2026-06-09T09:05:34.3921460Z   Added: ../Classes/tjs2/tjsLex.cpp
+2026-06-09T09:05:34.3921670Z   Added: ../Classes/tjs2/tjsMT19937ar-cok.cpp
+2026-06-09T09:05:34.3921890Z   Added: ../Classes/tjs2/tjsMath.cpp
+2026-06-09T09:05:34.3922100Z   Added: ../Classes/tjs2/tjsMessage.cpp
+2026-06-09T09:05:34.3922300Z   Added: ../Classes/tjs2/tjsNamespace.cpp
+2026-06-09T09:05:34.3922520Z   Added: ../Classes/tjs2/tjsNative.cpp
+2026-06-09T09:05:34.3922730Z   Added: ../Classes/tjs2/tjsObject.cpp
+2026-06-09T09:05:34.3922970Z   Added: ../Classes/tjs2/tjsObjectExtendable.cpp
+2026-06-09T09:05:34.3923210Z   Added: ../Classes/tjs2/tjsOctPack.cpp
+2026-06-09T09:05:34.3923430Z   Added: ../Classes/tjs2/tjsRandomGenerator.cpp
+2026-06-09T09:05:34.3923670Z   Added: ../Classes/tjs2/tjsRegExp.cpp
+2026-06-09T09:05:34.3923880Z   Added: ../Classes/tjs2/tjsScriptBlock.cpp
+2026-06-09T09:05:34.3924120Z   Added: ../Classes/tjs2/tjsScriptCache.cpp
+2026-06-09T09:05:34.3924330Z   Added: ../Classes/tjs2/tjsString.cpp
+2026-06-09T09:05:34.3924550Z   Added: ../Classes/tjs2/tjsUtils.cpp
+2026-06-09T09:05:34.3924860Z   Added: ../Classes/tjs2/tjsVariant.cpp
+2026-06-09T09:05:34.3925090Z   Added: ../Classes/tjs2/tjsVariantString.cpp
+2026-06-09T09:05:34.3925310Z   Added: ../Classes/tjs2/tjsdate.tab.cpp
+2026-06-09T09:05:34.3925520Z   Added: ../Classes/tjs2/tjspp.tab.cpp
+2026-06-09T09:05:34.3925730Z   Added: ../Classes/utils/ClipboardIntf.cpp
+2026-06-09T09:05:34.3925960Z   Added: ../Classes/utils/DebugIntf.cpp
+2026-06-09T09:05:34.3926170Z   Added: ../Classes/utils/KAGParser.cpp
+2026-06-09T09:05:34.3926410Z   Added: ../Classes/utils/MathAlgorithms_Default.cpp
+2026-06-09T09:05:34.3926670Z   Added: ../Classes/utils/MiscUtility.cpp
+2026-06-09T09:05:34.3926940Z   Added: ../Classes/utils/PadIntf.cpp
+2026-06-09T09:05:34.3927150Z   Added: ../Classes/utils/Random.cpp
+2026-06-09T09:05:34.3927370Z   Added: ../Classes/utils/RealFFT_Default.cpp
+2026-06-09T09:05:34.3927600Z   Added: ../Classes/utils/ThreadIntf.cpp
+2026-06-09T09:05:34.3927800Z   Added: ../Classes/utils/TickCount.cpp
+2026-06-09T09:05:34.3928010Z   Added: ../Classes/utils/TimerIntf.cpp
+2026-06-09T09:05:34.3928260Z   Added: ../Classes/utils/VelocityTracker.cpp
+2026-06-09T09:05:34.3928500Z   Added: ../Classes/utils/encoding/gbk2unicode.c
+2026-06-09T09:05:34.3928760Z   Added: ../Classes/utils/encoding/jis2unicode.c
+2026-06-09T09:05:34.3928970Z   Added: ../Classes/utils/md5.c
+2026-06-09T09:05:34.3929180Z   Added: ../Classes/utils/minizip/ioapi.cpp
+2026-06-09T09:05:34.3929400Z   Added: ../Classes/utils/minizip/unzip.c
+2026-06-09T09:05:34.3929620Z   Added: ../Classes/utils/minizip/zip.c
+2026-06-09T09:05:34.3929830Z   Added: ../Classes/vendor/lz4/lz4.c
+2026-06-09T09:05:34.3930040Z   Added: ../Classes/vendor/lz4/lz4frame.c
+2026-06-09T09:05:34.3930240Z   Added: ../Classes/vendor/lz4/lz4hc.c
+2026-06-09T09:05:34.3930440Z   Added: ../Classes/vendor/onig/enc/ascii.c
+2026-06-09T09:05:34.3930660Z   Added: ../Classes/vendor/onig/enc/big5.c
+2026-06-09T09:05:34.3930870Z   Added: ../Classes/vendor/onig/enc/cp1251.c
+2026-06-09T09:05:34.3931090Z   Added: ../Classes/vendor/onig/enc/euc_jp.c
+2026-06-09T09:05:34.3931320Z   Added: ../Classes/vendor/onig/enc/euc_kr.c
+2026-06-09T09:05:34.3931530Z   Added: ../Classes/vendor/onig/enc/euc_tw.c
+2026-06-09T09:05:34.3931760Z   Added: ../Classes/vendor/onig/enc/gb18030.c
+2026-06-09T09:05:34.3931990Z   Added: ../Classes/vendor/onig/enc/iso8859_1.c
+2026-06-09T09:05:34.3932260Z   Added: ../Classes/vendor/onig/enc/iso8859_10.c
+2026-06-09T09:05:34.3932500Z   Added: ../Classes/vendor/onig/enc/iso8859_11.c
+2026-06-09T09:05:34.3932750Z   Added: ../Classes/vendor/onig/enc/iso8859_13.c
+2026-06-09T09:05:34.3932970Z   Added: ../Classes/vendor/onig/enc/iso8859_14.c
+2026-06-09T09:05:34.3933580Z   Added: ../Classes/vendor/onig/enc/iso8859_15.c
+2026-06-09T09:05:34.3933820Z   Added: ../Classes/vendor/onig/enc/iso8859_16.c
+2026-06-09T09:05:34.3934070Z   Added: ../Classes/vendor/onig/enc/iso8859_2.c
+2026-06-09T09:05:34.3934310Z   Added: ../Classes/vendor/onig/enc/iso8859_3.c
+2026-06-09T09:05:34.3934550Z   Added: ../Classes/vendor/onig/enc/iso8859_4.c
+2026-06-09T09:05:34.3934800Z   Added: ../Classes/vendor/onig/enc/iso8859_5.c
+2026-06-09T09:05:34.3935050Z   Added: ../Classes/vendor/onig/enc/iso8859_6.c
+2026-06-09T09:05:34.3935290Z   Added: ../Classes/vendor/onig/enc/iso8859_7.c
+2026-06-09T09:05:34.3935540Z   Added: ../Classes/vendor/onig/enc/iso8859_8.c
+2026-06-09T09:05:34.3935780Z   Added: ../Classes/vendor/onig/enc/iso8859_9.c
+2026-06-09T09:05:34.3936010Z   Added: ../Classes/vendor/onig/enc/koi8_r.c
+2026-06-09T09:05:34.3936240Z   Added: ../Classes/vendor/onig/enc/sjis.c
+2026-06-09T09:05:34.3936460Z   Added: ../Classes/vendor/onig/enc/unicode.c
+2026-06-09T09:05:34.3936700Z   Added: ../Classes/vendor/onig/enc/utf16_be.c
+2026-06-09T09:05:34.3936920Z   Added: ../Classes/vendor/onig/enc/utf16_le.c
+2026-06-09T09:05:34.3937160Z   Added: ../Classes/vendor/onig/enc/utf32_be.c
+2026-06-09T09:05:34.3937390Z   Added: ../Classes/vendor/onig/enc/utf32_le.c
+2026-06-09T09:05:34.3937620Z   Added: ../Classes/vendor/onig/enc/utf8.c
+2026-06-09T09:05:34.3937820Z   Added: ../Classes/vendor/onig/regcomp.c
+2026-06-09T09:05:34.3938340Z   Added: ../Classes/vendor/onig/regenc.c
+2026-06-09T09:05:34.3938570Z   Added: ../Classes/vendor/onig/regerror.c
+2026-06-09T09:05:34.3938800Z   Added: ../Classes/vendor/onig/regexec.c
+2026-06-09T09:05:34.3939020Z   Added: ../Classes/vendor/onig/regext.c
+2026-06-09T09:05:34.3939230Z   Added: ../Classes/vendor/onig/reggnu.c
+2026-06-09T09:05:34.3939440Z   Added: ../Classes/vendor/onig/regparse.c
+2026-06-09T09:05:34.3939650Z   Added: ../Classes/vendor/onig/regposerr.c
+2026-06-09T09:05:34.3939870Z   Added: ../Classes/vendor/onig/regposix.c
+2026-06-09T09:05:34.3940090Z   Added: ../Classes/vendor/onig/regsyntax.c
+2026-06-09T09:05:34.3940310Z   Added: ../Classes/vendor/onig/regtrav.c
+2026-06-09T09:05:34.3940520Z   Added: ../Classes/vendor/onig/regversion.c
+2026-06-09T09:05:34.3940750Z   Added: ../Classes/vendor/onig/st.c
+2026-06-09T09:05:34.3940940Z   Added: ../Classes/visual/BitmapIntf.cpp
+2026-06-09T09:05:34.3941180Z   Added: ../Classes/visual/BitmapLayerTreeOwner.cpp
+2026-06-09T09:05:34.3941440Z   Added: ../Classes/visual/CharacterData.cpp
+2026-06-09T09:05:34.3941660Z   Added: ../Classes/visual/ComplexRect.cpp
+2026-06-09T09:05:34.3941880Z   Added: ../Classes/visual/FontImpl.cpp
+2026-06-09T09:05:34.3942080Z   Added: ../Classes/visual/FontSystem.cpp
+2026-06-09T09:05:34.3942310Z   Added: ../Classes/visual/GraphicsLoadThread.cpp
+2026-06-09T09:05:34.3942560Z   Added: ../Classes/visual/GraphicsLoaderIntf.cpp
+2026-06-09T09:05:34.3942800Z   Added: ../Classes/visual/ImageFunction.cpp
+2026-06-09T09:05:34.3943020Z   Added: ../Classes/visual/LayerBitmapIntf.cpp
+2026-06-09T09:05:34.3943240Z   Added: ../Classes/visual/LayerIntf.cpp
+2026-06-09T09:05:34.3943440Z   Added: ../Classes/visual/LayerManager.cpp
+2026-06-09T09:05:34.3943680Z   Added: ../Classes/visual/LayerTreeOwnerImpl.cpp
+2026-06-09T09:05:34.3943910Z   Added: ../Classes/visual/LoadPNG.cpp
+2026-06-09T09:05:34.3944110Z   Added: ../Classes/visual/LoadPVRv3.cpp
+2026-06-09T09:05:34.3944310Z   Added: ../Classes/visual/LoadTLG.cpp
+2026-06-09T09:05:34.4045120Z   Added: ../Classes/visual/LoadWEBP.cpp
+2026-06-09T09:05:34.4045450Z   Added: ../Classes/visual/MenuItemIntf.cpp
+2026-06-09T09:05:34.4045720Z   Added: ../Classes/visual/PrerenderedFont.cpp
+2026-06-09T09:05:34.4045980Z   Added: ../Classes/visual/RectItf.cpp
+2026-06-09T09:05:34.4046230Z   Added: ../Classes/visual/RenderManager.cpp
+2026-06-09T09:05:34.4046510Z   Added: ../Classes/visual/SaveTLG5.cpp
+2026-06-09T09:05:34.4046750Z   Added: ../Classes/visual/SaveTLG6.cpp
+2026-06-09T09:05:34.4046980Z   Added: ../Classes/visual/TransIntf.cpp
+2026-06-09T09:05:34.4047210Z   Added: ../Classes/visual/VideoOvlIntf.cpp
+2026-06-09T09:05:34.4048180Z   Added: ../Classes/visual/WindowIntf.cpp
+2026-06-09T09:05:34.4048400Z   Added: ../Classes/visual/argb.cpp
+2026-06-09T09:05:34.4048630Z   Added: ../Classes/visual/gl/WeightFunctor.cpp
+2026-06-09T09:05:34.4048890Z   Added: ../Classes/visual/gl/blend_function.cpp
+2026-06-09T09:05:34.4049160Z   Added: ../Classes/visual/ogl/RenderManager_ogl.cpp
+2026-06-09T09:05:34.4049400Z   Added: ../Classes/visual/ogl/astcrt.cpp
+2026-06-09T09:05:34.4049620Z   Added: ../Classes/visual/ogl/etcpak.cpp
+2026-06-09T09:05:34.4049850Z   Added: ../Classes/visual/ogl/imagepacker.cpp
+2026-06-09T09:05:34.4050070Z   Added: ../Classes/visual/ogl/pvrtc.cpp
+2026-06-09T09:05:34.4050290Z   Added: ../Classes/visual/tvpgl.cpp
+2026-06-09T09:05:34.4050500Z   Added header: ../Classes/base/BinaryStream.h
+2026-06-09T09:05:34.4050730Z   Added header: ../Classes/base/CharacterSet.h
+2026-06-09T09:05:34.4050970Z   Added header: ../Classes/base/EventIntf.h
+2026-06-09T09:05:34.4051210Z   Added header: ../Classes/base/PluginIntf.h
+2026-06-09T09:05:34.4051450Z   Added header: ../Classes/base/Protect.h
+2026-06-09T09:05:34.4051670Z   Added header: ../Classes/base/ScriptMgnIntf.h
+2026-06-09T09:05:34.4051910Z   Added header: ../Classes/base/StorageIntf.h
+2026-06-09T09:05:34.4052150Z   Added header: ../Classes/base/SysInitIntf.h
+2026-06-09T09:05:34.4052390Z   Added header: ../Classes/base/SystemIntf.h
+2026-06-09T09:05:34.4052770Z   Added header: ../Classes/base/TextStream.h
+2026-06-09T09:05:34.4052990Z   Added header: ../Classes/base/UserEvent.h
+2026-06-09T09:05:34.4053210Z   Added header: ../Classes/base/UtilStreams.h
+2026-06-09T09:05:34.4053440Z   Added header: ../Classes/base/XP3Archive.h
+2026-06-09T09:05:34.4053650Z   Added header: ../Classes/base/common.h
+2026-06-09T09:05:34.4053850Z   Added header: ../Classes/base/tar.h
+2026-06-09T09:05:34.4054060Z   Added header: ../Classes/base/win32/EventImpl.h
+2026-06-09T09:05:34.4054320Z   Added header: ../Classes/base/win32/FileSelector.h
+2026-06-09T09:05:34.4054570Z   Added header: ../Classes/base/win32/FuncStubs.h
+2026-06-09T09:05:34.4054830Z   Added header: ../Classes/base/win32/NativeEventQueue.h
+2026-06-09T09:05:34.4055110Z   Added header: ../Classes/base/win32/PluginImpl.h
+2026-06-09T09:05:34.4055350Z   Added header: ../Classes/base/win32/ScriptMgnImpl.h
+2026-06-09T09:05:34.4055620Z   Added header: ../Classes/base/win32/StorageImpl.h
+2026-06-09T09:05:34.4055880Z   Added header: ../Classes/base/win32/SusieArchive.h
+2026-06-09T09:05:34.4056160Z   Added header: ../Classes/base/win32/SysInitImpl.h
+2026-06-09T09:05:34.4056430Z   Added header: ../Classes/base/win32/SystemImpl.h
+2026-06-09T09:05:34.4056660Z   Added header: ../Classes/base/win32/win32io.h
+2026-06-09T09:05:34.4056900Z   Added header: ../Classes/environ/Application.h
+2026-06-09T09:05:34.4057200Z   Added header: ../Classes/environ/ConfigManager/GlobalConfigManager.h
+2026-06-09T09:05:34.4057570Z   Added header: ../Classes/environ/ConfigManager/IndividualConfigManager.h
+2026-06-09T09:05:34.4057940Z   Added header: ../Classes/environ/ConfigManager/LocaleConfigManager.h
+2026-06-09T09:05:34.4058260Z   Added header: ../Classes/environ/DetectCPU.h
+2026-06-09T09:05:34.4058520Z   Added header: ../Classes/environ/Platform.h
+2026-06-09T09:05:34.4058810Z   Added header: ../Classes/environ/XP3ArchiveRepack.h
+2026-06-09T09:05:34.4059090Z   Added header: ../Classes/environ/cocos2d/AppDelegate.h
+2026-06-09T09:05:34.4059410Z   Added header: ../Classes/environ/cocos2d/CCKeyCodeConv.h
+2026-06-09T09:05:34.4059700Z   Added header: ../Classes/environ/cocos2d/CustomFileUtils.h
+2026-06-09T09:05:34.4059980Z   Added header: ../Classes/environ/cocos2d/MainScene.h
+2026-06-09T09:05:34.4060250Z   Added header: ../Classes/environ/cocos2d/YUVSprite.h
+2026-06-09T09:05:34.4060490Z   Added header: ../Classes/environ/combase.h
+2026-06-09T09:05:34.4060730Z   Added header: ../Classes/environ/cpu_types.h
+2026-06-09T09:05:34.4060960Z   Added header: ../Classes/environ/typedefine.h
+2026-06-09T09:05:34.4061190Z   Added header: ../Classes/environ/ui/BaseForm.h
+2026-06-09T09:05:34.4061560Z   Added header: ../Classes/environ/ui/ConsoleWindow.h
+2026-06-09T09:05:34.4061830Z   Added header: ../Classes/environ/ui/DebugViewLayerForm.h
+2026-06-09T09:05:34.4062100Z   Added header: ../Classes/environ/ui/FileSelectorForm.h
+2026-06-09T09:05:34.4062370Z   Added header: ../Classes/environ/ui/GameMainMenu.h
+2026-06-09T09:05:34.4062640Z   Added header: ../Classes/environ/ui/GlobalPreferenceForm.h
+2026-06-09T09:05:34.4062930Z   Added header: ../Classes/environ/ui/InGameMenuForm.h
+2026-06-09T09:05:34.4063210Z   Added header: ../Classes/environ/ui/IndividualPreferenceForm.h
+2026-06-09T09:05:34.4063520Z   Added header: ../Classes/environ/ui/MainFileSelectorForm.h
+2026-06-09T09:05:34.4063790Z   Added header: ../Classes/environ/ui/MessageBox.h
+2026-06-09T09:05:34.4064080Z   Added header: ../Classes/environ/ui/PreferenceConfig.h
+2026-06-09T09:05:34.4064360Z   Added header: ../Classes/environ/ui/PreferenceForm.h
+2026-06-09T09:05:34.4064650Z   Added header: ../Classes/environ/ui/SeletListForm.h
+2026-06-09T09:05:34.4069920Z   Added header: ../Classes/environ/ui/SimpleMediaFilePlayer.h
+2026-06-09T09:05:34.4070250Z   Added header: ../Classes/environ/ui/TipsHelpForm.h
+2026-06-09T09:05:34.4070520Z   Added header: ../Classes/environ/ui/XP3RepackForm.h
+2026-06-09T09:05:34.4070820Z   Added header: ../Classes/environ/ui/extension/ActionExtension.h
+2026-06-09T09:05:34.4071290Z   Added header: ../Classes/environ/ui/extension/UIExtension.h
+2026-06-09T09:05:34.4071560Z   Added header: ../Classes/environ/vkdefine.h
+2026-06-09T09:05:34.4071840Z   Added header: ../Classes/environ/win32/ApplicationSpecialPath.h
+2026-06-09T09:05:34.4072160Z   Added header: ../Classes/environ/win32/CompatibleNativeFuncs.h
+2026-06-09T09:05:34.4072460Z   Added header: ../Classes/environ/win32/ConfigFormUnit.h
+2026-06-09T09:05:34.4072720Z   Added header: ../Classes/environ/win32/DetectCPU.h
+2026-06-09T09:05:34.4072980Z   Added header: ../Classes/environ/win32/EmergencyExit.h
+2026-06-09T09:05:34.4073240Z   Added header: ../Classes/environ/win32/HintWindow.h
+2026-06-09T09:05:34.4073500Z   Added header: ../Classes/environ/win32/ImeControl.h
+2026-06-09T09:05:34.4073750Z   Added header: ../Classes/environ/win32/MainFormUnit.h
+2026-06-09T09:05:34.4074020Z   Added header: ../Classes/environ/win32/MouseCursor.h
+2026-06-09T09:05:34.4074270Z   Added header: ../Classes/environ/win32/SystemControl.h
+2026-06-09T09:05:34.4074530Z   Added header: ../Classes/environ/win32/TVPWindow.h
+2026-06-09T09:05:34.4074780Z   Added header: ../Classes/environ/win32/TouchPoint.h
+2026-06-09T09:05:34.4075050Z   Added header: ../Classes/environ/win32/VersionFormUnit.h
+2026-06-09T09:05:34.4075320Z   Added header: ../Classes/environ/win32/WindowFormUnit.h
+2026-06-09T09:05:34.4075590Z   Added header: ../Classes/environ/win32/WindowsUtil.h
+2026-06-09T09:05:34.4075830Z   Added header: ../Classes/environ/win32/config.h
+2026-06-09T09:05:34.4076060Z   Added header: ../Classes/environ/win32type.h
+2026-06-09T09:05:34.4076300Z   Added header: ../Classes/extension/Extension.h
+2026-06-09T09:05:34.4076520Z   Added header: ../Classes/movie/ffmpeg/AE.h
+2026-06-09T09:05:34.4076770Z   Added header: ../Classes/movie/ffmpeg/AEAudioFormat.h
+2026-06-09T09:05:34.4077030Z   Added header: ../Classes/movie/ffmpeg/AEChannelData.h
+2026-06-09T09:05:34.4077300Z   Added header: ../Classes/movie/ffmpeg/AEChannelInfo.h
+2026-06-09T09:05:34.4077550Z   Added header: ../Classes/movie/ffmpeg/AEFactory.h
+2026-06-09T09:05:34.4077800Z   Added header: ../Classes/movie/ffmpeg/AEStream.h
+2026-06-09T09:05:34.4078050Z   Added header: ../Classes/movie/ffmpeg/AEStreamData.h
+2026-06-09T09:05:34.4078300Z   Added header: ../Classes/movie/ffmpeg/AEStreamInfo.h
+2026-06-09T09:05:34.4078550Z   Added header: ../Classes/movie/ffmpeg/AEUtil.h
+2026-06-09T09:05:34.4078790Z   Added header: ../Classes/movie/ffmpeg/AudioCodec.h
+2026-06-09T09:05:34.4079050Z   Added header: ../Classes/movie/ffmpeg/AudioCodecFFmpeg.h
+2026-06-09T09:05:34.4079350Z   Added header: ../Classes/movie/ffmpeg/AudioCodecPassthrough.h
+2026-06-09T09:05:34.4079640Z   Added header: ../Classes/movie/ffmpeg/AudioDevice.h
+2026-06-09T09:05:34.4080010Z   Added header: ../Classes/movie/ffmpeg/BaseRenderer.h
+2026-06-09T09:05:34.4080280Z   Added header: ../Classes/movie/ffmpeg/BitstreamStats.h
+2026-06-09T09:05:34.4080530Z   Added header: ../Classes/movie/ffmpeg/Clock.h
+2026-06-09T09:05:34.4080770Z   Added header: ../Classes/movie/ffmpeg/CodecUtils.h
+2026-06-09T09:05:34.4081020Z   Added header: ../Classes/movie/ffmpeg/Codecs.h
+2026-06-09T09:05:34.4081250Z   Added header: ../Classes/movie/ffmpeg/Demux.h
+2026-06-09T09:05:34.4081490Z   Added header: ../Classes/movie/ffmpeg/DemuxFFmpeg.h
+2026-06-09T09:05:34.4081750Z   Added header: ../Classes/movie/ffmpeg/DemuxPacket.h
+2026-06-09T09:05:34.4082010Z   Added header: ../Classes/movie/ffmpeg/FactoryCodec.h
+2026-06-09T09:05:34.4082260Z   Added header: ../Classes/movie/ffmpeg/Geometry.h
+2026-06-09T09:05:34.4082510Z   Added header: ../Classes/movie/ffmpeg/IAudioCallback.h
+2026-06-09T09:05:34.4082770Z   Added header: ../Classes/movie/ffmpeg/IVideoPlayer.h
+2026-06-09T09:05:34.4083060Z   Added header: ../Classes/movie/ffmpeg/InputStream.h
+2026-06-09T09:05:34.4083310Z   Added header: ../Classes/movie/ffmpeg/KRMovieDef.h
+2026-06-09T09:05:34.4083570Z   Added header: ../Classes/movie/ffmpeg/KRMovieLayer.h
+2026-06-09T09:05:34.4083840Z   Added header: ../Classes/movie/ffmpeg/KRMoviePlayer.h
+2026-06-09T09:05:34.4084100Z   Added header: ../Classes/movie/ffmpeg/MathUtils.h
+2026-06-09T09:05:34.4084490Z   Added header: ../Classes/movie/ffmpeg/Message.h
+2026-06-09T09:05:34.4084760Z   Added header: ../Classes/movie/ffmpeg/MessageQueue.h
+2026-06-09T09:05:34.4085100Z   Added header: ../Classes/movie/ffmpeg/OptionInfo.h
+2026-06-09T09:05:34.4085360Z   Added header: ../Classes/movie/ffmpeg/ProcessInfo.h
+2026-06-09T09:05:34.4085600Z   Added header: ../Classes/movie/ffmpeg/Ref.h
+2026-06-09T09:05:34.4085830Z   Added header: ../Classes/movie/ffmpeg/RenderFlags.h
+2026-06-09T09:05:34.4086100Z   Added header: ../Classes/movie/ffmpeg/RenderFormats.h
+2026-06-09T09:05:34.4086360Z   Added header: ../Classes/movie/ffmpeg/StreamInfo.h
+2026-06-09T09:05:34.4086620Z   Added header: ../Classes/movie/ffmpeg/TVPMediaDemux.h
+2026-06-09T09:05:34.4086870Z   Added header: ../Classes/movie/ffmpeg/Thread.h
+2026-06-09T09:05:34.4087100Z   Added header: ../Classes/movie/ffmpeg/TimeUtils.h
+2026-06-09T09:05:34.4087350Z   Added header: ../Classes/movie/ffmpeg/Timer.h
+2026-06-09T09:05:34.4087590Z   Added header: ../Classes/movie/ffmpeg/VideoCodec.h
+2026-06-09T09:05:34.4087860Z   Added header: ../Classes/movie/ffmpeg/VideoCodecFFmpeg.h
+2026-06-09T09:05:34.4088130Z   Added header: ../Classes/movie/ffmpeg/VideoPlayer.h
+2026-06-09T09:05:34.4088400Z   Added header: ../Classes/movie/ffmpeg/VideoPlayerAudio.h
+2026-06-09T09:05:34.4088680Z   Added header: ../Classes/movie/ffmpeg/VideoPlayerVideo.h
+2026-06-09T09:05:34.4088970Z   Added header: ../Classes/movie/ffmpeg/VideoReferenceClock.h
+2026-06-09T09:05:34.4089250Z   Added header: ../Classes/movie/ffmpeg/VideoRenderer.h
+2026-06-09T09:05:34.4089500Z   Added header: ../Classes/movie/ffmpeg/config.h
+2026-06-09T09:05:34.4089720Z   Added header: ../Classes/msg/MsgIntf.h
+2026-06-09T09:05:34.4089930Z   Added header: ../Classes/msg/MsgIntfInc.h
+2026-06-09T09:05:34.4090150Z   Added header: ../Classes/msg/win32/MsgImpl.h
+2026-06-09T09:05:34.4090380Z   Added header: ../Classes/msg/win32/OptionsDesc.h
+2026-06-09T09:05:34.4090630Z   Added header: ../Classes/msg/win32/ReadOptionDesc.h
+2026-06-09T09:05:34.4090880Z   Added header: ../Classes/plugins/LayerExBase.h
+2026-06-09T09:05:34.4091120Z   Added header: ../Classes/plugins/PluginStub.h
+2026-06-09T09:05:34.4091370Z   Added header: ../Classes/plugins/ncbind/ncb_foreach.h
+2026-06-09T09:05:34.4091610Z   Added header: ../Classes/plugins/tp_stub.h
+2026-06-09T09:05:34.4091830Z   Added header: ../Classes/plugins/xp3filter.h
+2026-06-09T09:05:34.4092050Z   Added header: ../Classes/sound/CDDAIntf.h
+2026-06-09T09:05:34.4262340Z   Added header: ../Classes/sound/FFWaveDecoder.h
+2026-06-09T09:05:34.4262630Z   Added header: ../Classes/sound/MIDIIntf.h
+2026-06-09T09:05:34.4263360Z   Added header: ../Classes/sound/MathAlgorithms.h
+2026-06-09T09:05:34.4263620Z   Added header: ../Classes/sound/PhaseVocoderDSP.h
+2026-06-09T09:05:34.4263880Z   Added header: ../Classes/sound/PhaseVocoderFilter.h
+2026-06-09T09:05:34.4264120Z   Added header: ../Classes/sound/RingBuffer.h
+2026-06-09T09:05:34.4264360Z   Added header: ../Classes/sound/SoundBufferBaseIntf.h
+2026-06-09T09:05:34.4264630Z   Added header: ../Classes/sound/VorbisWaveDecoder.h
+2026-06-09T09:05:34.4264870Z   Added header: ../Classes/sound/WaveIntf.h
+2026-06-09T09:05:34.4265090Z   Added header: ../Classes/sound/WaveLoopManager.h
+2026-06-09T09:05:34.4265340Z   Added header: ../Classes/sound/WaveSegmentQueue.h
+2026-06-09T09:05:34.4265580Z   Added header: ../Classes/sound/win32/CDDAImpl.h
+2026-06-09T09:05:34.4265810Z   Added header: ../Classes/sound/win32/MIDIImpl.h
+2026-06-09T09:05:34.4266080Z   Added header: ../Classes/sound/win32/SoundBufferBaseImpl.h
+2026-06-09T09:05:34.4266340Z   Added header: ../Classes/sound/win32/WaveImpl.h
+2026-06-09T09:05:34.4266580Z   Added header: ../Classes/sound/win32/WaveMixer.h
+2026-06-09T09:05:34.4266820Z   Added header: ../Classes/sound/win32/kmp_pi.h
+2026-06-09T09:05:34.4267060Z   Added header: ../Classes/sound/win32/oldwaveunpacker.h
+2026-06-09T09:05:34.4267320Z   Added header: ../Classes/sound/win32/tvpsnd.h
+2026-06-09T09:05:34.4267530Z   Added header: ../Classes/tjs2/tjs.h
+2026-06-09T09:05:34.4267880Z   Added header: ../Classes/tjs2/tjs.tab.h
+2026-06-09T09:05:34.4268100Z   Added header: ../Classes/tjs2/tjsArray.h
+2026-06-09T09:05:34.4268330Z   Added header: ../Classes/tjs2/tjsBinarySerializer.h
+2026-06-09T09:05:34.4268590Z   Added header: ../Classes/tjs2/tjsByteCodeLoader.h
+2026-06-09T09:05:34.4268830Z   Added header: ../Classes/tjs2/tjsCommHead.h
+2026-06-09T09:05:34.4269060Z   Added header: ../Classes/tjs2/tjsCompileControl.h
+2026-06-09T09:05:34.4269300Z   Added header: ../Classes/tjs2/tjsConfig.h
+2026-06-09T09:05:34.4269520Z   Added header: ../Classes/tjs2/tjsConstArrayData.h
+2026-06-09T09:05:34.4269750Z   Added header: ../Classes/tjs2/tjsDate.h
+2026-06-09T09:05:34.4269980Z   Added header: ../Classes/tjs2/tjsDateParser.h
+2026-06-09T09:05:34.4270210Z   Added header: ../Classes/tjs2/tjsDebug.h
+2026-06-09T09:05:34.4270420Z   Added header: ../Classes/tjs2/tjsDictionary.h
+2026-06-09T09:05:34.4270650Z   Added header: ../Classes/tjs2/tjsError.h
+2026-06-09T09:05:34.4270870Z   Added header: ../Classes/tjs2/tjsErrorDefs.h
+2026-06-09T09:05:34.4271100Z   Added header: ../Classes/tjs2/tjsErrorInc.h
+2026-06-09T09:05:34.4271330Z   Added header: ../Classes/tjs2/tjsError_jp.h
+2026-06-09T09:05:34.4271550Z   Added header: ../Classes/tjs2/tjsException.h
+2026-06-09T09:05:34.4271800Z   Added header: ../Classes/tjs2/tjsGlobalStringMap.h
+2026-06-09T09:05:34.4272050Z   Added header: ../Classes/tjs2/tjsHashSearch.h
+2026-06-09T09:05:34.4272290Z   Added header: ../Classes/tjs2/tjsInterCodeExec.h
+2026-06-09T09:05:34.4272530Z   Added header: ../Classes/tjs2/tjsInterCodeGen.h
+2026-06-09T09:05:34.4272770Z   Added header: ../Classes/tjs2/tjsInterface.h
+2026-06-09T09:05:34.4272980Z   Added header: ../Classes/tjs2/tjsLex.h
+2026-06-09T09:05:34.4273190Z   Added header: ../Classes/tjs2/tjsMT19937ar-cok.h
+2026-06-09T09:05:34.4273400Z   Added header: ../Classes/tjs2/tjsMath.h
+2026-06-09T09:05:34.4273600Z   Added header: ../Classes/tjs2/tjsMessage.h
+2026-06-09T09:05:34.4273910Z   Added header: ../Classes/tjs2/tjsNamespace.h
+2026-06-09T09:05:34.4274130Z   Added header: ../Classes/tjs2/tjsNative.h
+2026-06-09T09:05:34.4274490Z   Added header: ../Classes/tjs2/tjsObject.h
+2026-06-09T09:05:34.4274730Z   Added header: ../Classes/tjs2/tjsObjectExtendable.h
+2026-06-09T09:05:34.4274980Z   Added header: ../Classes/tjs2/tjsOctPack.h
+2026-06-09T09:05:34.4275220Z   Added header: ../Classes/tjs2/tjsRandomGenerator.h
+2026-06-09T09:05:34.4275460Z   Added header: ../Classes/tjs2/tjsRegExp.h
+2026-06-09T09:05:34.4275680Z   Added header: ../Classes/tjs2/tjsScriptBlock.h
+2026-06-09T09:05:34.4275910Z   Added header: ../Classes/tjs2/tjsScriptCache.h
+2026-06-09T09:05:34.4276210Z   Added header: ../Classes/tjs2/tjsString.h
+2026-06-09T09:05:34.4276420Z   Added header: ../Classes/tjs2/tjsTypes.h
+2026-06-09T09:05:34.4276620Z   Added header: ../Classes/tjs2/tjsUtils.h
+2026-06-09T09:05:34.4276820Z   Added header: ../Classes/tjs2/tjsVariant.h
+2026-06-09T09:05:34.4277050Z   Added header: ../Classes/tjs2/tjsVariantString.h
+2026-06-09T09:05:34.4277290Z   Added header: ../Classes/tjs2/tjsdate.tab.h
+2026-06-09T09:05:34.4277510Z   Added header: ../Classes/utils/ClipboardIntf.h
+2026-06-09T09:05:34.4277740Z   Added header: ../Classes/utils/DebugIntf.h
+2026-06-09T09:05:34.4277950Z   Added header: ../Classes/utils/Debugger.h
+2026-06-09T09:05:34.4278160Z   Added header: ../Classes/utils/Exception.h
+2026-06-09T09:05:34.4278380Z   Added header: ../Classes/utils/FilePathUtil.h
+2026-06-09T09:05:34.4278610Z   Added header: ../Classes/utils/KAGParser.h
+2026-06-09T09:05:34.4278830Z   Added header: ../Classes/utils/MathAlgorithms.h
+2026-06-09T09:05:34.4279090Z   Added header: ../Classes/utils/MathAlgorithms_Default.h
+2026-06-09T09:05:34.4279340Z   Added header: ../Classes/utils/ObjectList.h
+2026-06-09T09:05:34.4279560Z   Added header: ../Classes/utils/PadIntf.h
+2026-06-09T09:05:34.4279760Z   Added header: ../Classes/utils/Random.h
+2026-06-09T09:05:34.4279960Z   Added header: ../Classes/utils/RealFFT.h
+2026-06-09T09:05:34.4280170Z   Added header: ../Classes/utils/StringUtil.h
+2026-06-09T09:05:34.4280490Z   Added header: ../Classes/utils/ThreadIntf.h
+2026-06-09T09:05:34.4280720Z   Added header: ../Classes/utils/TickCount.h
+2026-06-09T09:05:34.4280930Z   Added header: ../Classes/utils/TimerIntf.h
+2026-06-09T09:05:34.4281160Z   Added header: ../Classes/utils/VelocityTracker.h
+2026-06-09T09:05:34.4281390Z   Added header: ../Classes/utils/iconv/iconv.h
+2026-06-09T09:05:34.4281620Z   Added header: ../Classes/utils/iconv/utf8.h
+2026-06-09T09:05:34.4281820Z   Added header: ../Classes/utils/md5.h
+2026-06-09T09:05:34.4282040Z   Added header: ../Classes/utils/minizip/crypt.h
+2026-06-09T09:05:34.4282280Z   Added header: ../Classes/utils/minizip/ioapi.h
+2026-06-09T09:05:34.4282500Z   Added header: ../Classes/utils/minizip/unzip.h
+2026-06-09T09:05:34.4282730Z   Added header: ../Classes/utils/minizip/zip.h
+2026-06-09T09:05:34.4282970Z   Added header: ../Classes/utils/win32/ClipboardImpl.h
+2026-06-09T09:05:34.4283220Z   Added header: ../Classes/utils/win32/DebugImpl.h
+2026-06-09T09:05:34.4283460Z   Added header: ../Classes/utils/win32/PadImpl.h
+2026-06-09T09:05:34.4283690Z   Added header: ../Classes/utils/win32/TVPTimer.h
+2026-06-09T09:05:34.4283930Z   Added header: ../Classes/utils/win32/ThreadImpl.h
+2026-06-09T09:05:34.4284170Z   Added header: ../Classes/utils/win32/TimerImpl.h
+2026-06-09T09:05:34.4284400Z   Added header: ../Classes/vendor/lz4/lz4.h
+2026-06-09T09:05:34.4284620Z   Added header: ../Classes/vendor/lz4/lz4frame.h
+2026-06-09T09:05:34.4284840Z   Added header: ../Classes/vendor/lz4/lz4hc.h
+2026-06-09T09:05:34.4285060Z   Added header: ../Classes/vendor/lz4/xxhash.h
+2026-06-09T09:05:34.4285300Z   Added header: ../Classes/vendor/onig/config.h
+2026-06-09T09:05:34.4285530Z   Added header: ../Classes/vendor/onig/oniggnu.h
+2026-06-09T09:05:34.4285780Z   Added header: ../Classes/vendor/onig/onigposix.h
+2026-06-09T09:05:34.4286020Z   Added header: ../Classes/vendor/onig/oniguruma.h
+2026-06-09T09:05:34.4286260Z   Added header: ../Classes/vendor/onig/regenc.h
+2026-06-09T09:05:34.4286490Z   Added header: ../Classes/vendor/onig/regint.h
+2026-06-09T09:05:34.4286730Z   Added header: ../Classes/vendor/onig/regparse.h
+2026-06-09T09:05:34.4286970Z   Added header: ../Classes/vendor/onig/st.h
+2026-06-09T09:05:34.4287190Z   Added header: ../Classes/visual/BitmapIntf.h
+2026-06-09T09:05:34.4287450Z   Added header: ../Classes/visual/BitmapLayerTreeOwner.h
+2026-06-09T09:05:34.4287720Z   Added header: ../Classes/visual/CharacterData.h
+2026-06-09T09:05:34.4287960Z   Added header: ../Classes/visual/ComplexRect.h
+2026-06-09T09:05:34.4288190Z   Added header: ../Classes/visual/FontImpl.h
+2026-06-09T09:05:34.4288490Z   Added header: ../Classes/visual/FontRasterizer.h
+2026-06-09T09:05:34.4288800Z   Added header: ../Classes/visual/FontSystem.h
+2026-06-09T09:05:34.4289020Z   Added header: ../Classes/visual/FreeType.h
+2026-06-09T09:05:34.4289260Z   Added header: ../Classes/visual/FreeTypeFace.h
+2026-06-09T09:05:34.4289520Z   Added header: ../Classes/visual/FreeTypeFontRasterizer.h
+2026-06-09T09:05:34.4289820Z   Added header: ../Classes/visual/GraphicsLoadThread.h
+2026-06-09T09:05:34.4290090Z   Added header: ../Classes/visual/GraphicsLoaderIntf.h
+2026-06-09T09:05:34.4290360Z   Added header: ../Classes/visual/ImageFunction.h
+2026-06-09T09:05:34.4290610Z   Added header: ../Classes/visual/LayerBitmapIntf.h
+2026-06-09T09:05:34.4290860Z   Added header: ../Classes/visual/LayerIntf.h
+2026-06-09T09:05:34.4291100Z   Added header: ../Classes/visual/LayerManager.h
+2026-06-09T09:05:34.4291340Z   Added header: ../Classes/visual/LayerTreeOwner.h
+2026-06-09T09:05:34.4291610Z   Added header: ../Classes/visual/LayerTreeOwnerImpl.h
+2026-06-09T09:05:34.4291860Z   Added header: ../Classes/visual/LoadTLG.h
+2026-06-09T09:05:34.4292090Z   Added header: ../Classes/visual/MenuItemIntf.h
+2026-06-09T09:05:34.4292340Z   Added header: ../Classes/visual/PrerenderedFont.h
+2026-06-09T09:05:34.4292580Z   Added header: ../Classes/visual/RectItf.h
+2026-06-09T09:05:34.4292810Z   Added header: ../Classes/visual/RenderManager.h
+2026-06-09T09:05:34.4293200Z   Added header: ../Classes/visual/RenderManager_software.h
+2026-06-09T09:05:34.4293460Z   Added header: ../Classes/visual/SaveTLG.h
+2026-06-09T09:05:34.4293680Z   Added header: ../Classes/visual/TransIntf.h
+2026-06-09T09:05:34.4293960Z   Added header: ../Classes/visual/VideoOvlIntf.h
+2026-06-09T09:05:34.4294190Z   Added header: ../Classes/visual/WindowIntf.h
+2026-06-09T09:05:34.4294410Z   Added header: ../Classes/visual/argb.h
+2026-06-09T09:05:34.4294620Z   Added header: ../Classes/visual/drawable.h
+2026-06-09T09:05:34.4294860Z   Added header: ../Classes/visual/gl/ResampleImage.h
+2026-06-09T09:05:34.4295150Z   Added header: ../Classes/visual/gl/ResampleImageInternal.h
+2026-06-09T09:05:34.4295450Z   Added header: ../Classes/visual/gl/WeightFunctor.h
+2026-06-09T09:05:34.4295720Z   Added header: ../Classes/visual/gl/blend_functor_c.h
+2026-06-09T09:05:34.4295980Z   Added header: ../Classes/visual/gl/blend_util_func.h
+2026-06-09T09:05:34.4296310Z   Added header: ../Classes/visual/gl/blend_variation.h
+2026-06-09T09:05:34.4296680Z   Added header: ../Classes/visual/gl/tvpgl_mathutil.h
+2026-06-09T09:05:34.4296940Z   Added header: ../Classes/visual/ogl/astcrt.h
+2026-06-09T09:05:34.4297170Z   Added header: ../Classes/visual/ogl/etcpak.h
+2026-06-09T09:05:34.4297410Z   Added header: ../Classes/visual/ogl/imagepacker.h
+2026-06-09T09:05:34.4297670Z   Added header: ../Classes/visual/ogl/ogl_common.h
+2026-06-09T09:05:34.4297900Z   Added header: ../Classes/visual/ogl/pvr.h
+2026-06-09T09:05:34.4298120Z   Added header: ../Classes/visual/ogl/pvrtc.h
+2026-06-09T09:05:34.4298350Z   Added header: ../Classes/visual/transhandler.h
+2026-06-09T09:05:34.4298600Z   Added header: ../Classes/visual/tvpfontstruc.h
+2026-06-09T09:05:34.4298820Z   Added header: ../Classes/visual/tvpgl.h
+2026-06-09T09:05:34.4299050Z   Added header: ../Classes/visual/tvpgl_asm_init.h
+2026-06-09T09:05:34.4299290Z   Added header: ../Classes/visual/tvpgl_route.h
+2026-06-09T09:05:34.4299520Z   Added header: ../Classes/visual/tvphal.h
+2026-06-09T09:05:34.4299740Z   Added header: ../Classes/visual/tvpinputdefs.h
+2026-06-09T09:05:34.4299980Z   Added header: ../Classes/visual/voMode.h
+2026-06-09T09:05:34.4300220Z   Added header: ../Classes/visual/win32/BasicDrawDevice.h
+2026-06-09T09:05:34.4300510Z   Added header: ../Classes/visual/win32/BitmapBitsAlloc.h
+2026-06-09T09:05:34.4300810Z   Added header: ../Classes/visual/win32/BitmapInfomation.h
+2026-06-09T09:05:34.4301160Z   Added header: ../Classes/visual/win32/DInputMgn.h
+2026-06-09T09:05:34.4301440Z   Added header: ../Classes/visual/win32/DrawDevice.h
+2026-06-09T09:05:34.4307820Z   Added header: ../Classes/visual/win32/GDIFontRasterizer.h
+2026-06-09T09:05:34.4308300Z   Added header: ../Classes/visual/win32/GraphicsLoaderImpl.h
+2026-06-09T09:05:34.4308600Z   Added header: ../Classes/visual/win32/LayerBitmapImpl.h
+2026-06-09T09:05:34.4308880Z   Added header: ../Classes/visual/win32/LayerImpl.h
+2026-06-09T09:05:34.4309150Z   Added header: ../Classes/visual/win32/MenuItemImpl.h
+2026-06-09T09:05:34.4309430Z   Added header: ../Classes/visual/win32/NativeFreeTypeFace.h
+2026-06-09T09:05:34.4309780Z   Added header: ../Classes/visual/win32/PassThroughDrawDevice.h
+2026-06-09T09:05:34.4310080Z   Added header: ../Classes/visual/win32/TVPColor.h
+2026-06-09T09:05:34.4824560Z   Added header: ../Classes/visual/win32/TVPScreen.h
+2026-06-09T09:05:34.4937020Z   Added header: ../Classes/visual/win32/TVPSysFont.h
+2026-06-09T09:05:34.4947010Z   Added header: ../Classes/visual/win32/VSyncTimingThread.h
+2026-06-09T09:05:34.4947410Z   Added header: ../Classes/visual/win32/VideoOvlImpl.h
+2026-06-09T09:05:34.4947770Z   Added header: ../Classes/visual/win32/WindowImpl.h
+2026-06-09T09:05:34.4948800Z   Added header: ../Classes/visual/win32/krmovie.h
+2026-06-09T09:05:34.4949410Z Total files added: 513
+2026-06-09T09:05:34.4975760Z ##[group]Run ruby scripts/configure_xcode.rb \
+2026-06-09T09:05:34.4976070Z [36;1mruby scripts/configure_xcode.rb \[0m
+2026-06-09T09:05:34.4976350Z [36;1m  build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj[0m
+2026-06-09T09:05:34.5023970Z shell: /bin/bash -e {0}
+2026-06-09T09:05:34.5024130Z env:
+2026-06-09T09:05:34.5024430Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:34.5024900Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:34.5025280Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:34.5025520Z ##[endgroup]
+2026-06-09T09:05:34.6278010Z `<PBXBuildFile UUID=`46880B8919C43A87006E1F66`>` attempted to initialize an object with an unknown UUID. `46880B8419C43A87006E1F66` for attribute: `file_ref`. This can be the result of a merge and the unknown UUID is being discarded.
+2026-06-09T09:05:34.6279790Z `<PBXBuildFile UUID=`46880B8B19C43A87006E1F66`>` attempted to initialize an object with an unknown UUID. `46880B8619C43A87006E1F66` for attribute: `file_ref`. This can be the result of a merge and the unknown UUID is being discarded.
+2026-06-09T09:05:34.6814280Z Configuring target: Kirikiroid2 iOS
+2026-06-09T09:05:34.7033220Z   Configured build settings for: Debug
+2026-06-09T09:05:34.7134600Z   Configured build settings for: Release
+2026-06-09T09:05:34.7235470Z Added opencv2.framework to project
+2026-06-09T09:05:34.7336500Z Xcode project configured successfully.
+2026-06-09T09:05:34.7383150Z ##[group]Run STUBS_DIR="build/Kirikiroid2/Classes/ios_stubs"
+2026-06-09T09:05:34.7383560Z [36;1mSTUBS_DIR="build/Kirikiroid2/Classes/ios_stubs"[0m
+2026-06-09T09:05:34.7383810Z [36;1mmkdir -p "$STUBS_DIR"[0m
+2026-06-09T09:05:34.7384000Z [36;1m[0m
+2026-06-09T09:05:34.7384210Z [36;1m# Copy needed win32 headers that don't depend on Windows API[0m
+2026-06-09T09:05:34.7384580Z [36;1mcp src/core/visual/win32/BitmapInfomation.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7384920Z [36;1mcp src/core/visual/win32/BitmapBitsAlloc.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7385270Z [36;1mcp src/core/visual/win32/LayerBitmapImpl.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7385610Z [36;1mcp src/core/visual/win32/MenuItemImpl.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7385920Z [36;1mcp src/core/utils/win32/TVPTimer.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7386220Z [36;1mcp src/core/visual/win32/BasicDrawDevice.h "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7386490Z [36;1m[0m
+2026-06-09T09:05:34.7386690Z [36;1m# Copy BitmapBitsAlloc.cpp (no Windows deps)[0m
+2026-06-09T09:05:34.7387000Z [36;1mcp src/core/visual/win32/BitmapBitsAlloc.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7387260Z [36;1m[0m
+2026-06-09T09:05:34.7387430Z [36;1m# Copy MenuItemImpl.cpp and patch it[0m
+2026-06-09T09:05:34.7387710Z [36;1mcp src/core/visual/win32/MenuItemImpl.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7388330Z [36;1msed -i '' 's/#include "MenuItemImpl.h"/#include "MenuItemImpl.h"\n#include "tjsCommHead.h"/g' "$STUBS_DIR/MenuItemImpl.cpp"[0m
+2026-06-09T09:05:34.7388740Z [36;1m[0m
+2026-06-09T09:05:34.7388890Z [36;1m# Copy TVPTimer.cpp and patch it[0m
+2026-06-09T09:05:34.7389150Z [36;1mcp src/core/utils/win32/TVPTimer.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7389530Z [36;1msed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/TVPTimer.cpp"[0m
+2026-06-09T09:05:34.7389990Z [36;1msed -i '' 's/#include <mmsystem.h>/\/\/ #include <mmsystem.h>/g' "$STUBS_DIR/TVPTimer.cpp"[0m
+2026-06-09T09:05:34.7390310Z [36;1m[0m
+2026-06-09T09:05:34.7390490Z [36;1m# Copy BasicDrawDevice.cpp and patch it[0m
+2026-06-09T09:05:34.7390780Z [36;1mcp src/core/visual/win32/BasicDrawDevice.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7391190Z [36;1msed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/BasicDrawDevice.cpp"[0m
+2026-06-09T09:05:34.7391530Z [36;1m[0m
+2026-06-09T09:05:34.7391770Z [36;1m# Copy LayerBitmapImpl.cpp and patch Windows-specific includes[0m
+2026-06-09T09:05:34.7392120Z [36;1mcp src/core/visual/win32/LayerBitmapImpl.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7392580Z [36;1msed -i '' 's/#include "visual\/FreeType.h"/\/\/ #include "visual\/FreeType.h"/g' "$STUBS_DIR/LayerBitmapImpl.cpp"[0m
+2026-06-09T09:05:34.7393210Z [36;1msed -i '' 's/#include "FreeTypeFontRasterizer.h"/\/\/ #include "FreeTypeFontRasterizer.h"/g' "$STUBS_DIR/LayerBitmapImpl.cpp"[0m
+2026-06-09T09:05:34.7393630Z [36;1m[0m
+2026-06-09T09:05:34.7393780Z [36;1m# Copy NativeEventQueue.cpp[0m
+2026-06-09T09:05:34.7394060Z [36;1mcp src/core/environ/win32/NativeEventQueue.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7394330Z [36;1m[0m
+2026-06-09T09:05:34.7394480Z [36;1m# Copy ThreadImpl.cpp and patch[0m
+2026-06-09T09:05:34.7394740Z [36;1mcp src/core/utils/win32/ThreadImpl.cpp "$STUBS_DIR/"[0m
+2026-06-09T09:05:34.7395180Z [36;1msed -i '' 's/#include <windows.h>/\/\/ #include <windows.h>/g' "$STUBS_DIR/ThreadImpl.cpp"[0m
+2026-06-09T09:05:34.7395640Z [36;1msed -i '' 's/#include <process.h>/\/\/ #include <process.h>/g' "$STUBS_DIR/ThreadImpl.cpp"[0m
+2026-06-09T09:05:34.7395960Z [36;1m[0m
+2026-06-09T09:05:34.7396110Z [36;1m# Add stub files to Xcode project[0m
+2026-06-09T09:05:34.7396330Z [36;1mruby scripts/add_sources.rb \[0m
+2026-06-09T09:05:34.7396600Z [36;1m  build/Kirikiroid2/proj.ios_mac/Kirikiroid2.xcodeproj \[0m
+2026-06-09T09:05:34.7396880Z [36;1m  build/Kirikiroid2/Classes/[0m
+2026-06-09T09:05:34.7441250Z shell: /bin/bash -e {0}
+2026-06-09T09:05:34.7441420Z env:
+2026-06-09T09:05:34.7441960Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:34.7442460Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:34.7442860Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:34.7443120Z ##[endgroup]
+2026-06-09T09:05:34.7965100Z sed: RE error: illegal byte sequence
+2026-06-09T09:05:34.7974750Z ##[error]Process completed with exit code 1.
+2026-06-09T09:05:34.8284130Z ##[group]Run cd build/Kirikiroid2/proj.ios_mac
+2026-06-09T09:05:34.8284450Z [36;1mcd build/Kirikiroid2/proj.ios_mac[0m
+2026-06-09T09:05:34.8284730Z [36;1mERROR_FILE="$GITHUB_WORKSPACE/build_errors.txt"[0m
+2026-06-09T09:05:34.8284990Z [36;1m{[0m
+2026-06-09T09:05:34.8285150Z [36;1m  echo "=== BUILD ERROR INFO ==="[0m
+2026-06-09T09:05:34.8285410Z [36;1m  echo "Date: $(date)"[0m
+2026-06-09T09:05:34.8285640Z [36;1m  echo "Run: $GITHUB_RUN_NUMBER"[0m
+2026-06-09T09:05:34.8285850Z [36;1m  echo ""[0m
+2026-06-09T09:05:34.8286270Z [36;1m  grep -E "error:|fatal:|scheme|not found|does not exist" xcodebuild.log | head -80 || echo "No error lines found"[0m
+2026-06-09T09:05:34.8286710Z [36;1m  echo ""[0m
+2026-06-09T09:05:34.8286890Z [36;1m  echo "=== LAST 150 LINES ==="[0m
+2026-06-09T09:05:34.8287120Z [36;1m  tail -150 xcodebuild.log[0m
+2026-06-09T09:05:34.8287440Z [36;1m} > "$ERROR_FILE"[0m
+2026-06-09T09:05:34.8287620Z [36;1mcat "$ERROR_FILE"[0m
+2026-06-09T09:05:34.8287830Z [36;1mcd "$GITHUB_WORKSPACE"[0m
+2026-06-09T09:05:34.8288070Z [36;1mgit config user.name "GitHub Actions"[0m
+2026-06-09T09:05:34.8288340Z [36;1mgit config user.email "actions@github.com"[0m
+2026-06-09T09:05:34.8288590Z [36;1mgit add build_errors.txt[0m
+2026-06-09T09:05:34.8288950Z [36;1mgit commit -m "auto: update build_errors.txt from run #$GITHUB_RUN_NUMBER" || true[0m
+2026-06-09T09:05:34.8289400Z [36;1mgit push origin trae || true[0m
+2026-06-09T09:05:34.8337790Z shell: /bin/bash -e {0}
+2026-06-09T09:05:34.8337960Z env:
+2026-06-09T09:05:34.8338300Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:34.8338830Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:34.8339230Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:34.8339520Z ##[endgroup]
+2026-06-09T09:05:34.8688340Z grep: xcodebuild.log: No such file or directory
+2026-06-09T09:05:34.8709120Z tail: xcodebuild.log: No such file or directory
+2026-06-09T09:05:34.8713940Z ##[error]Process completed with exit code 1.
+2026-06-09T09:05:34.9013070Z ##[group]Run actions/upload-artifact@v4
+2026-06-09T09:05:34.9013330Z with:
+2026-06-09T09:05:34.9013490Z   name: xcodebuild-log
+2026-06-09T09:05:34.9013720Z   path: build/Kirikiroid2/proj.ios_mac/xcodebuild.log
+2026-06-09T09:05:34.9014000Z   retention-days: 5
+2026-06-09T09:05:34.9014190Z   if-no-files-found: warn
+2026-06-09T09:05:34.9014370Z   compression-level: 6
+2026-06-09T09:05:34.9014570Z   overwrite: false
+2026-06-09T09:05:34.9014760Z   include-hidden-files: false
+2026-06-09T09:05:34.9014950Z env:
+2026-06-09T09:05:34.9015300Z   COCOS_CONSOLE_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/tools/cocos2d-console/bin
+2026-06-09T09:05:34.9015850Z   COCOS_TEMPLATES_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x/templates
+2026-06-09T09:05:34.9016340Z   COCOS_X_ROOT: /Users/runner/work/Kirikiroid2/Kirikiroid2/cocos2d-x
+2026-06-09T09:05:34.9016640Z ##[endgroup]
+2026-06-09T09:05:35.3486830Z ##[warning]No files were found with the provided path: build/Kirikiroid2/proj.ios_mac/xcodebuild.log. No artifacts will be uploaded.
+2026-06-09T09:05:35.5027340Z Post job cleanup.
+2026-06-09T09:05:35.5911070Z [command]/opt/homebrew/bin/git version
+2026-06-09T09:05:35.5972460Z git version 2.54.0
+2026-06-09T09:05:35.6008870Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/d4402135-a1dc-4579-bec5-6ddb93891f49/.gitconfig'
+2026-06-09T09:05:35.6016050Z Temporarily overriding HOME='/Users/runner/work/_temp/d4402135-a1dc-4579-bec5-6ddb93891f49' before making global git config changes
+2026-06-09T09:05:35.6016920Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-09T09:05:35.6023950Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/Kirikiroid2/Kirikiroid2
+2026-06-09T09:05:35.6074140Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-09T09:05:35.6114700Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-09T09:05:35.6606990Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-09T09:05:35.6636620Z http.https://github.com/.extraheader
+2026-06-09T09:05:35.6644550Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-06-09T09:05:35.6682100Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-09T09:05:35.7172930Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-09T09:05:35.7194090Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-09T09:05:35.7933620Z Cleaning up orphan processes
+2026-06-09T09:05:36.3786460Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/cache@v4, actions/checkout@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

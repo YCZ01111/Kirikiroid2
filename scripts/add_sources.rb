@@ -20,10 +20,47 @@ if classes_group
   classes_group.remove_from_project
 end
 
+# POSIX-compatible win32 files that should be included for iOS
+posix_compat_win32 = %w[
+  ThreadImpl.cpp
+  NativeEventQueue.cpp
+  TVPTimer.cpp
+  BitmapBitsAlloc.cpp
+  GraphicsLoaderImpl.cpp
+  DrawDevice.cpp
+]
+
+# Windows-only files that must be excluded even if in win32/
+win32_excluded = %w[
+  LayerBitmapImpl.cpp
+  BasicDrawDevice.cpp
+  MenuItemImpl.cpp
+  DrawDevice.cpp
+  WindowImpl.cpp
+  SystemImpl.cpp
+  Platform.cpp
+  WaveImpl.cpp
+  SoundBufferBaseImpl.cpp
+  TimerImpl.cpp
+  FuncStubs.cpp
+  SusieArchive.cpp
+  GDIFontRasterizer.cpp
+  NativeFreeTypeFace.cpp
+  TVPSysFont.cpp
+  VSyncTimingThread.cpp
+  ScriptMgnImpl.cpp
+  StorageImpl.cpp
+  SysInitImpl.cpp
+  DebugImpl.cpp
+  MsgImpl.cpp
+  RandomImpl.cpp
+  EventImpl.cpp
+]
+
 added = 0
 Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   # Skip platform-specific directories not needed for iOS
-  next if file.include?('/win32/') || file.include?('/ARM/') || file.include?('/android/') || file.include?('/sdl/') || file.include?('/linux/')
+  next if file.include?('/ARM/') || file.include?('/android/') || file.include?('/sdl/') || file.include?('/linux/')
   # Skip FFmpeg-dependent movie code (no FFmpeg on iOS)
   next if file.include?('/ffmpeg/')
   next if file.include?('/movie/krmovie')
@@ -36,8 +73,6 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('XP3ArchiveRepack')
   # Skip VorbisWaveDecoder (depends on libvorbis not available on iOS)
   next if file.include?('VorbisWaveDecoder')
-  # Skip UtilStreams (depends on libarchive and 7zip SDK)
-  next if file.include?('UtilStreams')
   # Skip UIExtension (depends on cocostudio not in cocos2d-x 3.6)
   next if file.include?('UIExtension')
   # Skip ResampleImage (depends on missing aligned_allocator.h)
@@ -48,7 +83,7 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('LoadBPG')
   # Skip LoadJPEG (depends on turbojpeg not available on iOS)
   next if file.include?('LoadJPEG')
-  # Skip FreeType/FreeTypeFontRasterizer (conflicts with FreeType2 lib headers on case-insensitive macOS, only used by win32)
+  # Skip FreeType/FreeTypeFontRasterizer (conflicts with FreeType2 lib headers on case-insensitive macOS)
   next if file.include?('FreeTypeFontRasterizer')
   next if file.end_with?('/FreeType.cpp')
   # Skip FFWaveDecoder (depends on FFmpeg/libavutil not available on iOS)
@@ -57,6 +92,21 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('7zArchive')
   # Skip XP3RepackForm (depends on XP3ArchiveRepack which needs 7zip SDK)
   next if file.include?('XP3RepackForm')
+
+  # Handle win32/ directory files
+  if file.include?('/win32/')
+    basename = File.basename(file)
+    # Include POSIX-compatible win32 files
+    if posix_compat_win32.include?(basename)
+      # Include this file
+    elsif win32_excluded.include?(basename)
+      next
+    else
+      # Exclude unknown win32 files by default
+      next
+    end
+  end
+
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
