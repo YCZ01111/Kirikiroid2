@@ -6,6 +6,19 @@
 #include "LocaleConfigManager.h"
 
 bool TVPWriteDataToFile(const ttstr &filepath, const void *data, unsigned int len);
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+// On iOS, tinyxml2 from cocos2d-x 3.6 doesn't have virtual Print, use CStr() instead
+static void SaveXmlToFile(tinyxml2::XMLDocument &doc, const std::string &path) {
+	tinyxml2::XMLPrinter printer;
+	doc.Print(&printer);
+	if (!TVPWriteDataToFile(path, printer.CStr(), printer.CStrSize())) {
+		TVPShowSimpleMessageBox(
+			LocaleConfigManager::GetInstance()->GetText("cannot_create_preference"),
+			LocaleConfigManager::GetInstance()->GetText("readonly_storage"));
+	}
+}
+#else
 class XMLMemPrinter : public tinyxml2::XMLPrinter {
 	tTVPMemoryStream _stream;
 	char _buffer[4096];
@@ -25,6 +38,12 @@ public:
 		}
 	}
 };
+static void SaveXmlToFile(tinyxml2::XMLDocument &doc, const std::string &path) {
+	XMLMemPrinter stream;
+	doc.Print(&stream);
+	stream.SaveFile(path);
+}
+#endif
 
 
 GlobalConfigManager::GlobalConfigManager() {
@@ -107,9 +126,7 @@ void iSysConfigManager::SaveToFile() {
 		}
 	}
 	doc.LinkEndChild(rootElement);
-	XMLMemPrinter stream;
-	doc.Print(&stream);
-	stream.SaveFile(GetFilePath());
+	SaveXmlToFile(doc, GetFilePath());
 	ConfigUpdated = false;
 }
 
