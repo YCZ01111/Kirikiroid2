@@ -9,6 +9,9 @@ ios_target = project.targets.find { |t| t.name.include?('iOS') } || project.targ
 puts "Configuring target: #{ios_target.name}"
 
 header_search_paths = [
+  # FreeType2 must come before Classes to avoid case-insensitive conflict
+  # (macOS matches <freetype.h> to project's FreeType.h otherwise)
+  '$(SRCROOT)/../cocos2d/external/freetype2/include/ios/freetype2',
   '$(SRCROOT)/../Classes',
   '$(SRCROOT)/../Classes/base',
   '$(SRCROOT)/../Classes/base/win32',
@@ -51,7 +54,6 @@ header_search_paths = [
   '$(SRCROOT)/../cocos2d/external/zip/include',
   '$(SRCROOT)/../cocos2d/external/curl/include/ios',
   '$(SRCROOT)/../cocos2d/external/freetype2/include/ios',
-  '$(SRCROOT)/../cocos2d/external/freetype2/include/ios/freetype2',
   '$(SRCROOT)/../cocos2d/external/websockets/include/ios',
   '$(SRCROOT)/../opencv2.framework/Headers'
 ]
