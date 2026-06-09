@@ -15,7 +15,9 @@
 #include "GlobalPreferenceForm.h"
 #include "IndividualPreferenceForm.h"
 #include "MessageBox.h"
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
 #include "SimpleMediaFilePlayer.h"
+#endif
 #include "tinyxml2/tinyxml2.h"
 #include "StorageImpl.h"
 #include "TipsHelpForm.h"
@@ -198,9 +200,11 @@ void TVPMainFileSelectorForm::onCellClicked(int idx) {
 	} else if ((archiveType = TVPCheckArchive(info.FullPath.c_str())) == 1) {
 		startup(info.FullPath);
 	} else if (archiveType == 0 && TVPCheckIsVideoFile(info.FullPath.c_str())) {
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
 		SimpleMediaFilePlayer *player = SimpleMediaFilePlayer::create();
 		TVPMainScene::GetInstance()->addChild(player, 10);// pushUIForm(player);
 		player->PlayFile(info.FullPath.c_str());
+#endif
 	} else if (archiveType && FileUtils::getInstance()->getFileExtension(info.NameForCompare) == ".skin") {
 		// maybe skin
 		if (TVPSkinManager::Check(info.FullPath)) {
