@@ -28,6 +28,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('/ffmpeg/')
   # Skip plugins that depend on FFmpeg
   next if file.include?('layerExMovie')
+  # Skip YUVSprite (uses _polyInfo from cocos2d-x 3.8+, not available in 3.6)
+  next if file.include?('YUVSprite')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
