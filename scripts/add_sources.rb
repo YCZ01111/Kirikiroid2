@@ -40,6 +40,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('UtilStreams')
   # Skip UIExtension (depends on cocostudio not in cocos2d-x 3.6)
   next if file.include?('UIExtension')
+  # Skip ResampleImage (depends on missing aligned_allocator.h)
+  next if file.include?('ResampleImage')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
