@@ -29,6 +29,7 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('/movie/krmovie')
   # Skip plugins that depend on FFmpeg
   next if file.include?('layerExMovie')
+  next if file.include?('SimpleMediaFilePlayer')
   # Skip YUVSprite (uses _polyInfo from cocos2d-x 3.8+, not available in 3.6)
   next if file.include?('YUVSprite')
   # Skip XP3ArchiveRepack (depends on 7zip SDK not available on iOS)
