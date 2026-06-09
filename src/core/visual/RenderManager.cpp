@@ -2634,7 +2634,9 @@ public:
 	tTVPSoftwareRenderManager()
 		: StretchType(stNearest)
 		, tempTexture(nullptr)
+#ifdef USE_SWSCALE
 		, img_convert_ctx(nullptr)
+#endif
 		, _drawCount(0)
 	{
 		_createStaticTexture2D = tTVPSoftwareTexture2D::Create;
