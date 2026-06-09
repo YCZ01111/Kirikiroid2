@@ -26,6 +26,7 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('/win32/') || file.include?('/ARM/') || file.include?('/android/') || file.include?('/sdl/')
   # Skip FFmpeg-dependent movie code (no FFmpeg on iOS)
   next if file.include?('/ffmpeg/')
+  next if file.include?('/movie/krmovie')
   # Skip plugins that depend on FFmpeg
   next if file.include?('layerExMovie')
   # Skip YUVSprite (uses _polyInfo from cocos2d-x 3.8+, not available in 3.6)
