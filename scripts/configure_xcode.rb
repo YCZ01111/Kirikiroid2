@@ -45,7 +45,8 @@ header_search_paths = [
   '$(SRCROOT)/../cocos2d/external/zip/include',
   '$(SRCROOT)/../cocos2d/external/curl/include/ios',
   '$(SRCROOT)/../cocos2d/external/freetype2/include/ios',
-  '$(SRCROOT)/../cocos2d/external/websockets/include/ios'
+  '$(SRCROOT)/../cocos2d/external/websockets/include/ios',
+  '$(SRCROOT)/../opencv2.framework/Headers'
 ]
 
 preprocessor_defs = [
@@ -78,13 +79,28 @@ ios_target.build_configurations.each do |config|
   config.build_settings['ENABLE_BITCODE'] = 'NO'
   config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
   config.build_settings['LIBRARY_SEARCH_PATHS'] ||= ['$(inherited)']
-  config.build_settings['OTHER_LDFLAGS'] ||= ['$(inherited)']
+  config.build_settings['FRAMEWORK_SEARCH_PATHS'] = ['$(inherited)', '$(SRCROOT)/..']
+  config.build_settings['OTHER_LDFLAGS'] = ['$(inherited)', '-framework', 'opencv2']
   config.build_settings['GCC_WARN_ABOUT_MISSING_PROTOTYPES'] = 'NO'
   config.build_settings['GCC_WARN_ABOUT_RETURN_TYPE'] = 'NO'
   config.build_settings['GCC_WARN_UNUSED_VARIABLE'] = 'NO'
   config.build_settings['CLANG_WARN_SUSPICIOUS_MOVE'] = 'NO'
   config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
   puts "  Configured build settings for: #{config.name}"
+end
+
+# Add opencv2.framework to the project
+frameworks_group = project.main_group.find_subpath('Frameworks', true)
+unless frameworks_group
+  frameworks_group = project.main_group.new_group('Frameworks')
+end
+
+# Check if opencv2.framework is already added
+existing_ref = frameworks_group.files.find { |f| f.path && f.path.include?('opencv2') }
+unless existing_ref
+  framework_ref = frameworks_group.new_file('../opencv2.framework')
+  ios_target.frameworks_build_phase.add_file_reference(framework_ref)
+  puts "Added opencv2.framework to project"
 end
 
 project.save

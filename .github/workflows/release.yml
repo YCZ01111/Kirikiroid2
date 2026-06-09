@@ -85,6 +85,18 @@ jobs:
         run: |
           git clone --depth=1 --branch=v5.9.6 https://github.com/kkos/oniguruma.git vendor/onig
 
+      - name: Download OpenCV iOS framework
+        run: |
+          curl -L -o opencv-ios.zip https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-ios-framework.zip
+          unzip -q opencv-ios.zip -d vendor/opencv
+          ls -la vendor/opencv/
+          # Verify the framework exists
+          if [ ! -d "vendor/opencv/opencv2.framework" ]; then
+            echo "ERROR: opencv2.framework not found after extraction"
+            find vendor/opencv -type d | head -20
+            exit 1
+          fi
+
       - name: Copy source files
         run: |
           DEST=build/Kirikiroid2/Classes
@@ -149,6 +161,12 @@ jobs:
         run: |
           cp -r cocos/kr2/Resources/* build/Kirikiroid2/Resources/
           cp -r cocos/kr2/cocosstudio/* build/Kirikiroid2/Resources/
+
+      - name: Copy OpenCV framework
+        run: |
+          cp -r vendor/opencv/opencv2.framework build/Kirikiroid2/opencv2.framework
+          echo "OpenCV framework copied"
+          ls -la build/Kirikiroid2/opencv2.framework/
 
       - name: Patch Oniguruma for C99 compatibility
         run: |

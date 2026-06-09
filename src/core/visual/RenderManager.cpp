@@ -17,7 +17,9 @@ extern "C" {
 #ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
 #endif
+#ifdef USE_SWSCALE
 #include "libswscale/swscale.h"
+#endif
 };
 #include "opencv2/opencv.hpp"
 #include "Application.h"
@@ -2433,8 +2435,10 @@ class tTVPSoftwareRenderManager : public iTVPRenderManager {
 
 	tTVPBBStretchType StretchType;
 
+#ifdef USE_SWSCALE
 	struct SwsContext *img_convert_ctx;
 	SwsContext *sws_opts;
+#endif
 
 	iTVPTexture2D *tempTexture;
 
