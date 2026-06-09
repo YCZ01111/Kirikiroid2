@@ -42,6 +42,10 @@ protected:
 
 	class HistoryCell : public cocos2d::ui::Widget {
 	public:
+#if COCOS2DX_VERSION < 0x00030800
+		// In cocos2d-x 3.6, Widget::init() is protected, so expose it
+		using Widget::init;
+#endif
 		static HistoryCell *create(const std::string &fullpath, const std::string &prefix, const std::string &pathname,
 			const std::string &filename) {
 			HistoryCell* ret = new HistoryCell();

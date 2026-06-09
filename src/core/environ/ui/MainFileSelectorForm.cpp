@@ -205,7 +205,7 @@ void TVPMainFileSelectorForm::onCellClicked(int idx) {
 		TVPMainScene::GetInstance()->addChild(player, 10);// pushUIForm(player);
 		player->PlayFile(info.FullPath.c_str());
 #endif
-	} else if (archiveType && FileUtils::getInstance()->getFileExtension(info.NameForCompare) == ".skin") {
+	} else if (archiveType && FileUtils::getInstance()->getExtension(info.NameForCompare) == ".skin") {
 		// maybe skin
 		if (TVPSkinManager::Check(info.FullPath)) {
 			std::vector<ttstr> btns;
@@ -589,7 +589,9 @@ void TVPMainFileSelectorForm::HistoryCell::initInfo(const std::string &fullpath,
 	_file = static_cast<cocos2d::ui::Text*>(reader.findController("file"));
 	_panel_delete = reader.findController("panel_delete");
 	if (!_panel_delete) _panel_delete = _btn_delete;
+#if COCOS2DX_VERSION >= 0x00030800
 	_scrollview->setScrollBarEnabled(false);
+#endif
 	_scrollview->setPropagateTouchEvents(true);
 
 	_prefix->setString(prefix);

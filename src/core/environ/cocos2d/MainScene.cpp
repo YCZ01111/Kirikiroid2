@@ -297,7 +297,7 @@ Sprite *TVPLoadCursorCUR(tTJSBinaryStream *pStream) {
 			}
 		}
 		cocos2d::Image *surface = new cocos2d::Image;
-		surface->initWithRawData(&pixbuf[0], pixbuf.size(), bmhdr.biWidth, bmhdr.biHeight, Texture2D::PixelFormat::RGBA8888, false);
+		surface->initWithRawData(&pixbuf[0], pixbuf.size(), bmhdr.biWidth, bmhdr.biHeight, (int)Texture2D::PixelFormat::RGBA8888, false);
 		Texture2D *tex = new Texture2D();
 		tex->initWithImage(surface);
 		Sprite *sprite = Sprite::create();
@@ -432,7 +432,7 @@ public:
 		return PrimaryLayerArea;
 	}
 
-	virtual Vec2 minContainerOffset() override {
+	virtual Vec2 minContainerOffset() {
 		const Size &size = getContentSize();
 		float scale = _container->getScale();
 		Vec2 ret(_viewSize.width - size.width * scale * _drawSpriteScaleX,
@@ -451,7 +451,7 @@ public:
 		return ret;
 	}
 
-	virtual Vec2 maxContainerOffset() override {
+	virtual Vec2 maxContainerOffset() {
 		// bottom-left
 		const Size &size = getContentSize();
 		float scale = _container->getScale();
@@ -473,11 +473,11 @@ public:
 	void onMouseDownEvent(Event *_e) {
 		EventMouse *e = static_cast<EventMouse*>(_e);
 		switch (e->getMouseButton()) {
-		case EventMouse::MouseButton::BUTTON_RIGHT:
+		case 1: // BUTTON_RIGHT in cocos2d-x 3.6
 			_mouseBtn = mbRight;
 			onMouseDown(e->getLocation());
 			break;
-		case EventMouse::MouseButton::BUTTON_MIDDLE:
+		case 2: // BUTTON_MIDDLE in cocos2d-x 3.6
 			_mouseBtn = mbMiddle;
 			onMouseDown(e->getLocation());
 			break;
@@ -489,11 +489,11 @@ public:
 	void onMouseUpEvent(Event *_e) {
 		EventMouse *e = static_cast<EventMouse*>(_e);
 		switch (e->getMouseButton()) {
-		case EventMouse::MouseButton::BUTTON_RIGHT:
+		case 1: // BUTTON_RIGHT in cocos2d-x 3.6
 			_mouseBtn = mbRight;
 			onMouseUp(e->getLocation());
 			break;
-		case EventMouse::MouseButton::BUTTON_MIDDLE:
+		case 2: // BUTTON_MIDDLE in cocos2d-x 3.6
 			_mouseBtn = mbMiddle;
 			onMouseUp(e->getLocation());
 			break;
@@ -1214,7 +1214,7 @@ public:
 	virtual void OnKeyPress(tjs_uint16 vk, int repeat, bool prevkeystate, bool convertkey) override {
 		if (TJSNativeInstance && vk) {
 			if (UseMouseKey && (vk == 0x1b || vk == 13 || vk == 32)) return;
-			// UNICODE ¤Ê¤Î¤Ç¤½¤Î¤Ş¤Ş¶É¤·¤Æ¤·¤Ş¤¦
+			// UNICODE å…åŠåŒ¹å…¬åŠå¼•å¼•å‚¾ä»„åŒ–ä»„å¼•ä¸¹
 			TVPPostInputEvent(new tTVPOnKeyPressInputEvent(TJSNativeInstance, vk));
 		}
 	}
@@ -1317,7 +1317,7 @@ public:
 				case caNone:
 					break;
 				case caHide:
-					Hide();
+					setVisible(false);
 					break;
 				case caMinimize:
 					//::ShowWindow(GetHandle(), SW_MINIMIZE);
@@ -1354,7 +1354,7 @@ public:
 						// this is the main window
 						iTJSDispatch2 * obj = TJSNativeInstance->GetOwnerNoAddRef();
 						obj->Invalidate(0, NULL, NULL, obj);
-						// TJSNativeInstance = NULL; // ¤³¤Î¶ÎëA¤Ç¤Ï¼È¤Ëthis¤¬Ï÷³ı¤µ¤ì¤Æ¤¤¤ë¤¿¤á¡¢¥á¥ó¥Ğ©`¤Ø¥¢¥¯¥»¥¹¤·¤Æ¤Ï¤¤¤±¤Ê¤¤
+						// TJSNativeInstance = NULL; // ä»‡åŠåƒ‡è•†åŒ¹åæš«åthisäº’ç¥…å£ºä»Šæœ¨åŒ–ä¸­æœˆå‡¶æˆ¶ï¹œä¸Ÿä»¶ç”°å¥ˆå°ºå¤±å¼æœ¬æ—¦ä»„åŒ–åä¸­ä»ƒå…ä¸­
 					}
 				} else {
 					delete this;
