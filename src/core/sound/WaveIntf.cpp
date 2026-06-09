@@ -18,8 +18,10 @@
 #include "UtilStreams.h"
 #include "WaveLoopManager.h"
 #include "tjsDictionary.h"
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
 #include "VorbisWaveDecoder.h"
 #include "FFWaveDecoder.h"
+#endif
 
 
 //---------------------------------------------------------------------------
@@ -746,17 +748,23 @@ struct tTVPWaveDecoderManager
 {
 	std::vector<tTVPWaveDecoderCreator *> Creators;
 	tTVPWDC_RIFFWave RIFFWaveDecoderCreator;
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
     VorbisWaveDecoderCreator vorbisWaveDecoderCreator;
     FFWaveDecoderCreator ffWaveDecoderCreator;
     OpusWaveDecoderCreator opusWaveDecoderCreator;
+#endif
 
 	tTVPWaveDecoderManager()
 	{
 		TVPWaveDecoderManagerAvail = true;
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
         TVPRegisterWaveDecoderCreator(&ffWaveDecoderCreator);
         TVPRegisterWaveDecoderCreator(&opusWaveDecoderCreator);
+#endif
 		TVPRegisterWaveDecoderCreator(&RIFFWaveDecoderCreator);
+#if CC_TARGET_PLATFORM != CC_PLATFORM_IOS
         TVPRegisterWaveDecoderCreator(&vorbisWaveDecoderCreator);
+#endif
 	}
 
 	~tTVPWaveDecoderManager()

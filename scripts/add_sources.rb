@@ -35,14 +35,19 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
     'EventImpl.cpp',
     'TVPTimer.cpp',
     'BasicDrawDevice.cpp',
+    'ThreadImpl.cpp',
+    'MenuItemImpl.cpp',
+    'BitmapBitsAlloc.cpp',
     'NativeEventQueue.h',
     'LayerBitmapImpl.h',
     'BitmapInfomation.h',
     'TVPTimer.h',
     'BasicDrawDevice.h',
+    'MenuItemImpl.h',
   ]
   if file.include?('/win32/')
-    is_needed = ios_needed_win32.any? { |f| file.end_with?('/' + f) || file.end_with?('/' + File.basename(f)) }
+    basename = File.basename(file)
+    is_needed = ios_needed_win32.any? { |f| basename == f }
     next unless is_needed
   end
   # Skip FFmpeg-dependent movie code (no FFmpeg on iOS)
