@@ -40,6 +40,7 @@ header_search_paths = [
   '$(SRCROOT)/../cocos2d/external/include',
   '$(SRCROOT)/../cocos2d/external/sources',
   '$(SRCROOT)/../cocos2d/external/xxhash/include',
+  '$(SRCROOT)/../cocos2d/external/xxhash',
   '$(SRCROOT)/../cocos2d/external/webp/include/ios',
   '$(SRCROOT)/../cocos2d/external/jpeg/include/ios',
   '$(SRCROOT)/../cocos2d/external/png/include/ios',
