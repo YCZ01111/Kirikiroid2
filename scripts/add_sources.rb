@@ -44,6 +44,10 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('ResampleImage')
   # Skip LoadJXR (depends on JXRGlue.h / jxrlib not available on iOS)
   next if file.include?('LoadJXR')
+  # Skip LoadBPG (depends on libbpg not available on iOS)
+  next if file.include?('LoadBPG')
+  # Skip LoadJPEG (depends on turbojpeg not available on iOS)
+  next if file.include?('LoadJPEG')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
