@@ -1,12 +1,14 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 08:42:24 UTC 2026
-Run: 120
+Date: Tue Jun  9 08:50:06 UTC 2026
+Run: 121
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 === LAST 150 LINES ===
+      ...
+  "tTVPNativeBaseBitmap::SetSize(unsigned int, unsigned int, bool)", referenced from:
       tTJSNI_Bitmap::SetSize(unsigned int, unsigned int, bool) in BitmapIntf.o
       iTVPBaseBitmap::SetSizeWithFill(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
   "tTVPNativeBaseBitmap::Independ()", referenced from:
@@ -31,24 +33,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
       tTVPBaseBitmap::~tTVPBaseBitmap() in LayerBitmapIntf.o
       tTVPBaseTexture::~tTVPBaseTexture() in LayerBitmapIntf.o
       ...
-  "XP3ArchiveRepackAsync::SetCallback(std::__1::function<void (int, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)> const&, std::__1::function<void (int, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)> const&, std::__1::function<void (unsigned long long, unsigned long long, unsigned long long)> const&, std::__1::function<void (int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)> const&, std::__1::function<void ()> const&)", referenced from:
-      TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::SetXP3Filter(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
-      TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::Stop()", referenced from:
-      std::__1::__function::__func<TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_0, std::__1::allocator<TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_0>, void (cocos2d::Ref*)>::operator()(cocos2d::Ref*&&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::Start()", referenced from:
-      TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::AddTask(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
-      TVPXP3Repacker::Start(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::SetOption(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, bool)", referenced from:
-      std::__1::__function::__func<TVPXP3RepackFileListForm::initData(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_8::operator()(tPreferenceItemCheckBox*) const::'lambda'(bool), std::__1::allocator<TVPXP3RepackFileListForm::initData(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_8::operator()(tPreferenceItemCheckBox*) const::'lambda'(bool)>, void (bool)>::operator()(bool&&) in XP3RepackForm.o
-      std::__1::__function::__func<TVPXP3RepackFileListForm::initData(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_9::operator()(tPreferenceItemCheckBox*) const::'lambda'(bool), std::__1::allocator<TVPXP3RepackFileListForm::initData(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_9::operator()(tPreferenceItemCheckBox*) const::'lambda'(bool)>, void (bool)>::operator()(bool&&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::XP3ArchiveRepackAsync()", referenced from:
-      TVPXP3Repacker::TVPXP3Repacker(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
-  "XP3ArchiveRepackAsync::~XP3ArchiveRepackAsync()", referenced from:
-      TVPXP3Repacker::~TVPXP3Repacker() in XP3RepackForm.o
-      TVPXP3Repacker::TVPXP3Repacker(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in XP3RepackForm.o
   "tTJSNC_BasicDrawDevice::tTJSNC_BasicDrawDevice()", referenced from:
       TVPInitScriptEngine() in ScriptMgnIntf.o
   "tTVPGraphicHandlerType::Load(void*, void*, int (*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat), void* (*)(void*, int), void (*)(void*, TJS::tTJSString const&, TJS::tTJSString const&), TJS::tTJSBinaryStream*, int, tTVPGraphicLoadMode)", referenced from:
@@ -148,6 +132,22 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
    NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-667h@2x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-667h@2x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-667h@2x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-667h@2x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-568h@2x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-568h@2x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-568h@2x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-568h@2x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseSelected.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseSelected.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseSelected.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseSelected.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
