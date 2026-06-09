@@ -28,6 +28,7 @@ header_search_paths = [
   '$(SRCROOT)/../Classes/visual/win32',
   '$(SRCROOT)/../Classes/plugins',
   '$(SRCROOT)/../Classes/movie',
+  '$(SRCROOT)/../Classes/movie/ffmpeg',
   '$(SRCROOT)/../Classes/vendor/onig',
   '$(SRCROOT)/../cocos2d',
   '$(SRCROOT)/../cocos2d/cocos',
