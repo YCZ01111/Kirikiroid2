@@ -51,6 +51,7 @@ header_search_paths = [
   '$(SRCROOT)/../cocos2d/external/zip/include',
   '$(SRCROOT)/../cocos2d/external/curl/include/ios',
   '$(SRCROOT)/../cocos2d/external/freetype2/include/ios',
+  '$(SRCROOT)/../cocos2d/external/freetype2/include/ios/freetype2',
   '$(SRCROOT)/../cocos2d/external/websockets/include/ios',
   '$(SRCROOT)/../opencv2.framework/Headers'
 ]
