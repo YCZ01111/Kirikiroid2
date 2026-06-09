@@ -1,153 +1,152 @@
 === BUILD ERROR INFO ===
-Date: Tue Jun  9 09:00:05 UTC 2026
-Run: 122
+Date: Tue Jun  9 11:07:34 UTC 2026
+Run: 124
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-ld: symbol(s) not found for architecture arm64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp:374:10: fatal error: 'libarchive/archive.h' file not found
 
 === LAST 150 LINES ===
-      tTJSNC_Bitmap::tTJSNC_Bitmap()::NCM_bufferForWrite::Get(TJS::tTJSVariant*, TJS::iTJSDispatch2*) in BitmapIntf.o
-      tTVPGraphicImageData::AssignToBitmap(tTVPBaseBitmap*) const in GraphicsLoaderIntf.o
-      tTVPBaseBitmap::UDFlip(tTVPRect const&) in LayerBitmapIntf.o
-      tTVPBaseBitmap::UDFlip(tTVPRect const&) in LayerBitmapIntf.o
-      tTVPBaseBitmap::LRFlip(tTVPRect const&) in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::GetTextureForRender(bool, tTVPRect const*)", referenced from:
-      vtable for tTVPBaseBitmap in LayerBitmapIntf.o
-      vtable for tTVPBaseTexture in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::GetFontGlyphDrawRect(TJS::tTJSString const&, tTVPRect&)", referenced from:
-      tTJSNI_BaseLayer::GetFontGlyphDrawRect(TJS::tTJSString const&, tTVPRect&) in LayerIntf.o
-  "tTVPNativeBaseBitmap::UnmapPrerenderedFont()", referenced from:
-      tTJSNI_BaseLayer::UnmapPrerenderedFont() in LayerIntf.o
-  "tTVPNativeBaseBitmap::SetSizeAndImageBuffer(tTVPBitmap*)", referenced from:
-      tTJSNI_Bitmap::SetSizeAndImageBuffer(tTVPBitmap*) in BitmapIntf.o
-  "tTVPNativeBaseBitmap::Assign(tTVPNativeBaseBitmap const&)", referenced from:
-      tTJSNI_Bitmap::CopyFrom(iTVPBaseBitmap const*) in BitmapIntf.o
-      tTJSNC_Bitmap::tTJSNC_Bitmap()::NCM_copyFrom::Process(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in BitmapIntf.o
-  "tTVPNativeBaseBitmap::SetFont(tTVPFont const&)", referenced from:
-      tTJSNC_ImageFunction::tTJSNC_ImageFunction()::NCM_drawText::Process(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in ImageFunction.o
-      tTJSNI_BaseLayer::ApplyFont() in LayerIntf.o
-      tTJSNI_BaseLayer::GetTextWidth(TJS::tTJSString const&) in LayerIntf.o
-      tTJSNI_BaseLayer::GetTextHeight(TJS::tTJSString const&) in LayerIntf.o
-      tTJSNI_BaseLayer::GetEscWidthX(TJS::tTJSString const&) in LayerIntf.o
-      tTJSNI_BaseLayer::GetEscWidthY(TJS::tTJSString const&) in LayerIntf.o
-      tTJSNI_BaseLayer::GetEscHeightX(TJS::tTJSString const&) in LayerIntf.o
-      ...
-  "tTVPNativeBaseBitmap::SetSize(unsigned int, unsigned int, bool)", referenced from:
-      tTJSNI_Bitmap::SetSize(unsigned int, unsigned int, bool) in BitmapIntf.o
-      iTVPBaseBitmap::SetSizeWithFill(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::Independ()", referenced from:
-      tTJSNI_Bitmap::Independ(bool) in BitmapIntf.o
-  "tTVPNativeBaseBitmap::Recreate(unsigned int, unsigned int, unsigned int)", referenced from:
-      tTVPGraphicImageData::AssignToBitmap(tTVPBaseBitmap*) const in GraphicsLoaderIntf.o
-  "tTVPNativeBaseBitmap::DrawGlyph(TJS::iTJSDispatch2*, tTVPRect const&, int, int, unsigned int, tTVPBBBltMethod, int, bool, bool, int, unsigned int, int, int, int, tTVPComplexRect*)", referenced from:
-      tTJSNC_ImageFunction::tTJSNC_ImageFunction()::NCM_drawGlyph::Process(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in ImageFunction.o
-  "tTVPNativeBaseBitmap::tTVPNativeBaseBitmap(tTVPNativeBaseBitmap const&)", referenced from:
-      tTJSNI_Bitmap::Construct(int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in BitmapIntf.o
-      tTJSNI_Bitmap::Load(TJS::tTJSString const&, unsigned int) in BitmapIntf.o
-      tTVPAsyncImageLoader::LoadRequest(TJS::iTJSDispatch2*, tTJSNI_Bitmap*, TJS::tTJSString const&) in GraphicsLoadThread.o
-  "tTVPNativeBaseBitmap::tTVPNativeBaseBitmap()", referenced from:
-      tTVPBaseBitmap::tTVPBaseBitmap(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
-      tTVPBaseTexture::tTVPBaseTexture(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::~tTVPNativeBaseBitmap()", referenced from:
-      tTVPAsyncImageLoader::LoadRequest(TJS::iTJSDispatch2*, tTJSNI_Bitmap*, TJS::tTJSString const&) in GraphicsLoadThread.o
-      tTVPAsyncImageLoader::LoadRequest(TJS::iTJSDispatch2*, tTJSNI_Bitmap*, TJS::tTJSString const&) in GraphicsLoadThread.o
-      tTVPBaseBitmap::tTVPBaseBitmap(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
-      tTVPBaseTexture::tTVPBaseTexture(unsigned int, unsigned int, unsigned int) in LayerBitmapIntf.o
-      tTVPBaseBitmap::~tTVPBaseBitmap() in LayerBitmapIntf.o
-      tTVPBaseBitmap::~tTVPBaseBitmap() in LayerBitmapIntf.o
-      tTVPBaseTexture::~tTVPBaseTexture() in LayerBitmapIntf.o
-      ...
-  "tTJSNC_BasicDrawDevice::tTJSNC_BasicDrawDevice()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "tTVPGraphicHandlerType::Load(void*, void*, int (*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat), void* (*)(void*, int), void (*)(void*, TJS::tTJSString const&, TJS::tTJSString const&), TJS::tTJSBinaryStream*, int, tTVPGraphicLoadMode)", referenced from:
-      tTVPAsyncImageLoader::LoadImageFromCommand(tTVPImageLoadCommand*) in GraphicsLoadThread.o
-      TVPInternalLoadBitmap(TJS::tTJSString const&, unsigned int, unsigned int, int, std::__1::vector<tTVPGraphicMetaInfoPair, std::__1::allocator<tTVPGraphicMetaInfoPair>>**, tTVPGraphicLoadMode, TJS::tTJSString*) in GraphicsLoaderIntf.o
-      TVPInternalLoadBitmap(TJS::tTJSString const&, unsigned int, unsigned int, int, std::__1::vector<tTVPGraphicMetaInfoPair, std::__1::allocator<tTVPGraphicMetaInfoPair>>**, tTVPGraphicLoadMode, TJS::tTJSString*) in GraphicsLoaderIntf.o
-  "tTVPGraphicHandlerType::Save(TJS::tTJSString const&, TJS::tTJSString const&, iTVPBaseBitmap const*, TJS::iTJSDispatch2*)", referenced from:
-      TVPSaveImage(TJS::tTJSString const&, TJS::tTJSString const&, iTVPBaseBitmap const*, TJS::iTJSDispatch2*) in GraphicsLoaderIntf.o
-  "tTVPGraphicHandlerType::Header(TJS::tTJSBinaryStream*, TJS::iTJSDispatch2**)", referenced from:
-      TVPLoadImageHeader(TJS::tTJSString const&, TJS::iTJSDispatch2**) in GraphicsLoaderIntf.o
-  "NativeEventQueueImplement::PostEvent(NativeEvent const&)", referenced from:
-      tTVPAsyncImageLoader::LoadingThread() in GraphicsLoadThread.o
-  "TVPTimer::ProgressAllTimer()", referenced from:
-      tTVPApplication::ProcessMessages() in Application.o
-  "tTVPBitmap::GetScanLine(unsigned int) const", referenced from:
-      TVPLoadGraphicAsync_ScanLineCallback(void*, int) in GraphicsLoadThread.o
-      tTVPGraphicImageData::AssignBitmap(tTVPBitmap*) in GraphicsLoaderIntf.o
-      TVPInternalLoadBitmap(TJS::tTJSString const&, unsigned int, unsigned int, int, std::__1::vector<tTVPGraphicMetaInfoPair, std::__1::allocator<tTVPGraphicMetaInfoPair>>**, tTVPGraphicLoadMode, TJS::tTJSString*) in GraphicsLoaderIntf.o
-      TVPInternalLoadBitmap(TJS::tTJSString const&, unsigned int, unsigned int, int, std::__1::vector<tTVPGraphicMetaInfoPair, std::__1::allocator<tTVPGraphicMetaInfoPair>>**, tTVPGraphicLoadMode, TJS::tTJSString*) in GraphicsLoaderIntf.o
-      TVPInternalLoadBitmap(TJS::tTJSString const&, unsigned int, unsigned int, int, std::__1::vector<tTVPGraphicMetaInfoPair, std::__1::allocator<tTVPGraphicMetaInfoPair>>**, tTVPGraphicLoadMode, TJS::tTJSString*) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      TVPLoadGraphic_ScanLineCallback(void*, int) in GraphicsLoaderIntf.o
-      ...
-  "tTJSNI_MenuItem::GetCaption(TJS::tTJSString&) const", referenced from:
-      TVPInGameMenuForm::initMenu(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, tTJSNI_MenuItem*) in InGameMenuForm.o
-      TVPInGameMenuForm::initMenu(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, tTJSNI_MenuItem*) in InGameMenuForm.o
-  "tTJSNI_MenuItem::GetChecked() const", referenced from:
-      TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in InGameMenuForm.o
-      std::__1::__function::__func<TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_2, std::__1::allocator<TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_2>, bool ()>::operator()() in InGameMenuForm.o
-      std::__1::__function::__func<TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_5, std::__1::allocator<TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)::$_5>, bool ()>::operator()() in InGameMenuForm.o
-  "tTJSNI_MenuItem::GetGroup() const", referenced from:
-      TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in InGameMenuForm.o
-  "tTJSNI_MenuItem::GetRadio() const", referenced from:
-      TVPInGameMenuForm::createMenuItem(int, tTJSNI_MenuItem*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in InGameMenuForm.o
-  "tTVPNativeBaseBitmap::GetScanLine(unsigned int) const", referenced from:
-      tTJSNC_Bitmap::tTJSNC_Bitmap()::NCM_buffer::Get(TJS::tTJSVariant*, TJS::iTJSDispatch2*) in BitmapIntf.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      TVPSaveAsPNG(void*, TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, TJS::tTJSString const&, TJS::iTJSDispatch2*) in LoadPNG.o
-      TVPSaveAsPNG(void*, TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, TJS::tTJSString const&, TJS::iTJSDispatch2*) in LoadPNG.o
-      SaveTLG5(TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, bool) in SaveTLG5.o
-      SaveTLG5(TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, bool) in SaveTLG5.o
-      SaveTLG6(TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, bool) in SaveTLG6.o
-      SaveTLG6(TJS::tTJSBinaryStream*, iTVPBaseBitmap const*, bool) in SaveTLG6.o
-      ...
-  "tTVPNativeBaseBitmap::GetPitchBytes() const", referenced from:
-      tTJSNI_Bitmap::GetPixelBufferPitch() const in BitmapIntf.o
-      tTJSNC_Bitmap::tTJSNC_Bitmap()::NCM_bufferPitch::Get(TJS::tTJSVariant*, TJS::iTJSDispatch2*) in BitmapIntf.o
-      tTVPBaseBitmap::UDFlip(tTVPRect const&) in LayerBitmapIntf.o
-      tTVPBaseBitmap::LRFlip(tTVPRect const&) in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::IsIndependent() const", referenced from:
-      iTVPBaseBitmap::BlendColor(tTVPRect, unsigned int, int, bool) in LayerBitmapIntf.o
-  "tTVPNativeBaseBitmap::Is32BPP() const", referenced from:
-      TVPSaveImage(TJS::tTJSString const&, TJS::tTJSString const&, iTVPBaseBitmap const*, TJS::iTJSDispatch2*) in GraphicsLoaderIntf.o
-      iTVPBaseBitmap::SetPointMain(int, int, unsigned int) in LayerBitmapIntf.o
-      iTVPBaseBitmap::SetPointMask(int, int, int) in LayerBitmapIntf.o
-      tTVPBaseBitmap::Fill(tTVPRect, unsigned int) in LayerBitmapIntf.o
-      iTVPBaseBitmap::Fill(tTVPRect, unsigned int) in LayerBitmapIntf.o
-      iTVPBaseBitmap::FillColor(tTVPRect, unsigned int, int) in LayerBitmapIntf.o
-      iTVPBaseBitmap::BlendColor(tTVPRect, unsigned int, int, bool) in LayerBitmapIntf.o
-      ...
-  "tTVPNativeBaseBitmap::GetWidth() const", referenced from:
-      PerspectiveCopy_GL(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in layerExPerspective.o
-      tTJSNI_Bitmap::SetSize(unsigned int, unsigned int, bool) in BitmapIntf.o
-      tTJSNI_Bitmap::SetWidth(unsigned int) in BitmapIntf.o
-      tTJSNI_Bitmap::GetWidth() const in BitmapIntf.o
-      tTJSNI_Bitmap::SetHeight(unsigned int) in BitmapIntf.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      ...
-  "tTVPNativeBaseBitmap::GetHeight() const", referenced from:
-      PerspectiveCopy_GL(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in layerExPerspective.o
-      tTJSNI_Bitmap::SetSize(unsigned int, unsigned int, bool) in BitmapIntf.o
-      tTJSNI_Bitmap::SetWidth(unsigned int) in BitmapIntf.o
-      tTJSNI_Bitmap::SetHeight(unsigned int) in BitmapIntf.o
-      tTJSNI_Bitmap::GetHeight() const in BitmapIntf.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      tTJSNI_BitmapLayerTreeOwner::NotifyBitmapCompleted(iTVPLayerManager*, int, int, tTVPBaseTexture*, tTVPRect const&, tTVPLayerType, int) in BitmapLayerTreeOwner.o
-      ...
-  "typeinfo for tTVPThread", referenced from:
-      typeinfo for tTVPWatchThread in TickCount.o
-      typeinfo for tTVPAsyncImageLoader in GraphicsLoadThread.o
-  "typeinfo for tTVPNativeBaseBitmap", referenced from:
-      typeinfo for iTVPBaseBitmap in LayerBitmapIntf.o
-ld: symbol(s) not found for architecture arm64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:31:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD ReleaseMouseCapture(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:465:31: warning: 'SetHint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD SetHint(class iTVPLayerManager* manager, iTJSDispatch2* sender, const ttstr &hint);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:33:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetHint(class iTVPLayerManager* manager, iTJSDispatch2* sender, const ttstr &hint) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:467:31: warning: 'NotifyLayerResize' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyLayerResize(class iTVPLayerManager* manager);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:35:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyLayerResize(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:468:31: warning: 'NotifyLayerImageChange' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyLayerImageChange(class iTVPLayerManager* manager);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:36:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyLayerImageChange(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:470:31: warning: 'SetAttentionPoint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD SetAttentionPoint(class iTVPLayerManager* manager, tTJSNI_BaseLayer *layer, tjs_int x, tjs_int y);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:38:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetAttentionPoint(class iTVPLayerManager* manager, class tTJSNI_BaseLayer *layer, tjs_int x, tjs_int y) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:471:31: warning: 'DisableAttentionPoint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager);
+                                     ^
+
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:39:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:473:31: warning: 'SetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ); // mode == tTVPImeMode
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:41:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ) = 0; // mode == tTVPImeMode
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:474:31: warning: 'ResetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager );
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:14:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:42:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager ) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:68:28: warning: 'Construct' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tjs_error TJS_INTF_METHOD Construct(tjs_int numparams, tTJSVariant **param,
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:47:2: note: overridden virtual function is here
+        Construct(tjs_int numparams, tTJSVariant **param,
+        ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:70:23: warning: 'Invalidate' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD Invalidate();
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:49:23: note: overridden virtual function is here
+        void TJS_INTF_METHOD Invalidate();
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:77:7: warning: 'Disconnect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void Disconnect(); // tTJSNI_BaseVideoOverlay::Disconnect override
+             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:67:15: note: overridden virtual function is here
+        virtual void Disconnect() = 0; // called from Window object's invalidation
+                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:111:7: warning: 'GetVisible' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        bool GetVisible() const { return Visible; }
+             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.cpp:15:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:68:15: note: overridden virtual function is here
+        virtual bool GetVisible() const = 0;
+                     ^
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/VelocityTracker.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/VelocityTracker.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/VelocityTracker.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/VelocityTracker.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/VelocityTracker.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/VelocityTracker.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/VelocityTracker.cpp:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+1 warning generated.
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/UtilStreams.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/UtilStreams.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/UtilStreams.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/UtilStreams.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp:374:10: fatal error: 'libarchive/archive.h' file not found
+#include "libarchive/archive.h"
+         ^~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/TransIntf.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/TransIntf.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/TransIntf.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/TransIntf.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/TransIntf.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -155,5 +154,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	Ld /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Kirikiroid2\ iOS normal (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/UtilStreams.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/UtilStreams.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
