@@ -227,12 +227,12 @@ jobs:
           cd build/Kirikiroid2/Classes/environ/cocos2d
           # Rename to .mm for Objective-C support
           mv CustomFileUtils.cpp CustomFileUtils.mm
-          # Replace getSuitableFOpen() (not in 3.6) with direct path
-          sed -i '' 's/getSuitableFOpen(path)/path/g' CustomFileUtils.mm
-          # Fix isFileExistInternal (private in FileUtilsApple) - use isFileExist instead
-          sed -i '' 's/FileUtilsInherit::isFileExistInternal(strFilePath)/FileUtilsInherit::isFileExist(strFilePath)/g' CustomFileUtils.mm
-          # Fix the override declaration
+          # Replace getSuitableFOpen() (not in 3.6) - just use the path string directly
+          sed -i '' 's/FileUtils::getInstance()->getSuitableFOpen(path)/path/g' CustomFileUtils.mm
+          # Fix isFileExistInternal (private in FileUtilsApple) - use public isFileExist
           sed -i '' 's/virtual bool isFileExistInternal(const std::string& strFilePath) const override;/virtual bool isFileExist(const std::string\& strFilePath) const;/g' CustomFileUtils.mm
+          sed -i '' 's/bool CustomFileUtils::isFileExistInternal/bool CustomFileUtils::isFileExist/g' CustomFileUtils.mm
+          sed -i '' 's/FileUtilsInherit::isFileExistInternal(strFilePath)/FileUtilsInherit::isFileExist(strFilePath)/g' CustomFileUtils.mm
 
       - name: Install xcodeproj gem
         run: gem install xcodeproj
