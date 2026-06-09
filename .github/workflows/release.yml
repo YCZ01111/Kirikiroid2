@@ -222,6 +222,18 @@ jobs:
             echo "Created config.h for Oniguruma"
           fi
 
+      - name: Patch CustomFileUtils for iOS compatibility
+        run: |
+          cd build/Kirikiroid2/Classes/environ/cocos2d
+          # Rename to .mm for Objective-C support
+          mv CustomFileUtils.cpp CustomFileUtils.mm
+          # Replace getSuitableFOpen() (not in 3.6) with direct path
+          sed -i '' 's/getSuitableFOpen(path)/path/g' CustomFileUtils.mm
+          # Fix isFileExistInternal (private in FileUtilsApple) - use isFileExist instead
+          sed -i '' 's/FileUtilsInherit::isFileExistInternal(strFilePath)/FileUtilsInherit::isFileExist(strFilePath)/g' CustomFileUtils.mm
+          # Fix the override declaration
+          sed -i '' 's/virtual bool isFileExistInternal(const std::string& strFilePath) const override;/virtual bool isFileExist(const std::string\& strFilePath) const;/g' CustomFileUtils.mm
+
       - name: Install xcodeproj gem
         run: gem install xcodeproj
 
