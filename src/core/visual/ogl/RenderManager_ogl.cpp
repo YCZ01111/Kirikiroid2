@@ -148,7 +148,7 @@ namespace GL { // independ from global gl functions
 #endif
 #ifdef _MSC_VER
 typedef PROC (WINAPI fGetProcAddress)(LPCSTR);
-#elif defined(TARGET_OS_IPHONE)
+#elif defined(TARGET_OS_IPHONE) || CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 typedef void* (fGetProcAddress)(const char *);
 #else
 typedef void* (EGLAPIENTRY fGetProcAddress)(const char *);
@@ -3966,13 +3966,13 @@ public:
 
 			// pass to OperateTriangles
 			tTVPPointD pttar[6] = {
-				dstpt[0], // 左上
-				dstpt[1], // 右上
-				dstpt[2], // 左下
+				dstpt[0], // 宸︿笂
+				dstpt[1], // 鍙充笂
+				dstpt[2], // 宸︿笅
 
-				dstpt[1], // 右上
-				dstpt[2], // 左下
-				dstpt[3], // 右下
+				dstpt[1], // 鍙充笂
+				dstpt[2], // 宸︿笅
+				dstpt[3], // 鍙充笅
 			}, pttex[6] = {
 				srcpt[0],
 				srcpt[1],

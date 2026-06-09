@@ -85,6 +85,11 @@ jobs:
         run: |
           git clone --depth=1 --branch=v5.9.6 https://github.com/kkos/oniguruma.git vendor/onig
 
+      - name: Download lz4
+        run: |
+          git clone --depth=1 --branch=v1.9.4 https://github.com/lz4/lz4.git vendor/lz4
+          ls vendor/lz4/lib/
+
       - name: Download OpenCV iOS framework
         run: |
           curl -L -o opencv-ios.zip https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-ios-framework.zip
@@ -156,6 +161,11 @@ jobs:
              vendor/onig/enc/euc_tw.c vendor/onig/enc/euc_kr.c vendor/onig/enc/big5.c \
              vendor/onig/enc/gb18030.c vendor/onig/enc/koi8_r.c vendor/onig/enc/cp1251.c \
              $DEST/vendor/onig/enc/
+
+          # Copy lz4 library
+          mkdir -p $DEST/vendor/lz4
+          cp vendor/lz4/lib/lz4.c vendor/lz4/lib/lz4hc.c vendor/lz4/lib/lz4frame.c $DEST/vendor/lz4/
+          cp vendor/lz4/lib/lz4.h vendor/lz4/lib/lz4hc.h vendor/lz4/lib/lz4frame.h $DEST/vendor/lz4/
 
       - name: Copy resources
         run: |
