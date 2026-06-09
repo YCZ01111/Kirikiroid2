@@ -238,7 +238,10 @@ jobs:
         run: |
           cd build/Kirikiroid2/proj.ios_mac/ios
           # The project uses TVPAppDelegate, not AppDelegate
-          sed -i '' 's/AppDelegate/TVPAppDelegate/g' AppController.mm
+          # Only replace class references, not #include directives or filenames
+          sed -i '' 's/#import "AppDelegate.h"/#import "AppDelegate.h"\n#import "..\/..\/Classes\/environ\/cocos2d\/AppDelegate.h"/g' AppController.mm
+          sed -i '' 's/AppDelegate \*delegate/TVPAppDelegate *delegate/g' AppController.mm
+          sed -i '' 's/\[\[AppDelegate alloc\]/[[TVPAppDelegate alloc]/g' AppController.mm
 
       - name: Install xcodeproj gem
         run: gem install xcodeproj
