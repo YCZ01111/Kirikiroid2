@@ -75,7 +75,9 @@ public:
 	void fireReleaseUpEvent() {
 		bool newstat = !_isSelected;
 		setSelected(newstat);
+#if COCOS2DX_VERSION >= 0x00030800
 		dispatchSelectChangedEvent(newstat);
+#endif
 	}
 };
 
@@ -501,7 +503,9 @@ void tPreferenceItemDeletable::initController(const NodeMap &allNodes)
 {
 	_deleteIcon = allNodes.findWidget("delete");
 	_scrollview = allNodes.findController<cocos2d::ui::ScrollView>("scrollview");
+#if COCOS2DX_VERSION >= 0x00030800
 	_scrollview->setScrollBarEnabled(false);
+#endif
 	Size viewSize = _scrollview->getContentSize();
 	float iconWidth = _deleteIcon->getContentSize().width;
 	viewSize.width += iconWidth;
