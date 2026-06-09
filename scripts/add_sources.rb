@@ -32,6 +32,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('YUVSprite')
   # Skip XP3ArchiveRepack (depends on 7zip SDK not available on iOS)
   next if file.include?('XP3ArchiveRepack')
+  # Skip VorbisWaveDecoder (depends on libvorbis not available on iOS)
+  next if file.include?('VorbisWaveDecoder')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
