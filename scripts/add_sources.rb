@@ -48,6 +48,9 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('LoadBPG')
   # Skip LoadJPEG (depends on turbojpeg not available on iOS)
   next if file.include?('LoadJPEG')
+  # Skip FreeType/FreeTypeFontRasterizer (conflicts with FreeType2 lib headers on case-insensitive macOS, only used by win32)
+  next if file.include?('FreeTypeFontRasterizer')
+  next if file.end_with?('/FreeType.cpp')
   rel_path = file.sub(File.dirname(source_dir) + '/', '')
   xcode_path = '../' + rel_path
   group_path = File.dirname(rel_path)
