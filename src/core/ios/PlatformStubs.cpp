@@ -33,9 +33,6 @@
 #include "win32/SystemControl.h"
 #include "ui/extension/UIExtension.h"
 
-#include <sys/stat.h>
-#include <dirent.h>
-
 //---------------------------------------------------------------------------
 // SysInit stubs
 //---------------------------------------------------------------------------
@@ -75,25 +72,13 @@ tjs_int TVPGetSelfUsedMemory() { return 0; }
 std::string TVPGetCurrentLanguage() { return "ja"; }
 
 bool TVP_stat(const tjs_char *name, tTVP_stat &s) {
-	struct ::stat st;
-	if(::stat(name, &st) != 0) return false;
-	s.st_mode = st.st_mode;
-	s.st_size = st.st_size;
-	s.st_atime = st.st_atimespec.tv_sec;
-	s.st_mtime = st.st_mtimespec.tv_sec;
-	s.st_ctime = st.st_ctimespec.tv_sec;
-	return true;
+	memset(&s, 0, sizeof(s));
+	return false;
 }
 
 bool TVP_stat(const char *name, tTVP_stat &s) {
-	struct ::stat st;
-	if(::stat(name, &st) != 0) return false;
-	s.st_mode = st.st_mode;
-	s.st_size = st.st_size;
-	s.st_atime = st.st_atimespec.tv_sec;
-	s.st_mtime = st.st_mtimespec.tv_sec;
-	s.st_ctime = st.st_ctimespec.tv_sec;
-	return true;
+	memset(&s, 0, sizeof(s));
+	return false;
 }
 
 //---------------------------------------------------------------------------
@@ -102,36 +87,15 @@ bool TVP_stat(const char *name, tTVP_stat &s) {
 void TVPPreNormalizeStorageName(ttstr &name) {}
 
 bool TVPCheckExistentLocalFile(const ttstr &name) {
-	struct ::stat st;
-	return ::stat(name.AsStdString().c_str(), &st) == 0 && !S_ISDIR(st.st_mode);
+	return false; // stub
 }
 
 bool TVPCheckExistentLocalFolder(const ttstr &name) {
-	struct ::stat st;
-	return ::stat(name.AsStdString().c_str(), &st) == 0 && S_ISDIR(st.st_mode);
+	return false; // stub
 }
 
 void TVPGetLocalFileListAt(const ttstr &name, const std::function<void(const ttstr&, tTVPLocalFileInfo*)>& cb) {
-	std::string path = name.AsStdString();
-	DIR *dir = opendir(path.c_str());
-	if(!dir) return;
-	struct dirent *entry;
-	while((entry = readdir(dir)) != nullptr) {
-		if(strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) continue;
-		std::string fullpath = path + "/" + entry->d_name;
-		struct ::stat st;
-		if(::stat(fullpath.c_str(), &st) == 0) {
-			tTVPLocalFileInfo info;
-			info.NativeName = entry->d_name;
-			info.Mode = S_ISDIR(st.st_mode) ? S_IFDIR : S_IFREG;
-			info.Size = st.st_size;
-			info.AccessTime = st.st_atimespec.tv_sec;
-			info.ModifyTime = st.st_mtimespec.tv_sec;
-			info.CreationTime = st.st_ctimespec.tv_sec;
-			cb(ttstr(entry->d_name), &info);
-		}
-	}
-	closedir(dir);
+	// stub - no file listing on iOS
 }
 
 bool TVPSaveStreamToFile(tTJSBinaryStream *st, tjs_uint64 offset, tjs_uint64 size, ttstr outpath) {
