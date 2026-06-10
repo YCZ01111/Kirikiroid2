@@ -30,12 +30,11 @@ posix_compat_win32 = %w[
   DrawDevice.cpp
 ]
 
-# Windows-only files that must be excluded even if in win32/
+# Windows-only files that must be excluded
 win32_excluded = %w[
   LayerBitmapImpl.cpp
   BasicDrawDevice.cpp
   MenuItemImpl.cpp
-  DrawDevice.cpp
   WindowImpl.cpp
   SystemImpl.cpp
   Platform.cpp
@@ -88,6 +87,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.end_with?('/FreeType.cpp')
   # Skip FFWaveDecoder (depends on FFmpeg/libavutil not available on iOS)
   next if file.include?('FFWaveDecoder')
+  # Skip UtilStreams (depends on libarchive/7zip/unrar not available on iOS; iOS stub provided)
+  next if file.end_with?('/UtilStreams.cpp')
   # Skip 7zArchive (depends on 7zip SDK not available on iOS)
   next if file.include?('7zArchive')
   # Skip XP3RepackForm (depends on XP3ArchiveRepack which needs 7zip SDK)
