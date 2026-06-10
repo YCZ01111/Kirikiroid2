@@ -1,153 +1,158 @@
 === BUILD ERROR INFO ===
-Date: Wed Jun 10 09:06:09 UTC 2026
-Run: 128
+Date: Wed Jun 10 09:19:55 UTC 2026
+Run: 129
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-ld: symbol(s) not found for architecture arm64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:79:5: error: no matching function for call to 'stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:82:4: error: no member named 'st_atimespec' in 'tTVP_stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:83:4: error: no member named 'st_mtimespec' in 'tTVP_stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:84:4: error: no member named 'st_ctimespec' in 'tTVP_stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:93:4: error: no member named 'st_atimespec' in 'tTVP_stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:94:4: error: no member named 'st_mtimespec' in 'tTVP_stat'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:95:4: error: no member named 'st_ctimespec' in 'tTVP_stat'
 
 === LAST 150 LINES ===
-  "TVPBeforeSystemInit()", referenced from:
-      TVPSystemInit() in SysInitIntf.o
-  "TVPCheckIsVideoFile(char const*)", referenced from:
-      TVPMainFileSelectorForm::onCellClicked(int) in MainFileSelectorForm.o
-  "TVPCheckStartupPath(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
-      TVPMainScene::startupFrom(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in MainScene.o
-  "TVPClipboardGetText(TJS::tTJSString&)", referenced from:
-      tTJSNC_Clipboard::tTJSNC_Clipboard()::NCM_asText::Get(TJS::tTJSVariant*, TJS::iTJSDispatch2*) in ClipboardIntf.o
-  "TVPClipboardSetText(TJS::tTJSString const&)", referenced from:
-      tTJSNC_Clipboard::tTJSNC_Clipboard()::NCM_asText::Set(TJS::tTJSVariant const*, TJS::iTJSDispatch2*) in ClipboardIntf.o
-  "TVPProcessXP3Repack(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
-      std::__1::__function::__func<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_11, std::__1::allocator<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_11>, void (cocos2d::Ref*)>::operator()(cocos2d::Ref*&&) in MainFileSelectorForm.o
-  "TVPSaveStreamToFile(TJS::tTJSBinaryStream*, unsigned long long, unsigned long long, TJS::tTJSString)", referenced from:
-      TVPBaseFileSelectorForm::onUnpackClicked(cocos2d::Ref*) in FileSelectorForm.o
-  "TVPUnlockSoundMixer()", referenced from:
-      tTVPApplication::OnActivate() in Application.o
-  "TVPAfterSystemUninit()", referenced from:
-      TVPSystemUninit() in SysInitIntf.o
-  "TVPExecuteUserConfig()", referenced from:
-      tTVPApplication::StartApplication(TJS::tTJSString) in Application.o
-  "TVPGetAppStoragePath()", referenced from:
-      TVPBaseFileSelectorForm::TVPBaseFileSelectorForm() in FileSelectorForm.o
-      TVPBaseFileSelectorForm::getShortCutDirList(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>&) in FileSelectorForm.o
-  "TVPGetSelfUsedMemory()", referenced from:
-      TVPMainScene::update(float) in MainScene.o
-  "TVPBeforeSystemUninit()", referenced from:
-      TVPSystemUninit() in SysInitIntf.o
-  "TVPCheckPrintDataPath()", referenced from:
-      tTVPApplication::StartApplication(TJS::tTJSString) in Application.o
-  "TVPClipboardHasFormat(tTVPClipboardFormat)", referenced from:
-      tTJSNC_Clipboard::tTJSNC_Clipboard()::NCM_hasFormat::Process(TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in ClipboardIntf.o
-  "TVPGetCurrentLanguage()", referenced from:
-      TVPAppDelegate::applicationDidFinishLaunching() in AppDelegate.o
-  "TVPGetLocalFileListAt(TJS::tTJSString const&, std::__1::function<void (TJS::tTJSString const&, tTVPLocalFileInfo*)> const&)", referenced from:
-      tGetDirListFunction::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) in dirlist.o
-      TVPInitFontNames() in FontImpl.o
-  "TVPShowSimpleInputBox(TJS::tTJSString&, TJS::tTJSString const&, TJS::tTJSString const&, std::__1::vector<TJS::tTJSString, std::__1::allocator<TJS::tTJSString>> const&)", referenced from:
-      TVPBaseFileSelectorForm::onBtnRenameClicked(cocos2d::Ref*) in FileSelectorForm.o
-      TVPBaseFileSelectorForm::onUnpackClicked(cocos2d::Ref*)::UnpackArchive::_onPassword() in FileSelectorForm.o
-      std::__1::__function::__func<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_12, std::__1::allocator<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_12>, void (cocos2d::Ref*)>::operator()(cocos2d::Ref*&&) in MainFileSelectorForm.o
-  "TVPGetRoughTickCount32()", referenced from:
-      TVPDrawSceneOnce(int) in MainScene.o
-      TVPDrawSceneOnce(int) in MainScene.o
-      TVPMainScene::onTouchBegan(cocos2d::Touch*, cocos2d::Event*) in MainScene.o
-      TVPMainScene::onTouchMoved(cocos2d::Touch*, cocos2d::Event*) in MainScene.o
-      TVPMainScene::onTouchEnded(cocos2d::Touch*, cocos2d::Event*) in MainScene.o
-      TVPBaseFileSelectorForm::onUnpackClicked(cocos2d::Ref*)::UnpackArchive::OnProgress(unsigned long long, unsigned long long) in FileSelectorForm.o
-      TVPBaseFileSelectorForm::onUnpackClicked(cocos2d::Ref*)::UnpackArchive::OnNewFile(int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, unsigned long long) in FileSelectorForm.o
-      ...
-  "TVPGetSystemFreeMemory()", referenced from:
-      TVPMainScene::update(float) in MainScene.o
-  "TVPBeginContinuousEvent()", referenced from:
-      TVPAddContinuousEventHook(tTVPContinuousEventCallbackIntf*) in EventIntf.o
-  "TVPDoSaveSystemVariables()", referenced from:
-      TVPDeliverCompactEvent(int) in EventIntf.o
-      tTJSNI_BaseMenuItem::OnClick() in MenuItemIntf.o
-  "TVPInitializeBaseSystems()", referenced from:
-      tTVPApplication::StartApplication(TJS::tTJSString) in Application.o
-  "TVPCheckExistentLocalFile(TJS::tTJSString const&)", referenced from:
-      TVPMainFileSelectorForm::ListHistory() in MainFileSelectorForm.o
-      TVPMainFileSelectorForm::ListHistory() in MainFileSelectorForm.o
-  "TVPCreateNativeClass_Debug()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-      FetchXP3Decoder() in xp3filter.o
-  "TVPCreateNativeClass_Layer()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_Timer()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPEnsureDataPathDirectory()", referenced from:
-      tTVPLogStreamHolder::Open(char const*) in DebugIntf.o
-  "TVPGetPackageVersionString()", referenced from:
-      TVPExecuteStartupScript() in ScriptMgnIntf.o
-      TVPGetErrorDialogTitle() in Application.o
-      TVPGetErrorDialogTitle() in Application.o
-      std::__1::__function::__func<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_9, std::__1::allocator<TVPMainFileSelectorForm::showMenu(cocos2d::Ref*)::$_9>, void (cocos2d::Ref*)>::operator()(cocos2d::Ref*&&) in MainFileSelectorForm.o
-  "TVPPreNormalizeStorageName(TJS::tTJSString&)", referenced from:
-      tTVPStorageMediaManager::NormalizeStorageName(TJS::tTJSString const&, TJS::tTJSString*, TJS::tTJSString*, TJS::tTJSString*) in StorageIntf.o
-  "TVPCheckExistentLocalFolder(TJS::tTJSString const&)", referenced from:
-      TVPCopyFolder(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in CustomFileUtils.o
-      _TVPGetInternalPreferencePath() in MainScene.o
-      TVPMainFileSelectorForm::ListHistory() in MainFileSelectorForm.o
-  "TVPCreateNativeClass_System()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-      FetchXP3Decoder() in xp3filter.o
-  "TVPCreateNativeClass_Window()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_Plugins()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_MenuItem()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_Storages()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-      FetchXP3Decoder() in xp3filter.o
-  "TVPGetSystemEventDisabledState()", referenced from:
-      TVPPostEvent(TJS::iTJSDispatch2*, TJS::iTJSDispatch2*, TJS::tTJSString&, unsigned int, unsigned int, unsigned int, TJS::tTJSVariant*) in EventIntf.o
-      TVPPostInputEvent(tTVPBaseInputEvent*, unsigned int) in EventIntf.o
-  "TVPReadAboutStringFromResource()", referenced from:
-      TVPGetAboutString() in MsgIntf.o
-  "TVPResetVolumeToAllSoundBuffer()", referenced from:
-      tTVPApplication::OnActivate() in Application.o
-      tTVPApplication::OnDeactivate() in Application.o
-  "TVPSetSystemEventDisabledState(bool)", referenced from:
-      TVPShowScriptException(TJS::eTJS&) in ScriptMgnIntf.o
-      TVPShowScriptException(TJS::eTJSScriptError&) in ScriptMgnIntf.o
-  "TVPPostApplicationActivateEvent()", referenced from:
-      tTVPApplication::OnActivate() in Application.o
-  "TVPCreateNativeClass_VideoOverlay()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPPostApplicationDeactivateEvent()", referenced from:
-      tTVPApplication::OnDeactivate() in Application.o
-  "TVPCreateNativeClass_CDDASoundBuffer()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_MIDISoundBuffer()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVPCreateNativeClass_WaveSoundBuffer()", referenced from:
-      TVPInitScriptEngine() in ScriptMgnIntf.o
-  "TVP_stat(char const*, tTVP_stat&)", referenced from:
-      TVPBaseFileSelectorForm::onPasteClicked(cocos2d::Ref*) in FileSelectorForm.o
-  "XKPageView::setCurPageIndex(long)", referenced from:
-      TVPSelectListForm::initWithInfo(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in SeletListForm.o
-  "XKPageView::create(cocos2d::Size, XKPageViewDelegate*)", referenced from:
-      TVPSelectListForm::bindBodyController(NodeMap const&) in SeletListForm.o
-  "XKPageView::addPage(cocos2d::Node*)", referenced from:
-      TVPSelectListForm::initWithInfo(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in SeletListForm.o
-  "tTJSNI_Window::Close()", referenced from:
-      std::__1::__function::__func<TVPGameMainMenu::init()::$_4::operator()(cocos2d::Ref*) const::'lambda'(), std::__1::allocator<TVPGameMainMenu::init()::$_4::operator()(cocos2d::Ref*) const::'lambda'()>, void ()>::operator()() in GameMainMenu.o
-  "BitmapInfomation::BitmapInfomation(unsigned int, unsigned int, int)", referenced from:
-      tTVPBitmap::Allocate(unsigned int, unsigned int, unsigned int) in LayerBitmapImpl.o
-  "BitmapInfomation::~BitmapInfomation()", referenced from:
-      tTVPBitmap::Allocate(unsigned int, unsigned int, unsigned int) in LayerBitmapImpl.o
-      tTVPBitmap::~tTVPBitmap() in LayerBitmapImpl.o
-  "tTVPSystemControl::SystemWatchTimerTimer()", referenced from:
-      tTVPApplication::Run() in Application.o
-  "tTVPSystemControl::tTVPSystemControl()", referenced from:
-      tTVPApplication::StartApplication(TJS::tTJSString) in Application.o
-ld: symbol(s) not found for architecture arm64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:468:31: warning: 'NotifyLayerImageChange' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyLayerImageChange(class iTVPLayerManager* manager);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:36:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyLayerImageChange(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:470:31: warning: 'SetAttentionPoint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD SetAttentionPoint(class iTVPLayerManager* manager, tTJSNI_BaseLayer *layer, tjs_int x, tjs_int y);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:38:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetAttentionPoint(class iTVPLayerManager* manager, class tTJSNI_BaseLayer *layer, tjs_int x, tjs_int y) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:471:31: warning: 'DisableAttentionPoint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager);
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:39:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:473:31: warning: 'SetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ); // mode == tTVPImeMode
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:41:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ) = 0; // mode == tTVPImeMode
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:474:31: warning: 'ResetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager );
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:42:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager ) = 0;
+                                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:68:28: warning: 'Construct' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        tjs_error TJS_INTF_METHOD Construct(tjs_int numparams, tTJSVariant **param,
+                                  ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:47:2: note: overridden virtual function is here
+        Construct(tjs_int numparams, tTJSVariant **param,
+        ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:70:23: warning: 'Invalidate' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD Invalidate();
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:49:23: note: overridden virtual function is here
+        void TJS_INTF_METHOD Invalidate();
+                             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:77:7: warning: 'Disconnect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void Disconnect(); // tTJSNI_BaseVideoOverlay::Disconnect override
+             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:67:15: note: overridden virtual function is here
+        virtual void Disconnect() = 0; // called from Window object's invalidation
+                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:111:7: warning: 'GetVisible' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        bool GetVisible() const { return Visible; }
+             ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:68:15: note: overridden virtual function is here
+        virtual bool GetVisible() const = 0;
+                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:79:5: error: no matching function for call to 'stat'
+        if(stat(name, &st) != 0) return false;
+           ^~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:387:9: note: candidate function not viable: no known conversion from 'const tjs_char *' (aka 'const char16_t *') to 'const char *' for 1st argument
+int     stat(const char *, struct stat *) __DARWIN_INODE64(stat);
+        ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:82:4: error: no member named 'st_atimespec' in 'tTVP_stat'
+        s.st_atime = st.st_atime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:231:18: note: expanded from macro 'st_atime'
+#define st_atime st_atimespec.tv_sec
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:83:4: error: no member named 'st_mtimespec' in 'tTVP_stat'
+        s.st_mtime = st.st_mtime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:232:18: note: expanded from macro 'st_mtime'
+#define st_mtime st_mtimespec.tv_sec
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:84:4: error: no member named 'st_ctimespec' in 'tTVP_stat'
+        s.st_ctime = st.st_ctime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:233:18: note: expanded from macro 'st_ctime'
+#define st_ctime st_ctimespec.tv_sec
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:93:4: error: no member named 'st_atimespec' in 'tTVP_stat'
+        s.st_atime = st.st_atime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:231:18: note: expanded from macro 'st_atime'
+#define st_atime st_atimespec.tv_sec
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:94:4: error: no member named 'st_mtimespec' in 'tTVP_stat'
+        s.st_mtime = st.st_mtime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:232:18: note: expanded from macro 'st_mtime'
+#define st_mtime st_mtimespec.tv_sec
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:95:4: error: no member named 'st_ctimespec' in 'tTVP_stat'
+        s.st_ctime = st.st_ctime;
+        ~ ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:36:
+/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/include/sys/stat.h:233:18: note: expanded from macro 'st_ctime'
+#define st_ctime st_ctimespec.tv_sec
+                 ^
+85 warnings and 7 errors generated.
 
-CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/sound/PhaseVocoderFilter.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/sound/PhaseVocoderFilter.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -155,5 +160,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	Ld /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Kirikiroid2\ iOS normal (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PlatformStubs.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
