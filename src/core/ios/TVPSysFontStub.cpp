@@ -4,6 +4,7 @@
 // Note: TVPGetAllFontList and TVPGetDefaultFontName are already in FontImpl.cpp
 //---------------------------------------------------------------------------
 #include "tjsCommHead.h"
+#include "tvpfontstruc.h"
 #include "TVPSysFont.h"
 #include "FontSystem.h"
 #include "MsgIntf.h"
