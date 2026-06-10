@@ -23,6 +23,7 @@
 #include "BitmapBitsAlloc.h"
 #include "RenderManager.h"
 #include "FontSystem.h"
+#include "FontRasterizer.h"
 #include "PrerenderedFont.h"
 #include "CharacterData.h"
 #include "ConfigManager/IndividualConfigManager.h"
@@ -252,7 +253,7 @@ static tTVPCharacterData * TVPGetCharacter(const tTVPFontAndCharacterData & font
 		data = GetCurrentRasterizer()->GetBitmap(font, aofsx, aofsy);
 	}
 	if(data) {
-		tTVPCharacterDataHolder * holder = new tTVPCharacterDataHolder(data);
+		tTVPCharacterDataHolder holder(data);
 		TVPFontCache.AddWithHash(font, hash, holder);
 	}
 	return data;
