@@ -1,14 +1,11 @@
 === BUILD ERROR INFO ===
-Date: Wed Jun 10 13:25:21 UTC 2026
-Run: 133
+Date: Wed Jun 10 13:35:53 UTC 2026
+Run: 134
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 === LAST 150 LINES ===
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-144.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-144.png
 
 CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-120.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-120.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
@@ -142,11 +139,13 @@ ld: warning: no platform load command found in '/Users/runner/Library/Developer/
 ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1633](ftlzw.o)', assuming: iOS
 ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1635](psaux.o)', assuming: iOS
 ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1636](psnames.o)', assuming: iOS
-Undefined symbols for architecture arm64:
-  "TVPListDir(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::function<void (std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int)>)", referenced from:
-      TVPCopyFolder(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in CustomFileUtils.o
-      TVPBaseFileSelectorForm::ListDir(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in FileSelectorForm.o
-ld: symbol(s) not found for architecture arm64
+duplicate symbol '__Z26DeinterleaveApplyingWindowPPfPKfS_imm' in:
+    /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2 iOS.build/Objects-normal/arm64/MathAlgorithms.o
+    /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2 iOS.build/Objects-normal/arm64/MathAlgorithms_Default.o
+duplicate symbol '__Z27InterleaveOverlappingWindowPfPKPKfS_imm' in:
+    /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2 iOS.build/Objects-normal/arm64/MathAlgorithms.o
+    /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2 iOS.build/Objects-normal/arm64/MathAlgorithms_Default.o
+ld: 2 duplicate symbols
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
