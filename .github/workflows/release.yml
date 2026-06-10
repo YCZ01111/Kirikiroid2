@@ -147,6 +147,7 @@ jobs:
           cp src/core/ios/MenuItemImplStub.cpp $DEST/ios/
           cp src/core/ios/TVPSysFontStub.cpp $DEST/ios/
           cp src/core/ios/UtilStreamsStub.cpp $DEST/ios/
+          cp src/core/ios/PlatformStubs.cpp $DEST/ios/
 
           mkdir -p $DEST/vendor/onig/enc
           cp vendor/onig/regcomp.c vendor/onig/regexec.c vendor/onig/regparse.c vendor/onig/regenc.c \
