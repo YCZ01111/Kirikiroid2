@@ -1,165 +1,154 @@
 === BUILD ERROR INFO ===
-Date: Wed Jun 10 08:47:04 UTC 2026
-Run: 126
+Date: Wed Jun 10 08:57:53 UTC 2026
+Run: 127
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:40:38: error: expected class name
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:44:16: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:45:17: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:46:56: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:47:39: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:48:58: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:49:28: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:50:100: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:51:60: error: only virtual member functions can be marked 'override'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:64:8: error: unknown type name 'FontRasterizer'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:100:1: error: unknown type name 'FontRasterizer'
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:256:40: error: reference to type 'const TJS::tTJSRefHolder<tTVPCharacterData>' could not bind to an lvalue of type 'tTVPCharacterDataHolder *' (aka 'tTJSRefHolder<tTVPCharacterData> *')
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:548:25: error: member reference base type 'int' is not a structure or union
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:556:25: error: member reference base type 'int' is not a structure or union
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:84:20: error: calling a private destructor of class 'tTVPBasicDrawDevice'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:96:22: error: calling a private destructor of class 'tTVPBasicDrawDevice'
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:102:46: error: cast from pointer to smaller type 'tjs_uint32' (aka 'unsigned int') loses information
 
 === LAST 150 LINES ===
-                                  ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.cpp:6872:17: warning: 'GetTargetLayerType' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-                tTVPLayerType GetTargetLayerType() { return LayerType; }
-                              ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.cpp:21:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.h:18:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/drawable.h:110:24: note: overridden virtual function is here
-        virtual tTVPLayerType GetTargetLayerType() = 0;
-                              ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerIntf.cpp:11061:21: warning: implicit conversion loses integer precision: 'tjs_int64' (aka 'long long') to 'tjs_uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
-        tjs_uint32 flags = (tjs_int64)*param[0];
-                   ~~~~~   ^~~~~~~~~~~~~~~~~~~~
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerExBase.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/LayerExBase.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerExBase.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerExBase.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/LayerExBase.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerExBase.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/LayerExBase.cpp:1:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/plugins/LayerExBase.h:6:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsNative.h:14:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsObjectExtendable.h:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsObject.h:16:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
-                return RefCount;
-                ~~~~~~ ^~~~~~~~
-1 warning generated.
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapIntf.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapIntf.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapIntf.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapIntf.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp:13:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
-                return RefCount;
-                ~~~~~~ ^~~~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp:16:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:457:29: warning: 'GetRenderManager' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual iTVPRenderManager* GetRenderManager();
-                                   ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp:16:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:100:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/LayerBitmapImpl.h:260:35: note: overridden virtual function is here
-        virtual class iTVPRenderManager* GetRenderManager() = 0;
-                                         ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.cpp:16:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:459:15: warning: 'CopyRect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool CopyRect(tjs_int x, tjs_int y, const iTVPBaseBitmap *ref,
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:296:15: note: overridden virtual function is here
-        virtual bool CopyRect(tjs_int x, tjs_int y, const iTVPBaseBitmap *ref,
-                     ^
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapImpl.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
-    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapImpl.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapImpl.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapImpl.o
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:6:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
-                return RefCount;
-                ~~~~~~ ^~~~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:12:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:457:29: warning: 'GetRenderManager' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual iTVPRenderManager* GetRenderManager();
-                                   ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:12:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:100:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/LayerBitmapImpl.h:260:35: note: overridden virtual function is here
-        virtual class iTVPRenderManager* GetRenderManager() = 0;
-                                         ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:12:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:459:15: warning: 'CopyRect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual bool CopyRect(tjs_int x, tjs_int y, const iTVPBaseBitmap *ref,
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerBitmapIntf.h:296:15: note: overridden virtual function is here
-        virtual bool CopyRect(tjs_int x, tjs_int y, const iTVPBaseBitmap *ref,
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:22:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/StringUtil.h:35:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
-                        return p - str.c_str();
-                        ~~~~~~ ~~^~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/StringUtil.h:45:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
-                        return (p - str.c_str());       // found a match
-                        ~~~~~~  ~~^~~~~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/StringUtil.h:79:29: warning: implicit conversion loses integer precision: 'std::wstring::size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
-                return val.SubString(pos, len);
-                           ~~~~~~~~~      ^~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:40:38: error: expected class name
-class iOSStubFontRasterizer : public FontRasterizer {
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:124:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyMouseWheel(tjs_uint32 shift, tjs_int delta, tjs_int x, tjs_int y) = 0;
                                      ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:44:16: error: only virtual member functions can be marked 'override'
-        void AddRef() override { refCount++; }
-                      ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:45:17: error: only virtual member functions can be marked 'override'
-        void Release() override { if(--refCount == 0) delete this; }
-                       ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:46:56: error: only virtual member functions can be marked 'override'
-        void ApplyFont(tTVPNativeBaseBitmap *bmp, bool force) override {}
-                                                              ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:47:39: error: only virtual member functions can be marked 'override'
-        void ApplyFont(const tTVPFont& font) override {}
-                                             ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:48:58: error: only virtual member functions can be marked 'override'
-        void GetTextExtent(tjs_char ch, tjs_int &w, tjs_int &h) override { w = 0; h = 0; }
-                                                                ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:49:28: error: only virtual member functions can be marked 'override'
-        tjs_int GetAscentHeight() override { return 0; }
-                                  ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:50:100: error: only virtual member functions can be marked 'override'
-        tTVPCharacterData* GetBitmap(const tTVPFontAndCharacterData & font, tjs_int aofsx, tjs_int aofsy) override { return nullptr; }
-                                                                                                          ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:51:60: error: only virtual member functions can be marked 'override'
-        void GetGlyphDrawRect(const ttstr & text, tTVPRect& area) override { area.left = area.top = area.right = area.bottom = 0; }
-                                                                  ^~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:64:8: error: unknown type name 'FontRasterizer'
-static FontRasterizer* TVPFontRasterizers[FONT_RASTER_MAX];
-       ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:100:1: error: unknown type name 'FontRasterizer'
-FontRasterizer* GetCurrentRasterizer() {
-^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:256:40: error: reference to type 'const TJS::tTJSRefHolder<tTVPCharacterData>' could not bind to an lvalue of type 'tTVPCharacterDataHolder *' (aka 'tTJSRefHolder<tTVPCharacterData> *')
-                TVPFontCache.AddWithHash(font, hash, holder);
-                                                     ^~~~~~
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:17:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsHashSearch.h:623:67: note: passing argument to parameter 'value' here
-        void AddWithHash(const KeyT &key, tjs_uint32 hash, const ValueT &value)
-                                                                         ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:548:25: error: member reference base type 'int' is not a structure or union
-                GetCurrentRasterizer()->ApplyFont(this, true);
-                ~~~~~~~~~~~~~~~~~~~~~~^ ~~~~~~~~~
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp:556:25: error: member reference base type 'int' is not a structure or union
-                GetCurrentRasterizer()->ApplyFont(this, false);
-                ~~~~~~~~~~~~~~~~~~~~~~^ ~~~~~~~~~
-6 warnings and 14 errors generated.
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:381:31: warning: 'NotifyTouchDown' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyTouchDown( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id )
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:132:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyTouchDown( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id ) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:383:31: warning: 'NotifyTouchUp' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyTouchUp( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id )
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:140:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyTouchUp( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id ) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:385:31: warning: 'NotifyTouchMove' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyTouchMove( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id )
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:148:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyTouchMove( tjs_real x, tjs_real y, tjs_real cx, tjs_real cy, tjs_uint32 id ) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:387:31: warning: 'NotifyTouchScaling' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyTouchScaling( tjs_real startdist, tjs_real curdist, tjs_real cx, tjs_real cy, tjs_int flag )
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:156:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyTouchScaling( tjs_real startdist, tjs_real curdist, tjs_real cx, tjs_real cy, tjs_int flag ) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:389:31: warning: 'NotifyTouchRotate' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyTouchRotate( tjs_real startangle, tjs_real curangle, tjs_real dist, tjs_real cx, tjs_real cy, tjs_int flag )
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:165:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyTouchRotate( tjs_real startangle, tjs_real curangle, tjs_real dist, tjs_real cx, tjs_real cy, tjs_int flag ) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:391:31: warning: 'NotifyMultiTouch' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD NotifyMultiTouch()
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:168:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD NotifyMultiTouch() = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:416:31: warning: 'ReleaseCapture' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD ReleaseCapture();
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:100:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD ReleaseCapture() = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:423:45: warning: 'GetFocusedLayer' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual tTJSNI_BaseLayer * TJS_INTF_METHOD GetFocusedLayer() const { return FocusedLayer; }
+                                                   ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:61:45: note: overridden virtual function is here
+        virtual tTJSNI_BaseLayer * TJS_INTF_METHOD GetFocusedLayer() const = 0;
+                                                   ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:428:23: warning: 'SetFocusedLayer' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD SetFocusedLayer(tTJSNI_BaseLayer * layer) { SetFocusTo(layer, false); }
+                             ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:65:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD SetFocusedLayer(tTJSNI_BaseLayer * layer) = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:466:31: warning: 'UpdateToDrawDevice' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void TJS_INTF_METHOD UpdateToDrawDevice();
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:200:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD UpdateToDrawDevice() = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:470:23: warning: 'RecheckInputState' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD RecheckInputState();
+                             ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:177:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD RecheckInputState() = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:476:23: warning: 'DumpLayerStructure' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        void TJS_INTF_METHOD DumpLayerStructure();
+                             ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerManager.h:204:31: note: overridden virtual function is here
+        virtual void TJS_INTF_METHOD DumpLayerStructure() = 0;
+                                     ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:84:20: error: calling a private destructor of class 'tTVPBasicDrawDevice'
+        if(Device) delete Device;
+                          ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/BasicDrawDevice.h:41:2: note: declared private here
+        ~tTVPBasicDrawDevice(); //!< <83>f<83>X<83>g<83><89><83>N<83>^
+        ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:96:22: error: calling a private destructor of class 'tTVPBasicDrawDevice'
+        if(Device) { delete Device; Device = nullptr; }
+                            ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/BasicDrawDevice.h:41:2: note: declared private here
+        ~tTVPBasicDrawDevice(); //!< <83>f<83>X<83>g<83><89><83>N<83>^
+        ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp:102:46: error: cast from pointer to smaller type 'tjs_uint32' (aka 'unsigned int') loses information
+tjs_uint32 tTJSNC_BasicDrawDevice::ClassID = (tjs_uint32)(&tTJSNC_BasicDrawDevice::ClassID);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+46 warnings and 3 errors generated.
 
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/KAGParser.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/KAGParser.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/KAGParser.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/KAGParser.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/utils/KAGParser.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/KAGParser.o
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BaseForm.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:4:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.h:5:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/MainScene.h:81:15: warning: 'deleteBackward' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void deleteBackward();
+                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:61:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCIMEDelegate.h:125:18: note: overridden virtual function is here
+    virtual void deleteBackward() {}
+                 ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:6:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/MainScene.h:82:15: warning: 'insertText' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void insertText(const char * text, size_t len);
+                     ^
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Prefix.pch:11:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/cocos2d.h:61:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/cocos2d/cocos/base/CCIMEDelegate.h:118:18: note: overridden virtual function is here
+    virtual void insertText(const char * text, size_t len) {CC_UNUSED_PARAM(text);CC_UNUSED_PARAM(len);}
+                 ^
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/ui/BaseForm.cpp:63:23: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+                int nAction = node->getNumberOfRunningActions();
+                    ~~~~~~~   ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Application.o
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/Application.cpp:1:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:62:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjs.h:17:
+In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariant.h:22:
+/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsVariantString.h:235:10: warning: implicit conversion loses integer precision: 'long' to 'tjs_int' (aka 'int') [-Wshorten-64-to-32]
+                return RefCount;
+                ~~~~~~ ^~~~~~~~
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/AppDelegate.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/environ/cocos2d/AppDelegate.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/AppDelegate.o
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -167,5 +156,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/LayerBitmapImpl.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/LayerBitmapImpl.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/BasicDrawDeviceStub.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/BasicDrawDeviceStub.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
