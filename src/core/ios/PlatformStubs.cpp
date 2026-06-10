@@ -238,11 +238,11 @@ void TVPCheckAbout() {}
 
 bool TVPDeleteFile(const std::string &filename) { return false; }
 
-std::string TVPGetAppPath() {
-	return "./";
+ttstr TVPGetAppPath() {
+	return ttstr(TJS_W("./"));
 }
 
-tjs_uint32 TVPGetVersion() { return 0x02000000; } // version 2.0.0.0
+void TVPGetVersion() {}
 
 bool TVPRenameFile(const std::string &from, const std::string &to) { return false; }
 
@@ -253,7 +253,7 @@ void TVPInvokeEvents() {}
 
 void TVPLoadPluigins() {}
 
-void TVPCreateFolders(const ttstr &name) {}
+bool TVPCreateFolders(const ttstr &name) { return true; }
 
 std::vector<std::string> TVPGetDriverPath() {
 	std::vector<std::string> paths;
@@ -269,20 +269,20 @@ void TVPTerminateSync(int code) {}
 
 tjs_uint32 TVPToActualColor(tjs_uint32 color) { return color; }
 
-void TVPGetCommandLine(const tjs_char*, tTJSVariant*) {}
+bool TVPGetCommandLine(const tjs_char * name, tTJSVariant *value) { return false; }
 
 void TVPLockSoundMixer() {}
 
 void TVPSendToOtherApp(const std::string &filename) {}
 
-void TVPAcceptSaveAsJPG(void*, const ttstr&, iTJSDispatch2**) {}
-void TVPAcceptSaveAsJXR(void*, const ttstr&, iTJSDispatch2**) {}
+bool TVPAcceptSaveAsJPG(void* formatdata, const ttstr & type, iTJSDispatch2** dic) { return false; }
+bool TVPAcceptSaveAsJXR(void* formatdata, const ttstr & type, iTJSDispatch2** dic) { return false; }
 
 bool TVPCheckStartupArg() { return false; }
 
 void TVPControlAdDialog(int, int, int) {}
 
-tTVPArchive * TVPCreateFileMedia() { return nullptr; }
+iTVPStorageMedia * TVPCreateFileMedia() { return nullptr; }
 
 void TVPDumpHWException() {}
 
