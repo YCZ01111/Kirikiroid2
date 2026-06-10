@@ -217,7 +217,7 @@ void XKPageView::setCurPageIndex(ssize_t idx) {
 //---------------------------------------------------------------------------
 // Additional missing symbols
 //---------------------------------------------------------------------------
-void TVPListDir(const std::string &path, const std::function<void(const std::string&, int)>& cb) {}
+void TVPListDir(const std::string &folder, std::function<void(const std::string&, int)> cb) {}
 
 void TVPLoadBPG(void*, void*, int(*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat),
 	void*(*)(void*, int), void(*)(void*, const ttstr&, const ttstr&),
