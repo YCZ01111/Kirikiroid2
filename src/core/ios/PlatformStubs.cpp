@@ -26,12 +26,28 @@
 #include "tvpfontstruc.h"
 #include "TVPSysFont.h"
 #include "BitmapInfomation.h"
+#include "GraphicsLoaderIntf.h"
 #include "win32/StorageImpl.h"
 #include "win32/SysInitImpl.h"
 #include "win32/SystemImpl.h"
 #include "win32/WindowImpl.h"
 #include "win32/SystemControl.h"
 #include "ui/extension/UIExtension.h"
+
+#include <string>
+
+//---------------------------------------------------------------------------
+// SDL stub (not needed on iOS)
+//---------------------------------------------------------------------------
+extern "C" void SDL_SetMainReady(void) {}
+
+//---------------------------------------------------------------------------
+// Global variables from SysInitImpl
+//---------------------------------------------------------------------------
+ttstr TVPNativeProjectDir;
+bool TVPTerminated = false;
+bool TVPTerminateOnNoWindowStartup = false;
+int TVPTerminateCode = 0;
 
 //---------------------------------------------------------------------------
 // SysInit stubs
@@ -196,4 +212,92 @@ XKPageView *XKPageView::create(cocos2d::Size size, XKPageViewDelegate *delegate)
 void XKPageView::addPage(cocos2d::Node *node) {
 }
 void XKPageView::setCurPageIndex(ssize_t idx) {
+}
+
+//---------------------------------------------------------------------------
+// Additional missing symbols
+//---------------------------------------------------------------------------
+void TVPListDir(const std::string &path, const std::function<void(const std::string&, int)>& cb) {}
+
+void TVPLoadBPG(void*, void*, int(*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat),
+	void*(*)(void*, int), void(*)(void*, const ttstr&, const ttstr&),
+	tTJSBinaryStream*, int, tTVPGraphicLoadMode) {}
+
+void TVPLoadJXR(void*, void*, int(*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat),
+	void*(*)(void*, int), void(*)(void*, const ttstr&, const ttstr&),
+	tTJSBinaryStream*, int, tTVPGraphicLoadMode) {}
+
+void TVPLoadJPEG(void*, void*, int(*)(void*, unsigned int, unsigned int, tTVPGraphicPixelFormat),
+	void*(*)(void*, int), void(*)(void*, const ttstr&, const ttstr&),
+	tTJSBinaryStream*, int, tTVPGraphicLoadMode) {}
+
+void TVPSaveAsJPG(void*, tTJSBinaryStream*, const iTVPBaseBitmap*, const ttstr&, iTJSDispatch2*) {}
+void TVPSaveAsJXR(void*, tTJSBinaryStream*, const iTVPBaseBitmap*, const ttstr&, iTJSDispatch2*) {}
+
+void TVPCheckAbout() {}
+
+bool TVPDeleteFile(const std::string &filename) { return false; }
+
+std::string TVPGetAppPath() {
+	return "./";
+}
+
+tjs_uint32 TVPGetVersion() { return 0x02000000; } // version 2.0.0.0
+
+bool TVPRenameFile(const std::string &from, const std::string &to) { return false; }
+
+tTVPArchive * TVPOpenArchive(const ttstr &name, bool ensure) { return nullptr; }
+bool TVPCheckArchive(const ttstr &name) { return false; }
+
+void TVPInvokeEvents() {}
+
+void TVPLoadPluigins() {}
+
+void TVPCreateFolders(const ttstr &name) {}
+
+std::vector<std::string> TVPGetDriverPath() {
+	std::vector<std::string> paths;
+	paths.push_back("./");
+	return paths;
+}
+
+void TVPLoadHeaderBPG(void*, tTJSBinaryStream*, iTJSDispatch2**) {}
+void TVPLoadHeaderJPG(void*, tTJSBinaryStream*, iTJSDispatch2**) {}
+void TVPLoadHeaderJXR(void*, tTJSBinaryStream*, iTJSDispatch2**) {}
+
+void TVPTerminateSync(int code) {}
+
+tjs_uint32 TVPToActualColor(tjs_uint32 color) { return color; }
+
+void TVPGetCommandLine(const tjs_char*, tTJSVariant*) {}
+
+void TVPLockSoundMixer() {}
+
+void TVPSendToOtherApp(const std::string &filename) {}
+
+void TVPAcceptSaveAsJPG(void*, const ttstr&, iTJSDispatch2**) {}
+void TVPAcceptSaveAsJXR(void*, const ttstr&, iTJSDispatch2**) {}
+
+bool TVPCheckStartupArg() { return false; }
+
+void TVPControlAdDialog(int, int, int) {}
+
+tTVPArchive * TVPCreateFileMedia() { return nullptr; }
+
+void TVPDumpHWException() {}
+
+void TVPExitApplication(int code) {}
+
+void TVPForceSwapBuffer() {}
+
+tjs_uint32 TVPFromActualColor(tjs_uint32 color) { return color; }
+
+iTJSDispatch2 * TVPGetMenuDispatch(tjs_int64 tag) { return nullptr; }
+
+void TVPInitUIExtension() {}
+
+bool TVPWriteDataToFile(const ttstr &name, const void *data, tjs_uint size) { return false; }
+
+tjs_uint32 TVPGetRoughTickCount32() {
+	return (tjs_uint32)(clock() * 1000 / CLOCKS_PER_SEC);
 }
