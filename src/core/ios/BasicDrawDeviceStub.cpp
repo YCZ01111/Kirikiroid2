@@ -81,7 +81,7 @@ tTJSNI_BasicDrawDevice::tTJSNI_BasicDrawDevice()
 
 tTJSNI_BasicDrawDevice::~tTJSNI_BasicDrawDevice()
 {
-	if(Device) delete Device;
+	if(Device) Device->Destruct();
 }
 
 tjs_error TJS_INTF_METHOD tTJSNI_BasicDrawDevice::Construct(tjs_int numparams, tTJSVariant **param,
@@ -93,13 +93,13 @@ tjs_error TJS_INTF_METHOD tTJSNI_BasicDrawDevice::Construct(tjs_int numparams, t
 
 void TJS_INTF_METHOD tTJSNI_BasicDrawDevice::Invalidate()
 {
-	if(Device) { delete Device; Device = nullptr; }
+	if(Device) { Device->Destruct(); Device = nullptr; }
 }
 
 //---------------------------------------------------------------------------
 // tTJSNC_BasicDrawDevice
 //---------------------------------------------------------------------------
-tjs_uint32 tTJSNC_BasicDrawDevice::ClassID = (tjs_uint32)(&tTJSNC_BasicDrawDevice::ClassID);
+tjs_uint32 tTJSNC_BasicDrawDevice::ClassID = (tjs_uint32)(size_t)(&tTJSNC_BasicDrawDevice::ClassID);
 
 tTJSNC_BasicDrawDevice::tTJSNC_BasicDrawDevice() : tTJSNativeClass(TJS_W("BasicDrawDevice"))
 {
