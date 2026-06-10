@@ -89,6 +89,8 @@ Dir.glob(File.join(source_dir, '**/*.{cpp,mm,m,c}')).each do |file|
   next if file.include?('FFWaveDecoder')
   # Skip UtilStreams (depends on libarchive/7zip/unrar not available on iOS; iOS stub provided)
   next if file.end_with?('/UtilStreams.cpp')
+  # Skip sound/MathAlgorithms.cpp (duplicate of utils/MathAlgorithms_Default.cpp)
+  next if file.end_with?('/sound/MathAlgorithms.cpp')
   # Skip 7zArchive (depends on 7zip SDK not available on iOS)
   next if file.include?('7zArchive')
   # Skip XP3RepackForm (depends on XP3ArchiveRepack which needs 7zip SDK)
