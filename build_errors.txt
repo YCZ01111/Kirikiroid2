@@ -1,158 +1,153 @@
 === BUILD ERROR INFO ===
-Date: Wed Jun 10 13:15:37 UTC 2026
-Run: 132
+Date: Wed Jun 10 13:25:21 UTC 2026
+Run: 133
 
     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project Kirikiroid2.xcodeproj -scheme "Kirikiroid2 iOS" -sdk iphoneos -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY= ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=12.0
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:241:13: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:245:12: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:256:6: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:272:6: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:278:6: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:279:6: error: functions that differ only in their return type cannot be overloaded
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:285:15: error: functions that differ only in their return type cannot be overloaded
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 === LAST 150 LINES ===
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:38:31: note: overridden virtual function is here
-        virtual void TJS_INTF_METHOD SetAttentionPoint(class iTVPLayerManager* manager, class tTJSNI_BaseLayer *layer, tjs_int x, tjs_int y) = 0;
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:471:31: warning: 'DisableAttentionPoint' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager);
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:39:31: note: overridden virtual function is here
-        virtual void TJS_INTF_METHOD DisableAttentionPoint(class iTVPLayerManager* manager) = 0;
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:473:31: warning: 'SetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ); // mode == tTVPImeMode
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:41:31: note: overridden virtual function is here
-        virtual void TJS_INTF_METHOD SetImeMode( class iTVPLayerManager* manager, tjs_int mode ) = 0; // mode == tTVPImeMode
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:281:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/WindowImpl.h:474:31: warning: 'ResetImeMode' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager );
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:18:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/WindowIntf.h:21:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/LayerTreeOwner.h:42:31: note: overridden virtual function is here
-        virtual void TJS_INTF_METHOD ResetImeMode( class iTVPLayerManager* manager ) = 0;
-                                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:68:28: warning: 'Construct' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        tjs_error TJS_INTF_METHOD Construct(tjs_int numparams, tTJSVariant **param,
-                                  ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:47:2: note: overridden virtual function is here
-        Construct(tjs_int numparams, tTJSVariant **param,
-        ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:70:23: warning: 'Invalidate' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        void TJS_INTF_METHOD Invalidate();
-                             ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:49:23: note: overridden virtual function is here
-        void TJS_INTF_METHOD Invalidate();
-                             ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:77:7: warning: 'Disconnect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        void Disconnect(); // tTJSNI_BaseVideoOverlay::Disconnect override
-             ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:67:15: note: overridden virtual function is here
-        virtual void Disconnect() = 0; // called from Window object's invalidation
-                     ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:77:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/win32/VideoOvlImpl.h:111:7: warning: 'GetVisible' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
-        bool GetVisible() const { return Visible; }
-             ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:20:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/VideoOvlIntf.h:68:15: note: overridden virtual function is here
-        virtual bool GetVisible() const = 0;
-                     ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:241:13: error: functions that differ only in their return type cannot be overloaded
-std::string TVPGetAppPath() {
-~~~~~~~~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:10:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/StorageIntf.h:161:25: note: previous declaration is here
-TJS_EXP_FUNC_DEF(ttstr, TVPGetAppPath, ());
-                 ~~~~~  ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:61:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsConfig.h:35:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsTypes.h:34:61: note: expanded from macro 'TJS_EXP_FUNC_DEF'
-#define TJS_EXP_FUNC_DEF(rettype, name, arg) extern rettype name arg
-                                                    ~~~~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:245:12: error: functions that differ only in their return type cannot be overloaded
-tjs_uint32 TVPGetVersion() { return 0x02000000; } // version 2.0.0.0
-~~~~~~~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:14:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/msg/MsgIntf.h:65:13: note: previous declaration is here
-extern void TVPGetVersion();
-       ~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:256:6: error: functions that differ only in their return type cannot be overloaded
-void TVPCreateFolders(const ttstr &name) {}
-~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:30:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/win32/StorageImpl.h:82:24: note: previous declaration is here
-TJS_EXP_FUNC_DEF(bool, TVPCreateFolders, (const ttstr &folder));
-                 ~~~~  ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:61:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsConfig.h:35:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsTypes.h:34:61: note: expanded from macro 'TJS_EXP_FUNC_DEF'
-#define TJS_EXP_FUNC_DEF(rettype, name, arg) extern rettype name arg
-                                                    ~~~~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:272:6: error: functions that differ only in their return type cannot be overloaded
-void TVPGetCommandLine(const tjs_char*, tTJSVariant*) {}
-~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:7:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/SysInitIntf.h:72:24: note: previous declaration is here
-TJS_EXP_FUNC_DEF(bool, TVPGetCommandLine, (const tjs_char * name, tTJSVariant *value = NULL));
-                 ~~~~  ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:5:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsCommHead.h:61:
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsConfig.h:35:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/tjs2/tjsTypes.h:34:61: note: expanded from macro 'TJS_EXP_FUNC_DEF'
-#define TJS_EXP_FUNC_DEF(rettype, name, arg) extern rettype name arg
-                                                    ~~~~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:278:6: error: functions that differ only in their return type cannot be overloaded
-void TVPAcceptSaveAsJPG(void*, const ttstr&, iTJSDispatch2**) {}
-~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:29:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/GraphicsLoaderIntf.h:224:13: note: previous declaration is here
-extern bool TVPAcceptSaveAsJPG(void* formatdata, const ttstr & type, iTJSDispatch2** dic );
-       ~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:279:6: error: functions that differ only in their return type cannot be overloaded
-void TVPAcceptSaveAsJXR(void*, const ttstr&, iTJSDispatch2**) {}
-~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:29:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/visual/GraphicsLoaderIntf.h:225:13: note: previous declaration is here
-extern bool TVPAcceptSaveAsJXR(void* formatdata, const ttstr & type, iTJSDispatch2** dic );
-       ~~~~ ^
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:285:15: error: functions that differ only in their return type cannot be overloaded
-tTVPArchive * TVPCreateFileMedia() { return nullptr; }
-~~~~~~~~~~~~~ ^
-In file included from /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp:10:
-/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/base/StorageIntf.h:169:20: note: previous declaration is here
-iTVPStorageMedia * TVPCreateFileMedia();
-~~~~~~~~~~~~~~~~~~ ^
-85 warnings and 7 errors generated.
-
-CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/sound/PhaseVocoderFilter.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
     cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
-    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/2734343000197761777/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/sound/PhaseVocoderFilter.cpp -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PhaseVocoderFilter.o
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-144.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-144.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-120.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-120.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-120.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-120.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-114.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-114.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-114.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-114.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-100.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-100.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Icon-100.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Icon-100.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/HelloWorld.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/HelloWorld.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/HelloWorld.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/HelloWorld.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default@2x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default@2x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default@2x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default@2x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-736h@3x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-736h@3x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-736h@3x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-736h@3x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-667h@2x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-667h@2x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-667h@2x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-667h@2x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-568h@2x.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-568h@2x.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/Default-568h@2x.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Default-568h@2x.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseSelected.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseSelected.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseSelected.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseSelected.png
+
+CopyPNGFile /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/copypng -strip-PNG-text /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Resources/CloseNormal.png /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/CloseNormal.png
+
+CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/main.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-implicit-fallthrough -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -include /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/PrecompiledHeaders/SharedPrecompiledHeaders/4851079614877445115/Prefix.pch -MMD -MT dependencies -MF /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/main.d --serialize-diagnostics /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/main.dia -c /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/ios/main.m -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/main.o
+
+Ld /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Kirikiroid2\ iOS normal (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+    cd /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac
+    /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target arm64-apple-ios12.0 -isysroot /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -Os -L/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -L/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos -F/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -F/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos -F/Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/proj.ios_mac/.. -filelist /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Kirikiroid2\ iOS.LinkFileList -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Kirikiroid2\ iOS_lto.o -stdlib\=libc++ -fobjc-link-runtime -framework opencv2 -framework Security /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d\ iOS.a -framework CoreMotion -framework Foundation -framework UIKit -framework CoreGraphics -framework OpenGLES -lz -framework QuartzCore -framework OpenAL -framework AVFoundation -framework AudioToolbox -framework opencv2 -Xlinker -dependency_info -Xlinker /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/Kirikiroid2\ iOS_dependency_info.dat -o /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Kirikiroid2\ iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[869](tif_aux.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[870](tif_close.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[871](tif_codec.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[872](tif_color.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[873](tif_compress.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[874](tif_dir.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[875](tif_dirinfo.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[876](tif_dirread.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[877](tif_dirwrite.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[878](tif_dumpmode.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[879](tif_error.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[881](tif_fax3.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[882](tif_fax3sm.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[883](tif_flush.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[884](tif_getimage.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[888](tif_luv.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[890](tif_lzw.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[891](tif_next.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[893](tif_open.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[894](tif_packbits.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[895](tif_pixarlog.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[896](tif_predict.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[898](tif_read.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[899](tif_strip.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[900](tif_swab.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[901](tif_thunder.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[902](tif_tile.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[904](tif_warning.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[905](tif_write.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[906](tif_zip.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[907](tif_unix.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1519](chipmunk.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1520](cpArbiter.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1521](cpArray.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1523](cpBBTree.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1524](cpBody.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1525](cpCollision.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1526](cpHashSet.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1527](cpPolyShape.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1528](cpShape.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1529](cpSpace.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1530](cpSpaceComponent.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1531](cpSpaceHash.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1532](cpSpaceQuery.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1533](cpSpaceStep.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1534](cpSpatialIndex.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1537](cpConstraint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1538](cpDampedRotarySpring.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1539](cpDampedSpring.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1540](cpGearJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1541](cpGrooveJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1542](cpPinJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1543](cpPivotJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1544](cpRatchetJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1545](cpRotaryLimitJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1546](cpSimpleMotor.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1547](cpSlideJoint.c.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1595](ftsystem.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1597](ftinit.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1598](ftbase.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1601](ftbitmap.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1605](ftglyph.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1612](ftstroke.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1617](truetype.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1618](type1.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1619](cff.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1620](type1cid.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1621](pfr.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1622](type42.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1623](winfnt.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1624](pcf.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1625](bdf.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1626](sfnt.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1627](autofit.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1628](pshinter.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1629](raster.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1630](smooth.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1632](ftgzip.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1633](ftlzw.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1635](psaux.o)', assuming: iOS
+ld: warning: no platform load command found in '/Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/libcocos2d iOS.a[1636](psnames.o)', assuming: iOS
+Undefined symbols for architecture arm64:
+  "TVPListDir(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::function<void (std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int)>)", referenced from:
+      TVPCopyFolder(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in CustomFileUtils.o
+      TVPBaseFileSelectorForm::ListDir(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in FileSelectorForm.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'libcocos2d iOS' from project 'cocos2d_libs')
@@ -160,5 +155,5 @@ warning: Traditional headermap style is no longer supported; please migrate to u
 
 
 The following build commands failed:
-	CompileC /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Intermediates.noindex/Kirikiroid2.build/Release-iphoneos/Kirikiroid2\ iOS.build/Objects-normal/arm64/PlatformStubs.o /Users/runner/work/Kirikiroid2/Kirikiroid2/build/Kirikiroid2/Classes/ios/PlatformStubs.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
+	Ld /Users/runner/Library/Developer/Xcode/DerivedData/Kirikiroid2-dedbgbegybfiqvdkodrrdaoivget/Build/Products/Release-iphoneos/Kirikiroid2\ iOS.app/Kirikiroid2\ iOS normal (in target 'Kirikiroid2 iOS' from project 'Kirikiroid2')
 (1 failure)
